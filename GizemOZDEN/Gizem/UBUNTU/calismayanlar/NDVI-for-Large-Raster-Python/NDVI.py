@@ -25,6 +25,7 @@ import os.path
 from osgeo import gdal
 from osgeo.gdalconst import *
 import numpy as np
+from show_image import show_image
 
 if __name__ == '__main__':
     # ___________________________Arguments___________________________
@@ -112,5 +113,10 @@ if __name__ == '__main__':
 
             # write ndvi array into output .tiff file
             dst_ds.GetRasterBand(1).WriteArray(ndvi_array, j, i) 
+
+
+    #show image
+    show_image(outputRaster_path, red_array, nir_array)
     # program ends
     dst_ds = None
+

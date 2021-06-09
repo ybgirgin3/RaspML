@@ -79,7 +79,6 @@ def evaluate(param_file):
     print(f'Evaluating Experiment: {params.general.experiment_name}')
 
     eval.run_evaluation(params)
-    
 #=======
 @click.group()
 @click.version_option()
@@ -94,7 +93,6 @@ def run(param_file):
     run_model.run_model(params)
 
 #>>>>>>> 84286767b9b02e973b36d70a1d81f97748488d2d
-    
 # Setup Click command group
 @click.group()
 def cli():
