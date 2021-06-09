@@ -1,0 +1,10 @@
+django
+django-crispy-forms
+sentinelsat
+Archive
+rasterio
+pandas
+numpy
+pip-date
+matplotlib
+

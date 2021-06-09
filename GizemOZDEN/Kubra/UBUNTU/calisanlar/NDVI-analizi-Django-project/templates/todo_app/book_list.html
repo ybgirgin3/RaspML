@@ -1,0 +1,63 @@
+{% extends "todo_app/base.html" %}
+{% block title %}
+
+  book list sayfası
+
+{% endblock title %}
+
+
+{% block icerikyazisi %}
+    
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <p>
+        <a href="{% url 'upload_book' %}" class="btn btn-primary">yükle</a>
+      </p>
+      <table class="table">
+        <thread>
+          <tr>
+            <th>NDVI</th>
+            <th>TARİH</th>
+            <th>geojson dosyası</th>
+            <th>İndir</th>
+            <th>Sil</th>
+          </tr>   
+        </thread>
+        <tbody>
+          {% for book in books %}
+            <tr>
+             <td>
+               {% if book.cover %}
+                  <a href="{{ book.cover.url }}">
+                  <img src="{{ book.cover.url }}" alt="{{ book.tarih }}" style="width:500px;"></a>
+                {% else %}
+                  <span class="text-muted">resim yok</span>
+               {% endif %}
+             </td>
+             <td>{{ book.tarih }}</td>
+             <td>
+              <a href="{{ book.author.url }}" class="btn btn-primary btn-sm" target="_blank">
+                geojson indir
+              </a>
+             </td>
+             <td>
+               <a href="{{ book.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">
+                 tif indir
+               </a>
+             </td>
+             <td>
+               <form method="post" action="{% url 'delete_book' book.pk %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm">SİL</button>
+               </form>
+             </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <img src="/media/books/covers/deneme.jpg"  style="width:500px;">
+      
+
+
+{% endblock icerikyazisi %}
+
