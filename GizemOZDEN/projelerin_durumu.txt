@@ -1,0 +1,39 @@
+├── Gizem
+│   ├── RASP
+│   └── UBUNTU
+│       ├── calisanlar
+│       │   ├── PlantHealth                                     : https://github.com/eokeeffe/PlantHealth
+│       │   ├── PyGdal_batch_NDVI                               : https://github.com/xbr2017/PyGdal_batch_NDVI
+│       │   └── SAR2NDVI_CNN                                    : https://github.com/antoniomazza88/SAR2NDVI_CNN   
+
+│       ├── calismayanlar
+│       │   └── NDVI-for-Large-Raster-Python                    : https://github.com/Weixing-Zhang/NDVI-for-Large-Raster-Python
+
+│       └── muallak
+│           ├── [1] GSV_NDVI_Comparison (C++)                   : https://github.com/larkinandy/GSV_NDVI_Comparison
+│           └── [2] ndvi_superresolution                        : https://github.com/caseyagraff/ndvi_superresolution
+
+
+
+└── Kübra
+    ├── RASP
+    └── UBUNTU
+        ├── calisanlar
+        │   ├── Crop-lines-system                               : https://github.com/jbhewitt12/Crop-lines-system
+        │   ├── Image-VideoSegmentationinNIRforPlantDetection   : https://github.com/MuonRay/Image-VideoSegmentationinNIRforPlantDetection
+        │   ├── multispectral-image-processing                  : https://github.com/georgealexakis/multispectral-image-processing
+        │   └── NDVI-analizi-Django-project                     : https://github.com/tarnetintern/NDVI-analizi-Django-projectv
+
+        └── calismayanlar
+            ├── NDVI_GNDVI_ImageProcessing                      : https://github.com/krish11031998-pythonwhisperer/NDVI_GNDVI_ImageProcessing
+            ├── NDVI-Test                                       : https://github.com/DataTacticsCorp/NDVI-Test
+            ├── ndvi_automation                                 : https://github.com/hengji-liu/ndvi_automation
+            └── py-yield-estimation                             : https://github.com/SenteraLLC/py-yield-estimation
+
+102 directories
+
+calisanlar      : sıkıntısız bir şekilde çalışmış/sıkıntısı giderilmiş olan repolar
+calismayanlar   : paket, dosya, dataset, csv gibi temel eksiklikleri bulunan projeler, eksikleri internetten araştırılabilir fakat bulunma garantisi yok malesef
+muallak         : 
+                 [1] -> C++ dili ile yazılmış eğer C++ üzerine paketlerin nasıl yükleneceği çözülebilirse bir ihtimal çalışabilir. C++ bilen birinin yardımını almak daha mantıklı olacaktır
+                 [2] -> yapay zeka eğitimi için yazılmış olan program train kısmı için belirli modellere ihtiyaç duyuyor modeller eğer proje sahibinin kendi eğittiği modeller değilse sıkıntı çözülebilir.

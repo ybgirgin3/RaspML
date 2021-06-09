@@ -1,0 +1,82 @@
+
+Kübra:
+========
+[-] 1- https://github.com/krish11031998-pythonwhisperer/NDVI_GNDVI_ImageProcessing:
+  program içinde daha önceden eğitilmiş modellerin veya eğitim için kullanılacak olan resimlerin çağrıldığı satırlar var. o modeller veya resimler repo içinde yok onları bulamazsak çalışma ihtimali yok
+  
+  sıkıntı: csv dosyaları yok 
+
+[+] 2- https://github.com/MuonRay/Image-VideoSegmentationinNIRforPlantDetection:
+  renk üzerinden işlem yapmış çalışması sıkıntı çıkarmaz
+
+
+[-] 3- https://github.com/SenteraLLC/py-yield-estimation:
+  repodan anladığım kadarıyla kullanıma hazır bir paket readme dosyasında nasıl kullanılacağı yazıyor.
+  
+  sıkıntı: iki versiyon var çalıştırmak için serverless ve poetry gerekli tüm kütüphaneleri yükledim ama ikisinde de ayrı ayrı hata veriyor, klasör içinde hataların resimleri var
+
+[+] 4- https://github.com/georgealexakis/multispectral-image-processing:
+  data olarak kullanılan resimler paketler repo içinde verilmiş, paket uyuşmazlığı gibi bir durum söz konusu olmadığından çalışır gibi gözüküyor
+
+[-] 5- https://github.com/DataTacticsCorp/NDVI-Test:
+  yazılım visual studio'da yani windows bilgisayarda yazılmış linux üzerinden hata verirse anca o yüzden hata verir onun dışından data olarak kullanılan resimler paketler repo içinde verilmiş, paket uyuşmazlığı gibi bir durum söz konusu olmadığından çalışır gibi gözüküyor
+  
+  sıkıntı: ValueError: operands could not be broadcast together with shapes (768,1023) (678,1024), herhangi bir kütüğhane veya başka bir şey yazmıyor
+
+[-] 6- https://github.com/hengji-liu/ndvi_automation:
+  proje içinde çok fazla modül var onları incelemem lazım 
+
+  sıkıntı: red.tiff adından bir resme ihtiyaç duyuyor
+
+
+[+] 7- https://github.com/tarnetintern/NDVI-analizi-Django-project:
+  bu bir websitesi projesi websiteyi çalıştırma kısmında sıkıntı yok arkaplanda çalışacak ve asıl NDVI işlemini yapacak kısmı üzerinden duruma göre çalışma gerektirebilir
+
+8-(RASPBERRY)  https://github.com/YomYoAgrculturalTrading/Raspberry-pi-NDVI:
+  Raspberry pi üzerinden çalışacak olan bir proje tek modülden oluşuyor temel olarak opencv kullanılmış opencv hataları olursa giderilmesi basit olur diye tahmin ediyorum
+
+[+]9- https://github.com/jbhewitt12/Crop-lines-system:
+  program içinde kullanılan resimlerden birkaç tanesi repo içinde var sıkıntı çıkartacak gibi durmuyor
+
+Gizem
+======
+[+] 10- https://github.com/xbr2017/PyGdal_batch_NDVI :
+  gerekli paketler repo içinde var kütüphane uyumsuzlukları dışından sıkınt çıkaracak bir durum gözükmüyor
+
+[-] 11- https://github.com/antoniomazza88/SAR2NDVI_CNN:
+  CNN kullanarak yapılmış, büyük olasılıkla bu kısımda sıkıntı yaşarız bir de python2.7 ile yazılmış yani çok eski bir sürüm python onunla ilgili hataları gidermek için biraz daha detaylı araştırma yapmamız gerekebilir.
+  
+  sıkıntı: proje dataset diye bir klasör arıyor ama repo içinde dataset yok
+
+12- (RASPBERRY) https://github.com/stackpointers/NDVI/tree/master/NDVI:
+  readme dosyasında program ile ilgili nasıl çalışacak şekliden tüm detayları vermiş çok karmaşık bir görüntüsü yok çalışır
+
+[-] 13- https://github.com/Weixing-Zhang/NDVI-for-Large-Raster-Python:
+  repo içinde fazla bir kod yok harici kütüphaneler üzerinden yapılmış sanırım ve yine python2.7 ile yapılmış 11. proje gibi. gelebilecek olan hataları bundan kaynaklı olabilir
+  Sıkıntı: ERROR 5: sample_NDVI.tif: GDALDataset::GetRasterBand(4) - Illegal band # 
+            diye bir hata veriyor kütüphane kaynaklı ama kütüphane ile ilgili herhangi bir döküman bulamadım;
+            python3 NDVI.py -block 500 -redband 1 -NIRband 4 -i sample_NDVI.tif -o sample_berkay.tiff
+
+[?] 14- https://github.com/larkinandy/GSV_NDVI_Comparison:
+  proje C++ dili kullanılarak yazılmış o dili bilmiyorum malesef
+
+[+] 15- https://github.com/eokeeffe/PlantHealth:
+  modüller içinde kullanılan harici resim yok repo eksiksiz gibi duruyor. çalışabilir
+
+16- (RASPBERRY) https://github.com/rubenmak/raspberry-pi-ndvi-plant-analysis:
+  tek modül ve raspberry pi üzerinden çalışacak sıkıntı yok 
+
+[?] 17- https://github.com/caseyagraff/ndvi_superresolution:
+  terminal arayüzü ve pytorch kullanmış, genelde version sıkıntısı çıkıyor bu paketlerde eğer sıkıntı çıkabilir ama çözülüp çözülemeyeceğinin garantisi yok malesef
+  Sıkıntı: çalışıyor eğitim kısımları vs var içlerinde bu yüzden colab üzerinden denemek mantıklı
+
+18-(RASPBERRY)  https://github.com/johnjsb/ndvi-algorithm-for-raspberry-pi:
+  hem python hem cpp ile yazılmış python2.7 ile yazılmış yine sıkıntı çıkarsa bundan çıkabilir
+
+NOTE: 
+  bulduğunuz projeler genel olarak yaklaşık 2 veya 3 yıllık projeler; kütüphaneler üzerindeki değişiklikler, işletim sistemleri üzerindeki değişiklikler gibi güncellemelerden dolayı alınan hatalar düzeltilemiyebiliniyor.
+
+  Beyza'nın da 9 tane projesini yaptık, kimisi iptal edildi kimisi değiştirildi. biz onunla proje başına 85 TL olarak anlaştık. 
+  Ben TeamViewer ile bilgisayarınıza veya raspberry pi'nize bağlanıyorum projenin gereksinimlerini kurup başarılı bir şekilde çıktı aldıktan sonra siz bana o proje için anlaşılan ücreti gönderiyorsunuz ve diğerlerine devam ediyoruz. Sıkıntı çıkaran, başarısız olunan projenin ücreti de iptal oluyor doğal olarak. eğer başarısız olunan proje yerine hocanız yeni bir proje gönderirse (beyza'da öyle oldu) ve o projeyi başarılı bir şekilde tamamlarsak yine onun da ücretini dahil ediyoruz.
+
+
