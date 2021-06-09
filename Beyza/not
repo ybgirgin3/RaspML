@@ -1,0 +1,10 @@
+[+] (opencv)  1 - çalışıyor
+[+] (opencv)  2 - çalışıyor
+[?] (opencv)  3 - video clip istiyor, sanırım video üzerinden işlem yapıyor
+[-] (keras)   4 - keras ile ilgili sorunlar var eski sürüm ile yapılmış büyük ihtimalle hataların çözümlerini araştırdım ama pek bulamadım
+[-] (torch)   5 - torch kısmında pickle okuma hatası var o sebepten dolayı çalışmıyor
+[+] (opencv)  6 - asıl gönderilen repo değilde o repo için kaynak olarak indirilecek olan program çalışıyor
+ 
+
+
+

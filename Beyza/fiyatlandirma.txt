@@ -1,0 +1,21 @@
+6 tane projede zaten var olduğundan dolayı onları raspberry pi üzerine entegre ederken sıfırdan üretilme fiyatlarının yarısı alınır.
+
+yani eğer projenizi sıfırdan yapmaya kalkarsak;
+  sadece raspberry pi içinde çalışacak scriptler kategorisine girdiğinden tek bir proje için; 199,99 TL alıyorum
+  yani projeyi ben yapsaydım bu 6 proje için toplam fiyat;
+    199,99 TL * 6 = 1199,94 TL olacaktı
+
+  projeler var olduğundan ve "hiçbir hatası olmadığı" varsayıldığından dolayı fiyat;
+    1199,94 / 2 = 599,97 TL oluyor.
+
+  öğrenci indirimi olarakta %15 indirim -89,9955 TL ile
+    509,9745 TL yapıyor
+
+  performans hatası aldığımız projelerin değiştirilmesi ile ilgili olarak konuşmuştuk. 
+  1- eğer proje iptali olursa, yani proje sayısı düşerse fiyatlandırmadan çıkarılıp tekrar hesaplanma yapılır.
+  2- eğer proje sayısı düşmez ve yerine yenisi gelirse aynı fiyat devam eder.
+  3- eğer yeni gelecek olan proje eğer hocanız tarafından verilmez de sıfırdan bizim yapmamız istenirse, tam yapım fiyatından (öğrenci indirimli olarak) fiyatlandırılır
+
+
+  
+  

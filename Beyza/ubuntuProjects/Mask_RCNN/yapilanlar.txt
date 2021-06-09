@@ -1,0 +1,9 @@
+python3.6 kullanan bir conda env oluşturuldu
+  conda create -n prev_py python=3.6
+
+gerekli paketler yüklendi
+  pip3 install -r requirements2.txt
+
+daha sonra samples içindeki demo.py dosyası
+  python3 demo.py 
+komutunu kullanarak çalıştırıldı

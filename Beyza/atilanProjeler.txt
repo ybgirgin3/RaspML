@@ -1,0 +1,25 @@
+1 - https://github.com/Aakash1822/Fruit_prediction
+  -> bu projede repo sahibinin kullandığı csv dosyası repo içinde bulunmuyor. çalışır hale getirebilmek için o csv dosyasının bulunması lazım, sanırım repo sahibi hintli illaki medium'da falan bunu bir blog olarak anlattığı kısım vardır. ordan o dosyanın bulunması lazım
+
+
+  
+2-  https://github.com/Ankuvaidya/Count-number-of-on-tree-fruits--Python
+    https://github.com/abhisheklomsh/FruitCountProject
+    https://github.com/abhisheklomsh/FruitCountProject
+  -> bu projeler renk mantığını renk tanıma üzerinden işlemler yapıyor, en hızlı bu çalışır fakat makine öğrenmesi içermiyor
+
+
+  
+
+3-  https://github.com/isarlab-department-engineering/WS-COUNT
+  -> bu projede pytorch kullanıyor arkaplanda fakat raspberry pi'nin işlemcisi ve ram'i hızlı bir şekilde bu programı çalıştırmak için yeterli alana ve güce sahip değil, tensorflow ile yaptığım bir proje vardı videoda en fazla 2.5 fps alabiliyordum
+
+  
+
+4- https://github.com/aborger/FruitCount
+  -> bu proje de yine arkaplanında mrcnn diye çağırılmış bir yapay zeka kütüphanesi kullanıyor yine bundan da düşük performans sıkıntılar yaşayabiliriz.
+
+  
+  
+şimdi renk algılama üzerinden yapılan projeler raspberry pi üzerinden ortalamanın biraz üstü bir performansta çalışır. Pytorch kullanan proje ise sıkıntı çıkarabilir. Hem performans hem de gerekli gerekli dosyaların işlemlerin yapılması sırasında raspberry pi'de donma ve/veya kapanma durumları olabilir.
+

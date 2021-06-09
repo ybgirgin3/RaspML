@@ -1,0 +1,27 @@
+1-  https://github.com/PavanproJack/Fruit-Detection-in-Orchards
+
+  açıklama:
+    proje darknet kullanılarak eğitilmiş (yani en azından README dosyasından öyle yazıyor) fakat repo içerisinde eğitilmiş weight dosyaları ve/veya config dosyası yok. 
+    dolayısıyla programı çalıştırmak için o dosyalara ihtiyaç var. Google colab üzerinden eğitip çalıştırabiliyoruz demiştiniz. daha önce eğittiniz mi peki bu projeyi ?
+
+2-  https://github.com/HaochenQ/Fruit-Recognition-and-Counting
+    https://github.com/mjjackey/Mask_R_CNN_in_Fruit_Counting
+
+  açıklama: 
+    mrcnn kısmında hatalar veriyor tıpkı bir önceki raspberry pi üzerinden çalışması gereken ama çalışmayan yapay zeka projeleri gibi;
+      "ValueError: Tried to convert 'shape' to a tensor and failed. Error: None values not supported."
+    hatası alıyorum, çok büyük ihtimalle mrcnn ile ilgili bir sorun eğer hatanını çözümünü bulabilirsem projeler tamamlanacak gibi duruyor
+
+
+
+1. proje:
+  birinci proje için darknet eğitimi yapılmış tamam ama onu çalıştırabilmem için dataseti lazım, 
+  dataseti içindeki herbir resimde bulunan meyvelerin konumlarının annotation uygulamaları ile tek tek işaretlenmesi lazım bu işarete bağlı olarak metin belgelerinin oluşturulması lazım
+  bu resimler ve metin belgelerini, "train", "test", "valid" adında üç gruba ayırılması lazım.
+
+  bu da direk zaten sıfırdan yapay zeka eğitimine giriyor ve bu işlem zaten en az bir hafta sürer. 
+
+
+3. proje: 
+  üçüncü projede aynı ikinci proje gibi kütüphane hatası veriyor. ben onları çarşambaya kadar incelemeye devam ederim olurda bir tanesini çözebilirsem zaten diğeri de çözülmüş olur.
+
