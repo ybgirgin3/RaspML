@@ -74,174 +74,174 @@ class ImageProcessing():
                 temp2 = copy.deepcopy(data[1::2])
                 data[0::2] = temp2
                 data[1::2] = temp
-                    udata = np.packbits(np.concatenate(
+                udata = np.packbits(np.concatenate(
                             [data[0::3], np.array([0, 0, 0, 0] * 12000000, dtype=np.uint8).reshape(12000000, 4), data[2::3],
                                  data[1::3]], axis=1).reshape(192000000, 1)).tobytes()
-                            img = np.fromstring(udata, np.dtype('u2'), (4000 * 3000)).reshape((3000, 4000))
-			except Exception as e:
-				exc_type, exc_obj, exc_tb = sys.exc_info()
-				print(str(e) + ' Line: ' + str(exc_tb.tb_lineno))
-				oldfirmware = True
-		elif (cameraModel == 'Survey2'):
-			with open(self.filedirectory + "/" + rawfilename) as rawimage:
-				img = np.fromfile(rawimage, np.dtype('u2'), (4608 * 3456)).reshape((3456, 4608))
-		try:
-			color = cv2.cvtColor(img, cv2.COLOR_BAYER_RG2RGB).astype("float32")
-			plt.figure(30)
-			plt.imshow(color)
-		except:
-			exc_type, exc_obj, exc_tb = sys.exc_info()
-			# self.PreProcessLog.append(str(e) + ' Line: ' + str(exc_tb.tb_lineno))
-			print(str(e) + ' Line: ' + str(exc_tb.tb_lineno))
-		redmax = np.percentile(color[:, :, 0], 98)
-		redmin = np.percentile(color[:, :, 0], 2)
-		print("redmax= '%3f'and redmin = '%3f'", redmax, redmin)
-		greenmax = np.percentile(color[:, :, 1], 98)
-		greenmin = np.percentile(color[:, :, 1], 2)
-		print("greenmax= '%3f'and greenmin = '%3f'", greenmax, greenmin)
-		bluemax = np.percentile(color[:, :, 2], 98)
-		bluemin = np.percentile(color[:, :, 2], 2)
-		print("bluemax= '%3f'and bluemin = '%3f'", bluemax, bluemin)
-		# color = cv2.merge((color[:,:,0],color[:,:,2],color[:,:,1])).astype(np.dtype('u2'))
-		color[:, :, 0] = (((color[:, :, 0] - redmin) / (redmax - redmin)))
-		color[:, :, 2] = (((color[:, :, 2] - bluemin) / (bluemax - bluemin)))
-		color[:, :, 1] = (((color[:, :, 1] - greenmin) / (greenmax - greenmin)))
-		print("BEFORE \n")
-		print("color max is", color.max())
-		print("\n color min is", color.min())
-		print("\n color mean and std is", color.mean(), color.std())
-		color[color > 1.0] = 1.0
-		color[color < 0.0] = 0.0
-		color = cv2.normalize(color.astype("float"), None, 0.0, 1.0, cv2.NORM_MINMAX)
-		print("After \n")
-		print("color max is", color.max())
-		print("\n color min is", color.min())
-		print("\n color mean and std is", color.mean(), color.std())
-		color = color * 255.0
-		color = color.astype("uint8")
-		#    color = cv2.bitwise_not(color)
-		print("After * 255 \n")
-		print("color max is", color.max())
-		print("\n color min is", color.min())
-		print("\n color mean and std is", color.mean(), color.std())
-		cv2.imencode(".jpg", color)
-		#    cv2.cvtColor(color,cv2.COLOR_BGR2RGB)
-		names = rawfilename.split('.')
-		outputfilename = self.processed_newpath + "/" + names[0] + "_Processed.jpg"
-		name = names[0] + "_Processed.jpg"
-		#    color = cv2.cvtColor(color,cv2.COLOR_BGR2RGB)
-		cv2.imwrite(outputfilename, color)
-		return (outputfilename, name)
+                img = np.fromstring(udata, np.dtype('u2'), (4000 * 3000)).reshape((3000, 4000))
+            except Exception as e:
+                exc_type, exc_obj, exc_tb = sys.exc_info()
+                print(str(e) + ' Line: ' + str(exc_tb.tb_lineno))
+                oldfirmware = True
+        elif (cameraModel == 'Survey2'):
+            with open(self.filedirectory + "/" + rawfilename) as rawimage:
+                img = np.fromfile(rawimage, np.dtype('u2'), (4608 * 3456)).reshape((3456, 4608))
+        try:
+            color = cv2.cvtColor(img, cv2.COLOR_BAYER_RG2RGB).astype("float32")
+            plt.figure(30)
+            plt.imshow(color)
+        except:
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            # self.PreProcessLog.append(str(e) + ' Line: ' + str(exc_tb.tb_lineno))
+            print(str(e) + ' Line: ' + str(exc_tb.tb_lineno))
+            redmax = np.percentile(color[:, :, 0], 98)
+            redmin = np.percentile(color[:, :, 0], 2)
+            print("redmax= '%3f'and redmin = '%3f'", redmax, redmin)
+            greenmax = np.percentile(color[:, :, 1], 98)
+            greenmin = np.percentile(color[:, :, 1], 2)
+            print("greenmax= '%3f'and greenmin = '%3f'", greenmax, greenmin)
+            bluemax = np.percentile(color[:, :, 2], 98)
+            bluemin = np.percentile(color[:, :, 2], 2)
+            print("bluemax= '%3f'and bluemin = '%3f'", bluemax, bluemin)
+            # color = cv2.merge((color[:,:,0],color[:,:,2],color[:,:,1])).astype(np.dtype('u2'))
+            color[:, :, 0] = (((color[:, :, 0] - redmin) / (redmax - redmin)))
+            color[:, :, 2] = (((color[:, :, 2] - bluemin) / (bluemax - bluemin)))
+            color[:, :, 1] = (((color[:, :, 1] - greenmin) / (greenmax - greenmin)))
+            print("BEFORE \n")
+            print("color max is", color.max())
+            print("\n color min is", color.min())
+            print("\n color mean and std is", color.mean(), color.std())
+            color[color > 1.0] = 1.0
+            color[color < 0.0] = 0.0
+            color = cv2.normalize(color.astype("float"), None, 0.0, 1.0, cv2.NORM_MINMAX)
+            print("After \n")
+            print("color max is", color.max())
+            print("\n color min is", color.min())
+            print("\n color mean and std is", color.mean(), color.std())
+            color = color * 255.0
+            color = color.astype("uint8")
+            #    color = cv2.bitwise_not(color)
+            print("After * 255 \n")
+            print("color max is", color.max())
+            print("\n color min is", color.min())
+            print("\n color mean and std is", color.mean(), color.std())
+            cv2.imencode(".jpg", color)
+            #    cv2.cvtColor(color,cv2.COLOR_BGR2RGB)
+            names = rawfilename.split('.')
+            outputfilename = self.processed_newpath + "/" + names[0] + "_Processed.jpg"
+            name = names[0] + "_Processed.jpg"
+            #    color = cv2.cvtColor(color,cv2.COLOR_BGR2RGB)
+            cv2.imwrite(outputfilename, color)
+            return (outputfilename, name)
 
-	def imageResize(self, x, y, filename):
-		img = Image.open(filename)
-		print("Image was provided")
-		img_resized = img.resize((x, y), Image.ANTIALIAS)
-		new_filename = self.filedirectory + '\Image_scaled.jpg'
-		img_resized.save(new_filename, optimize=True, quality=95)
-		return new_filename
+        def imageResize(self, x, y, filename):
+            img = Image.open(filename)
+            print("Image was provided")
+            img_resized = img.resize((x, y), Image.ANTIALIAS)
+            new_filename = self.filedirectory + '\Image_scaled.jpg'
+            img_resized.save(new_filename, optimize=True, quality=95)
+            return new_filename
 
-	def pixels(self, image):
-		ndvi_pixels = []
-		for i in range(len(image)):
-			for j in range(len(image[0])):
-				for k in range(len(image[0][0])):
-					if image[i, j, k] != 0:
-						ndvi_pixels.append([i, j])
-		return ndvi_pixels
+        def pixels(self, image):
+            ndvi_pixels = []
+            for i in range(len(image)):
+                for j in range(len(image[0])):
+                    for k in range(len(image[0][0])):
+                        if image[i, j, k] != 0:
+                            ndvi_pixels.append([i, j])
+            return ndvi_pixels
 
-	def segmentImage(self, x1, y1, x2, y2, img, num=5):
-		mask = np.zeros(img.shape[:2], np.uint8)
-		bgdModel = np.zeros((1, 65), np.float64)
-		fgdModel = np.zeros((1, 65), np.float64)
-		w = len(img[0])
-		h = len(img)
-		x = int(x1 * w)
-		y = int(y1 * h)
-		a = int(x2 * w)
-		b = int(y2 * h)
-		rect = (x, y, a, b)
-		cv2.grabCut(img, mask, rect, bgdModel, fgdModel, num, cv2.GC_INIT_WITH_RECT)
-		mask2 = np.where((mask == 2) | (mask == 0), 0, 1).astype('uint8')
-		img2 = img * mask2[:, :, np.newaxis]
-		cv2.imwrite(self.filedirectory + "/segmented_image.JPG", img2)
-		return img2, self.filedirectory + "/segmented_image.JPG"
+        def segmentImage(self, x1, y1, x2, y2, img, num=5):
+            mask = np.zeros(img.shape[:2], np.uint8)
+            bgdModel = np.zeros((1, 65), np.float64)
+            fgdModel = np.zeros((1, 65), np.float64)
+            w = len(img[0])
+            h = len(img)
+            x = int(x1 * w)
+            y = int(y1 * h)
+            a = int(x2 * w)
+            b = int(y2 * h)
+            rect = (x, y, a, b)
+            cv2.grabCut(img, mask, rect, bgdModel, fgdModel, num, cv2.GC_INIT_WITH_RECT)
+            mask2 = np.where((mask == 2) | (mask == 0), 0, 1).astype('uint8')
+            img2 = img * mask2[:, :, np.newaxis]
+            cv2.imwrite(self.filedirectory + "/segmented_image.JPG", img2)
+            return img2, self.filedirectory + "/segmented_image.JPG"
 
-	def calibrate(self, multiple, values):
-		slope = multiple["slope"]
-		intercept = multiple["intercept"]
-		return int((slope * values) + intercept)
+        def calibrate(self, multiple, values):
+            slope = multiple["slope"]
+            intercept = multiple["intercept"]
+            return int((slope * values) + intercept)
 
-	def calibration(self, filename, name, pixel_min_max):
-		img = cv2.imread(filename, -1)
-		bands = [img[:, :, 0], img[:, :, 1], img[:, :, 2]]
-		blue = bands[0]
-		green = bands[1]
-		red = bands[2]
-		base_coef = self.BASE_COEFF_SURVEY2_NDVI_JPG
-		pixel_min_max["redmax"] = max(red.max(), pixel_min_max["redmax"])
-		pixel_min_max["redmin"] = min(red.min(), pixel_min_max["redmin"])
-		pixel_min_max["greenmax"] = max(green.max(), pixel_min_max["greenmax"])
-		pixel_min_max["greenmin"] = min(green.min(), pixel_min_max["greenmin"])
-		pixel_min_max["bluemax"] = max(blue.max(), pixel_min_max["bluemax"])
-		pixel_min_max["bluemin"] = min(blue.min(), pixel_min_max["bluemin"])
-		min_max_list = ["redmax", "redmin", "bluemin", "bluemax"]
-		for min_max in min_max_list:
-			if len(min_max) == 6:
-				color = min_max[:3]
-			elif len(min_max) == 7:
-				color = min_max[:4]
-			else:
-				color = min_max[:5]
-			pixel_min_max[min_max] = self.calibrate(base_coef[color], pixel_min_max[min_max])
-		red = ((red * base_coef["red"]["slope"]) + base_coef["red"]["intercept"])
-		green = ((green * base_coef["green"]["slope"]) + base_coef["green"]["intercept"])
-		blue = ((blue * base_coef["blue"]["slope"]) + base_coef["blue"]["intercept"])
-		maxpixel = pixel_min_max["redmax"] if pixel_min_max["redmax"] > pixel_min_max["bluemax"] else pixel_min_max[
-			"bluemax"]
-		minpixel = pixel_min_max["redmin"] if pixel_min_max["redmin"] < pixel_min_max["bluemin"] else pixel_min_max[
-			"bluemin"]
-		red = ((red - minpixel) / (maxpixel - minpixel))
-		green = ((green - minpixel) / (maxpixel - minpixel))
-		blue = ((blue - minpixel) / (maxpixel - minpixel))
-		red *= 255
-		green *= 255
-		blue *= 255
-		red = red.astype(int)
-		green = green.astype(int)
-		blue = blue.astype(int)
-		red = red.astype("uint8")
-		green = green.astype("uint8")
-		blue = blue.astype("uint8")
-		refimg = cv2.merge((blue, green, red))
-		# name = filename.split('.')[]
-		cv2.imwrite(self.calibrated_newpath + "/" + name + "_Calibrated.jpg", refimg)
-		return self.calibrated_newpath + "/" + name + "_Calibrated.jpg"
+        def calibration(self, filename, name, pixel_min_max):
+            img = cv2.imread(filename, -1)
+            bands = [img[:, :, 0], img[:, :, 1], img[:, :, 2]]
+            blue = bands[0]
+            green = bands[1]
+            red = bands[2]
+            base_coef = self.BASE_COEFF_SURVEY2_NDVI_JPG
+            pixel_min_max["redmax"] = max(red.max(), pixel_min_max["redmax"])
+            pixel_min_max["redmin"] = min(red.min(), pixel_min_max["redmin"])
+            pixel_min_max["greenmax"] = max(green.max(), pixel_min_max["greenmax"])
+            pixel_min_max["greenmin"] = min(green.min(), pixel_min_max["greenmin"])
+            pixel_min_max["bluemax"] = max(blue.max(), pixel_min_max["bluemax"])
+            pixel_min_max["bluemin"] = min(blue.min(), pixel_min_max["bluemin"])
+            min_max_list = ["redmax", "redmin", "bluemin", "bluemax"]
+            for min_max in min_max_list:
+                if len(min_max) == 6:
+                    color = min_max[:3]
+                elif len(min_max) == 7:
+                    color = min_max[:4]
+                else:
+                    color = min_max[:5]
+            pixel_min_max[min_max] = self.calibrate(base_coef[color], pixel_min_max[min_max])
+            red = ((red * base_coef["red"]["slope"]) + base_coef["red"]["intercept"])
+            green = ((green * base_coef["green"]["slope"]) + base_coef["green"]["intercept"])
+            blue = ((blue * base_coef["blue"]["slope"]) + base_coef["blue"]["intercept"])
+            maxpixel = pixel_min_max["redmax"] if pixel_min_max["redmax"] > pixel_min_max["bluemax"] else pixel_min_max[
+                    "bluemax"]
+            minpixel = pixel_min_max["redmin"] if pixel_min_max["redmin"] < pixel_min_max["bluemin"] else pixel_min_max[
+                    "bluemin"]
+            red = ((red - minpixel) / (maxpixel - minpixel))
+            green = ((green - minpixel) / (maxpixel - minpixel))
+            blue = ((blue - minpixel) / (maxpixel - minpixel))
+            red *= 255
+            green *= 255
+            blue *= 255
+            red = red.astype(int)
+            green = green.astype(int)
+            blue = blue.astype(int)
+            red = red.astype("uint8")
+            green = green.astype("uint8")
+            blue = blue.astype("uint8")
+            refimg = cv2.merge((blue, green, red))
+            # name = filename.split('.')[]
+            cv2.imwrite(self.calibrated_newpath + "/" + name + "_Calibrated.jpg", refimg)
+            return self.calibrated_newpath + "/" + name + "_Calibrated.jpg"
 
-	def imageResize(self, x, y, filedir=None, filename=None):
-		img = Image.open(filename)
-		print("Image was provided")
-		img_resized = img.resize((x, y), Image.ANTIALIAS)
-		new_filename = filedir + '\Image_scaled.jpg'
-		img_resized.save(new_filename, optimize=True, quality=95)
-		return new_filename
+        def imageResize(self, x, y, filedir=None, filename=None):
+            img = Image.open(filename)
+            print("Image was provided")
+            img_resized = img.resize((x, y), Image.ANTIALIAS)
+            new_filename = filedir + '\Image_scaled.jpg'
+            img_resized.save(new_filename, optimize=True, quality=95)
+            return new_filename
 
-	def segmentImage(self, x1, y1, x2, y2, img, num=5):
-		mask = np.zeros(img.shape[:2], np.uint8)
-		bgdModel = np.zeros((1, 65), np.float64)
-		fgdModel = np.zeros((1, 65), np.float64)
-		w = len(img[0])
-		h = len(img)
-		x = int(x1 * w)
-		y = int(y1 * h)
-		a = int(x2 * w)
-		b = int(y2 * h)
-		rect = (x, y, a, b)
-		cv2.grabCut(img, mask, rect, bgdModel, fgdModel, num, cv2.GC_INIT_WITH_RECT)
-		mask2 = np.where((mask == 2) | (mask == 0), 0, 1).astype('uint8')
-		img2 = img * mask2[:, :, np.newaxis]
-		cv2.imwrite(self.filedirectory + "/segmented_image.JPG", img2)
-		return img2, self.filedirectory + "/segmented_image.JPG"
+        def segmentImage(self, x1, y1, x2, y2, img, num=5):
+            mask = np.zeros(img.shape[:2], np.uint8)
+            bgdModel = np.zeros((1, 65), np.float64)
+            fgdModel = np.zeros((1, 65), np.float64)
+            w = len(img[0])
+            h = len(img)
+            x = int(x1 * w)
+            y = int(y1 * h)
+            a = int(x2 * w)
+            b = int(y2 * h)
+            rect = (x, y, a, b)
+            cv2.grabCut(img, mask, rect, bgdModel, fgdModel, num, cv2.GC_INIT_WITH_RECT)
+            mask2 = np.where((mask == 2) | (mask == 0), 0, 1).astype('uint8')
+            img2 = img * mask2[:, :, np.newaxis]
+            cv2.imwrite(self.filedirectory + "/segmented_image.JPG", img2)
+            return img2, self.filedirectory + "/segmented_image.JPG"
 
 
 
