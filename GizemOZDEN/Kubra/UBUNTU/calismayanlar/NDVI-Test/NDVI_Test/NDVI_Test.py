@@ -4,6 +4,7 @@ import glob
 from skimage import data, io
 from skimage import color
 import matplotlib.pyplot as plt
+from termcolor import colored
 
 
 # Lets set the directory to where we're saving the new images.
@@ -11,9 +12,9 @@ import matplotlib.pyplot as plt
 
 # Load in all the NIR and RGB image file names
 #nirImgs = glob.glob("..\\DB\\*_nir.jpg")
-nirImgs = glob.glob("DB/*_nir.jpg")
+nirImgs = glob.glob("../DB/*_nir.jpg")
 #rgbImgs = glob.glob("..\\DB\\*_rgb.jpg")
-rgbImgs = glob.glob("DB/*_rgb.jpg")
+rgbImgs = glob.glob("../DB/*_rgb.jpg")
 # Used for tinting images green
 greenMultiplier = [0, 1, 0]
 
@@ -24,7 +25,12 @@ for i in range(0, len(nirImgs)):
     rgbImg = io.imread(str(rgbImgs[i]))
     nirImg = io.imread(str(nirImgs[i]))
     # Calculate NDVI [(NIR - VIS) / (NIR + VIS)]
-    ndviImg = (nirImg - rgbImg[:,:, 0]) / (nirImg + rgbImg[:,:, 0])
+    #print("hoop")
+    print("rgbImg {}".format(colored(rgbImg.shape, "yellow")))
+    print("nirImg {}".format(colored(nirImg.shape, "yellow")))
+    #ndviImg = (nirImg - rgbImg[:,:, 0]) / (nirImg + rgbImg[:,:, 0])
+    ndviImg = (nirImg - rgbImg.shape[0:2]) / (nirImg + rgbImg.shape[0:2])
+    print("ndviImg: {}".format(colored(ndviImg, "red")))
     # Make sure values are thresholded.
     ndviImg[ndviImg > 1] = 1
     ndviImg[ndviImg < -1] = -1

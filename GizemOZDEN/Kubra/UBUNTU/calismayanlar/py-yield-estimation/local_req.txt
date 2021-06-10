@@ -1,2 +1,0 @@
-rio_tiler
-sat-search
