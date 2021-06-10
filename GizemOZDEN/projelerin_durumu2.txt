@@ -1,0 +1,34 @@
+.
+├── Gizem
+│   ├── RASP
+│   │   └── NDVI
+│   │       └── NDVI
+│   └── UBUNTU
+│       ├── calisanlar
+│       │   ├── PlantHealth
+│       │   ├── PyGdal_batch_NDVI
+│       │   └── SAR2NDVI_CNN
+
+│       ├── calismayanlar
+│       │   └── NDVI-for-Large-Raster-Python
+│       └── muallak
+│           ├── GSV_NDVI_Comparison
+│           └── ndvi_superresolution
+└── Kubra
+    ├── RASP
+    │   └── Raspberry-pi-NDVI
+    └── UBUNTU
+        ├── calisanlar
+        │   ├── Crop-lines-system
+        │   ├── Image-VideoSegmentationinNIRforPlantDetection
+        │   ├── multispectral-image-processing
+        │   └── NDVI-analizi-Django-project
+
+        ├── calismayanlar
+        │   ├── NDVI_GNDVI_ImageProcessing
+        │   ├── NDVI-Test
+        │   └── ndvi_automation
+        └── muallak
+            └── py-yield-estimation
+
+120 directories
