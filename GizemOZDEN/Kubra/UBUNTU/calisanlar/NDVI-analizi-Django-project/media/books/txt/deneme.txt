@@ -1,9 +1,0 @@
-Dosya adý::[['S2A_MSIL2A_20191219T090401_N0213_R007_T35TPE_20191220T135408'
-Uydu adý: Satellite: Sentinel-2
-Dosya boyutu: Size: 943.77 MB'
-Çekim tarihi: Timestamp('2019-12-19 09:04:01.024000')
-Orbit numarasý: 23456
-Bulut yüzdesi: 14.012882
-vejetasyon yüzdesi: 29.379436
-su yüzdesi: 12.595308
-not vejetasyon yüzdesi: 18.366854
