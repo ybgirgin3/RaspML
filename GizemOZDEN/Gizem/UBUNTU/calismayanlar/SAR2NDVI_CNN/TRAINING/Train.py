@@ -123,8 +123,8 @@ def main(data_folder, output_folder, identifier, num_epochs=1500):
 
 if __name__ == '__main__':
     kwargs = {}
-    kwargs['data_folder'] = '/DATASET/'
-    kwargs['output_folder'] = '/MODEL/'
+    kwargs['data_folder'] = '../DATASET/'
+    kwargs['output_folder'] = '../MODEL/'
     kwargs['identifier'] = 'OPTI'
     kwargs['n_epochs'] = 10
     main(kwargs['data_folder'], kwargs['output_folder'], kwargs['identifier'], kwargs['n_epochs'])
