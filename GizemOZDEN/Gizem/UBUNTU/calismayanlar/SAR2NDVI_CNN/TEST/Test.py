@@ -53,9 +53,9 @@ def main(data_folder, model_folder, output_folder, identifier):
 
 if __name__ == '__main__':
     kwargs = {}
-    kwargs['data_folder'] = './DATASET/'
-    kwargs['model_folder'] = './MODEL/'
-    kwargs['output_folder'] = './IMAGES/'
+    kwargs['data_folder'] = '../DATASET/'
+    kwargs['model_folder'] = '../MODEL/'
+    kwargs['output_folder'] = '../IMAGES/'
     kwargs['identifier'] = 'OPTII'
     main(kwargs['data_folder'], kwargs['model_folder'], kwargs['output_folder'], kwargs['identifier'])
 

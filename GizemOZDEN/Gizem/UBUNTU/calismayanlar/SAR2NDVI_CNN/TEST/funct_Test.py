@@ -4,7 +4,7 @@ import os
 
 import numpy as np
 import lasagne
-import osgeo as gdal
+from osgeo import gdal
 
 
 def load_input(path,identity,num):
