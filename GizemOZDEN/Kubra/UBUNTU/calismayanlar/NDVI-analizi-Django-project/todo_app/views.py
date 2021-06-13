@@ -15,9 +15,10 @@ from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
 # Create your views here.
 def index(request):
     return HttpResponse("index sayfam")
+
 def deneme(request):
-    file_path = ('media\\books\\txt\\deneme.txt')   #full path to text.
-    data_file = open(file_path , 'r')       
+    file_path = ('media/books/txt/deneme.txt')   #full path to text.
+    data_file = open(file_path , 'r')
     data = data_file.read()
     data=list(data.split("\n"))
     context = {'deneme': data}
@@ -25,8 +26,10 @@ def deneme(request):
 
 def anaSayfa(request):
     return render(request,"todo_app/index.html")
+
 def main(request):
     return render(request,"todo_app/base.html")
+
 def ndviolustur(request):
     context = {}
     name=""
@@ -38,13 +41,13 @@ def ndviolustur(request):
         context["url"]=fs.url(name)
         print(name)
     return render(request,"todo_app/ndviolustur.html",context)
+
 def ndvihesaplama(request):
     api = SentinelAPI('flavves', 'BATUhan123.', 'https://scihub.copernicus.eu/dhus')
     footprint = geojson_to_wkt(read_geojson('media/map.geojson'))
     products = api.query(footprint,
                         date=('20191219', date(2019, 12, 29)),
                         platformname='Sentinel-2')
-    
     # pandas dataframe yap
     products_df = api.to_dataframe(products)
 
@@ -54,7 +57,6 @@ def ndvihesaplama(request):
 
 
 
-        
     df=products_df_sorted
     NotDefteriKaydi = df.values.tolist()
     str_denemesi=str(NotDefteriKaydi)
@@ -63,8 +65,9 @@ def ndvihesaplama(request):
     yerler=[0,7,8,9,12,14,18,19,20]
     isimler=["Dosya adı:","Uydu adı","Dosya boyutu","Çekim tarihi","Orbit numarası","Bulut","vejetasyon","su","not vejetasyon"]
     i=0
+
     with open("media/books/txt/deneme.txt", "w") as dosya:
-        for sira in yerler:   
+        for sira in yerler:
             print(isimler[i]+":"+Kaydetmeye_basla[sira])
             yaz=(isimler[i]+":"+Kaydetmeye_basla[sira])
             i=i+1
@@ -72,8 +75,8 @@ def ndvihesaplama(request):
             dosya.write("\n")
     dosya.close()
 
-    file_path = ('media\\books\\txt\\deneme.txt')   #full path to text.
-    data_file = open(file_path , 'r')       
+    file_path = ('media/books/txt/deneme.txt')   #full path to text.
+    data_file = open(file_path , 'r')
     data = data_file.read()
     data=list(data.split("\n"))
     context = {'deneme': data}
@@ -84,7 +87,7 @@ def ndvihesaplama(request):
 def book_list(request):
     books = Book.objects.all()
     return render(request,"todo_app/book_list.html",{"books": books})
-    
+
 def upload_book(request):
     if request.method == "POST":
         form = BookForm(request.POST, request.FILES)
