@@ -2,6 +2,7 @@ import os.path
 from osgeo import gdal
 from osgeo.gdalconst import *
 import numpy as np
+from show_image import show_image
 
 if __name__ == '__main__':
     import argparse
@@ -18,7 +19,6 @@ if __name__ == '__main__':
     block_size = int(args.block)
     redband_num = int(args.redband)
     NIRband_num = int(args.NIRband)
-    args = parser.parse_args()
 
     input_file = args.i
     output_file = args.o
@@ -36,16 +36,13 @@ if __name__ == '__main__':
     # output parameters
     format_ = "GTiff"
     driver = gdal.GetDriverByName(format_)
-    dst_data = driver.Create(output_file, x_size, y_size, 1, gdal.GDT_Float32)
+    dst_data = driver.Create(output_file, x_size, y_size, 1, gdal.GDT_Byte)
     dst_data.SetGeoTransform(data.GetGeoTransform())
     dst_data.SetProjection(data.GetProjection())
 
     for i in range(0, y_size, block_size):
-
         rows = block_size if i + block_size < y_size else y_size - i
-
         for j in range(0, x_size, block_size):
-
             cols = block_size if j + block_size < x_size else x_size - j
 
             # extract block out of the whole raster
@@ -58,6 +55,11 @@ if __name__ == '__main__':
             # calculate
             ndvi_arr = (nir_arr - red_arr) / (nir_arr + red_arr)
             dst_data.GetRasterBand(1).WriteArray(ndvi_arr, j, i)
+
+    dst_data = None
+    show_image(output_file, red_arr, nir_arr)
+
+
 
 
 
