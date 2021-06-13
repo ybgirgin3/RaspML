@@ -33,13 +33,11 @@ def main(data_folder, output_folder, identifier, num_epochs=1500):
     k_1 = 9  # receptive field side - layer 1
     k_2 = 5  # receptive field side - layer 2
     k_3 = 5  # receptive field side - layer 3
-    
     r = ((k_1 - 1) + (k_2 - 1) + (k_3 - 1)) / 2
     ########################################################
 
         # Load the dataset
     print("Loading data...")
-    
     num = 1
     X_train, y_train, X_val, y_val = load_dataset(data_folder, ps, r, identifier,num) 
 
@@ -48,14 +46,11 @@ def main(data_folder, output_folder, identifier, num_epochs=1500):
     input_var = T.tensor4('inputs')
     target_var = T.tensor4('targets') 
 
-    
     # Model building
     print("Building model and compiling functions...")
     network = build_cnn(input_var,X_train.shape[1])
-    
     # Create loss for training
     prediction = lasagne.layers.get_output(network)
-    
     loss = abs(prediction-target_var)
     loss = loss.mean()
     # We could add some weight decay as well here, see lasagne.regularization.
@@ -65,7 +60,6 @@ def main(data_folder, output_folder, identifier, num_epochs=1500):
     params = lasagne.layers.get_all_params(network, trainable=True)
     l_rate = T.scalar('learn_rate','float32')
     updates = lasagne.updates.momentum(loss, params, l_rate, momentum=0.9)
-    
     # Create a loss expression for validation/testing. The crucial difference here is
     # that we do a deterministic forward pass through the network, disabling dropout layers.
     test_prediction = lasagne.layers.get_output(network, deterministic=True)
@@ -78,7 +72,6 @@ def main(data_folder, output_folder, identifier, num_epochs=1500):
 
     # Compile a second function computing the validation loss and accuracy:
     val_fn = theano.function([input_var, target_var], test_loss)  
-    
     # Finally, launch the tcraining loop.
     print("Starting training...")
     train_loss_curve = []
@@ -107,9 +100,7 @@ def main(data_folder, output_folder, identifier, num_epochs=1500):
 
             # Then we print the results for this epoch:
 
-        
         print("Epoch {} of {} took {:.3f}s".format(epoch + 1, num_epochs, time.time() - start_time))
-        
         t = train_err / train_batches
         v = val_err / val_batches
         print("  training loss:\t\t{:.10f}".format(t))
@@ -124,14 +115,12 @@ def main(data_folder, output_folder, identifier, num_epochs=1500):
 
 
 
-        get_param_fn = theano.function([], params)        
+        get_param_fn = theano.function([], params)
         suffix = '_ID'+identifier+'_date_'+str(num)
         sio.savemat(output_folder+'loss'+suffix+'.mat',
                     {'train_loss': np.asarray(train_loss_curve), 'val_loss': np.asarray(val_loss_curve)})
-                    
         np.savez(output_folder+'model'+suffix+'.npz', *get_param_fn())
-        
- 
+
 if __name__ == '__main__':
     kwargs = {}
     kwargs['data_folder'] = '/DATASET/'

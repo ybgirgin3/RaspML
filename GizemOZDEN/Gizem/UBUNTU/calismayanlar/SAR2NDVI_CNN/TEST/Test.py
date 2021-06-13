@@ -28,11 +28,9 @@ def main(data_folder, model_folder, output_folder, identifier):
     print("Loading data...")
     num = 1
     x = load_input(data_folder,identifier,num)
-    
     # Prepare Theano variables for inputs and targets
     input_var = T.tensor4('inputs')
     prediction = T.tensor4('targets') 
-    
     # Model building
     print("Building model and compiling functions...")
     network = build_cnn(input_var,x.shape[1])
@@ -41,18 +39,12 @@ def main(data_folder, model_folder, output_folder, identifier):
         param_values = [g['arr_%d' % i] for i in range(len(g.files))]
     lasagne.layers.set_all_param_values(network, param_values)
 
-     
     prediction = lasagne.layers.get_output(network, deterministic=True)
-    
-    
     # Compile a function performing a training step on a mini-batch (by giving
     # the updates dictionary) and returning the corresponding training loss:
     test_fn = theano.function([input_var], prediction)#, allow_input_downcast=True)#,n0]
     pred_err = test_fn(x)
     ndvi1 = pred_err[0,0,:,:]
-    
-    
-    
     im = output_folder + identifier + '_NDVI_PRED.tif'
     ndvi1_array = np.asarray(ndvi1)
     ndvi1_array = Image.fromarray(ndvi1_array, mode='F')
