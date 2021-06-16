@@ -24,3 +24,14 @@ KUBRA HANIM:
 
 
 
+GİZEM HANIM:
+===================
+1- Gizem/UBUNTU/calismayanlar/NDVI-for-Large-Raster-Python
+  proje çıktı olarak siyah bir ekran veriyor, içeriğindeki tüm satırları internetten araştırdım kullanılan kütüphaneyi ve nasıl kullanıldığını da araştırdım fakat kıyaslamalarıma rağmen girdi olarak aldığı tif dosyası ne içeriyor olursa olsun siyah bir çıktı veriyor. bakarak tekrardan yazmayı denedim python ile yazılmış olduğundan belki girinti kısımlarında bir sıkıntı vardır diye ama maalesef ondan da bir verim alamadım.
+  benim yazdığım modülleri proje içinde görebilirsiniz. fark edilmelerini kolaylaştırmak için isimlerini berkay olarak koydum
+
+2- Gizem/UBUNTU/calismayanlar/SAR2NDVI_CNN
+  hata çıktılar dosya içerisinde png olarak yazıyor ordan kontrol edebilirsiniz.
+  train kısmını çalıştırmadan test kısmını çalıştıramıyorum, train kısmını çalıştırdığım zaman matris hatası veriyor
+  train kısmını colab üzerinde denedim onda da paketler yüklenmiyor
+

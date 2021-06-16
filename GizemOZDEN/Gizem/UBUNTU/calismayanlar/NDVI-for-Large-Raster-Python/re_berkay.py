@@ -2,7 +2,8 @@ from osgeo import gdal
 from osgeo.gdalconst import *
 
 # open image
-filen = 'land_shallow_topo_2048.tif'
+filen = 'images/land_shallow_topo_2048.tif'
+fileo = "images/berkay.tif"
 #block = 500
 #redband = 1
 dataset = gdal.Open(filen, gdal.GA_ReadOnly)
@@ -27,10 +28,8 @@ if geotransform:
     print("Origin = ({}, {})".format(geotransform[0], geotransform[3]))
     print("Pixel Size = ({}, {})".format(geotransform[1], geotransform[5]))
 
-"""
 band = dataset.GetRasterBand(1)
 print("Band Type={}".format(gdal.GetDataTypeName(band.DataType)))
-"""
 
 
 min = band.GetMinimum()
@@ -60,7 +59,7 @@ if metadata.get(gdal.DCAP_CREATECOPY) == "YES":
 red_band = dataset.GetRasterBand(1)
 nir_band = dataset.GetRasterBand(2)
 
-drv = driver.Create(output_file, x_size, y_size, gdal.GDT_Byte)
-drv.SetGeoTransform(dataset.GeoGeoTransform())
+drv = driver.Create(fileo, x_size, y_size, gdal.GDT_Byte)
+#drv.SetGeoTransform(dataset.GeoGeoTransform())
 drv.SetProjection(dataset.GetProjection())
 
