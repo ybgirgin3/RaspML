@@ -37,24 +37,25 @@ import sys, struct
 
 import osgeo.gdal as gdal
 
+
 dataset = gdal.Open(r'indicies/red.tif', gdal.GA_ReadOnly)
 print(dataset.GetProjection())
-# band = dataset.GetRasterBand(1)
-# scanline = band.ReadRaster(0, 948, band.XSize, 1, band.XSize, 1, gdal.GDT_Float32)
-# Unpack the line of data to be read as floating point data
-# t = struct.unpack('f' * band.XSize, scanline)
-# print(t)
+band = dataset.GetRasterBand(1)
+scanline = band.ReadRaster(0, 948, band.XSize, 1, band.XSize, 1, gdal.GDT_Float32)
+#Unpack the line of data to be read as floating point data
+t = struct.unpack('f' * band.XSize, scanline)
+print(t)
 
-# imsave('temp.tif', np.random.rand(3, 4, 301, 219))
-# im = imread('temp.tif', key=0)
-# print(im.shape)
+imsave('temp.tif', np.random.rand(3, 4, 301, 219))
+im = imread('temp.tif', key=0)
+print(im.shape)
 
 
-# red = imread('red.tif')
-# red = red[..., 0]
-# print(red[900, 900])
-# print(red.shape)
-# imsave('template.jpg', red)
+red = imread('red.tif')
+red = red[..., 0]
+print(red[900, 900])
+print(red.shape)
+imsave('template.jpg', red)
 
-# redjpg = imread('template.jpg')
-# print(redjpg.shape)
+redjpg = imread('template.jpg')
+print(redjpg.shape)

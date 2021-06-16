@@ -345,9 +345,10 @@ def measuredistance(imgs,imgo,filedir,filename):
 #Image Processing : END
 #Start of calling methods
 
-filedir = input("Enter the file directory \n")
-files = os.chdir(filedir)
-files = os.listdir(filedir)
+#print(os.getcwd())
+filedir = input("Enter the file directory: ")
+#files = os.chdir(filedir)
+files = os.listdir(os.path.join(os.getcwd(), filedir))
 print("Before sorting", files)
 files.sort()
 print("after sorting", files)

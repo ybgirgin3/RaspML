@@ -37,16 +37,6 @@ def passImage(image):
     else: return False
 
 
-def NDVI(nir, rgb):
-    # Calculate NDVI [(NIR - VIS) / (NIR + VIS)]
-    if nir.shape[0] > rgb.shape[1]:
-        ndvi = (nirImg[:, None] - rgbImg[None, :]) / (nirImg[:, None] + rgbImg[None, :])
-    else:
-        #ndvi = (rgbImg - nirImg) / (nirImg + rgbImg)
-        ndvi = (nirImg[None, :] - rgbImg[:, None]) / (nirImg[None, :] + rgbImg[:, None])
-
-    return ndvi
-
 for i in range(0, len(nirImgs)):
     # Load the next image pair from the set
     rgbImg = io.imread(str(rgbImgs[i]))
@@ -54,20 +44,23 @@ for i in range(0, len(nirImgs)):
 
     # control images
     if passImage(rgbImg) and passImage(nirImg):
-        # print image shapes
-        rgbImg = rgbImg[:,:, 0].T
-        nirImg = nirImg
-        print("nirImg {}".format(colored(nirImg.shape, "yellow")))
-        print("rgbImg {}".format(colored(rgbImg.shape, "yellow")))
-
-        # calculate
-        ndvi = NDVI(nirImg, rgbImg)
-        print(ndvi)
-
-
-
-
+        # Calculate NDVI [(NIR - VIS) / (NIR + VIS)]
+        print("rgbImg {}".format(colored(rgbImg[:,:, 0].shape, "yellow")))
+        print("nirImg {}".format(colored(nirImg.T.shape, "yellow")))
     else: bad_image_counter += 1
+
+
+
+    """
+    # Calculate NDVI [(NIR - VIS) / (NIR + VIS)]
+    #print("hoop")
+    #new_c = [[0],[0]]
+    #nirImg = np.append(nirImg, new_c, axis=0)
+    print("nirImg {}".format(colored(nirImg.shape, "yellow")))
+    #print(nirImg.shape[1])
+    print()
+    print("rgbImg {}".format(colored(rgbImg.shape, "yellow")))
+    """
 
 
     """

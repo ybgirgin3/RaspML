@@ -1,0 +1,26 @@
+KUBRA HANIM:
+================
+1- Kubra/UBUNTU/calismayanlar/NDVI-Test
+  bu proje üzerinden matris uyuşmazlığı vardı, bunu ortadan kaldırmak için;
+    iki farklı fonksiyon yazıldı. bir tanesi matris toplamlarındaki uyuşmazlığı gidermek için
+    diğer ndvi hesaplaması yaparken ki yine matris indis uyuşmazlığını gidermek için fakat başarılı olunamadı
+
+
+2- Kubra/UBUNTU/calismayanlar/NDVI_GNDVI_ImageProcessing
+  proje dataseti gerektiriyor, bir klasör oluşturup içine birkaç tane de resim yüklediğimiz zaman da "raw image değil" hatası veriyor. raw image'ın da tam olarak ne olduğundan projede bahsedilmiyor. 
+  oluşturduğu klasörlerde boş
+
+
+3- /Kubra/UBUNTU/calismayanlar/ndvi_automation
+  red tif isimli bir resim arıyordu onu da buldum fakat çıktı vermiyor
+
+
+4- Kubra/UBUNTU/calismayanlar/NDVI-analizi-Django-project
+  sentinel hub diye bir sitede hesap açmak gerekiyor fakat sitede hesap açma yeri yok
+  projenin içinde saçma kelimeleri kullanılmış;
+    kappa burada
+    adana, badana
+    gibi anlamsız ve proje içinde kullanmayan birçok şey var onlar içinden asıl işi yapan kısımları ayırt edemiyorum
+
+
+
