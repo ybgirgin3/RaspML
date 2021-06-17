@@ -48,7 +48,7 @@ Gizem
   
   sıkıntı: proje dataset diye bir klasör arıyor ama repo içinde dataset yok
 
-12- (RASPBERRY) https://github.com/stackpointers/NDVI/tree/master/NDVI:
+[ + ] 12- (RASPBERRY) https://github.com/stackpointers/NDVI/tree/master/NDVI:
   readme dosyasında program ile ilgili nasıl çalışacak şekliden tüm detayları vermiş çok karmaşık bir görüntüsü yok çalışır
 
 [-] 13- https://github.com/Weixing-Zhang/NDVI-for-Large-Raster-Python:
@@ -63,7 +63,7 @@ Gizem
 [+] 15- https://github.com/eokeeffe/PlantHealth:
   modüller içinde kullanılan harici resim yok repo eksiksiz gibi duruyor. çalışabilir
 
-16- (RASPBERRY) https://github.com/rubenmak/raspberry-pi-ndvi-plant-analysis:
+[+]16- (RASPBERRY) https://github.com/rubenmak/raspberry-pi-ndvi-plant-analysis:
   tek modül ve raspberry pi üzerinden çalışacak sıkıntı yok 
 
 [?] 17- https://github.com/caseyagraff/ndvi_superresolution:
