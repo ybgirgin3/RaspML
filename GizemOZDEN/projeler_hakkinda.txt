@@ -32,7 +32,7 @@ Kübra:
 [+] 7- https://github.com/tarnetintern/NDVI-analizi-Django-project:
   bu bir websitesi projesi websiteyi çalıştırma kısmında sıkıntı yok arkaplanda çalışacak ve asıl NDVI işlemini yapacak kısmı üzerinden duruma göre çalışma gerektirebilir
 
-8-(RASPBERRY)  https://github.com/YomYoAgrculturalTrading/Raspberry-pi-NDVI:
+[+] 8-(RASPBERRY)  https://github.com/YomYoAgrculturalTrading/Raspberry-pi-NDVI:
   Raspberry pi üzerinden çalışacak olan bir proje tek modülden oluşuyor temel olarak opencv kullanılmış opencv hataları olursa giderilmesi basit olur diye tahmin ediyorum
 
 [+]9- https://github.com/jbhewitt12/Crop-lines-system:
@@ -70,7 +70,7 @@ Gizem
   terminal arayüzü ve pytorch kullanmış, genelde version sıkıntısı çıkıyor bu paketlerde eğer sıkıntı çıkabilir ama çözülüp çözülemeyeceğinin garantisi yok malesef
   Sıkıntı: çalışıyor eğitim kısımları vs var içlerinde bu yüzden colab üzerinden denemek mantıklı
 
-18-(RASPBERRY)  https://github.com/johnjsb/ndvi-algorithm-for-raspberry-pi:
+[+] 18-(RASPBERRY)  https://github.com/johnjsb/ndvi-algorithm-for-raspberry-pi:
   hem python hem cpp ile yazılmış python2.7 ile yazılmış yine sıkıntı çıkarsa bundan çıkabilir
 
 NOTE: 
