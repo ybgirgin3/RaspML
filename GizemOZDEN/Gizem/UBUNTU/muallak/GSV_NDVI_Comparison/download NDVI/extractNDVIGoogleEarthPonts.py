@@ -330,7 +330,7 @@ def main():
                 for fileName in os.listdir(tempCSVFolder):
                     os.remove(tempCSVFolder + fileName)
         except Exception as e:
-            print str(e)
+            print(str(e))
     print("the end")
 main()
 

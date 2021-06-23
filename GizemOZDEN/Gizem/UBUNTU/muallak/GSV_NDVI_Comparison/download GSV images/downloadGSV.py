@@ -14,7 +14,8 @@ import csv
 
 ########### define filepaths and constants #########
 countyNumber = "53059"  # for folder organization purposes
-folder = os.path.dirname(sys.argv[0]) + "/"
+#folder = os.path.dirname(sys.argv[0]) + "/"
+folder = 'folder/'
 countyFolder = folder + "panoramaImages/County" + countyNumber + "/"
 metaData = folder + "GoogleImageMetaData/textFolder/C" + countyNumber + ".txt"
 outputCSV = folder + "GoogleImageMetaData/csvFolder/C" + countyNumber + ".csv"
@@ -100,7 +101,8 @@ def processPanoramaInfo(inputFile):
 #   csvArray (string) - data to be written
 #   tempFileName (string) - name, including full filepath, of csv file to write
 def writeCSVArray(csvArray,tempFileName):
-    a = open(tempFileName, 'wb')
+    #a = open(tempFileName, 'wb')
+    a = open(tempFileName, 'w')
     columnIndex = 0
     rowIndex = 0
     a.write("panId, panDate, panLat, panLong \n")
@@ -126,18 +128,19 @@ def readPanCSV(inputCSV):
             for (k,v) in row.items(): # go over each column name and value 
                 if(k == "panId"): # if the variable name is in the list of variables in linkWebDict (variables we want to keep)
                     csvArray.append(v)
-        del reader, row
+        #del reader, row
         return(csvArray)       
     print("completed reading CSV")
 
 ############ main function #########
 
-def main():
-    csvArray = processPanoramaInfo(metaData,countyFolder)
-    writeCSVArray(csvArray,outputCSV)
-    panIds = readPanCSV(outputCSV)
-    downloadBatchPanoramas(panIds)
-    print("completed main function")
-    
+#def main():
+csvArray = processPanoramaInfo(metaData)#,countyFolder)
+writeCSVArray(csvArray,outputCSV)
+panIds = readPanCSV(outputCSV)
+downloadBatchPanoramas(panIds)
+print("completed main function")
+
+#main()
 
 ### end of downloadGSV.py ###
