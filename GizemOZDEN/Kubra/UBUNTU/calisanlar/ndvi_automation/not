@@ -1,0 +1,7 @@
+# eski
+  red.tiff adından bir belgeye ihtiyaç duyuyor
+  işlemlerin hepsinde de bu belgeye ihtiyaç duyuyor
+
+# yeni
+  bulunan red.tiff dosyasını kullanarak scanline denen bir işlem yapmaya çalışıyor fakat scanline bir değer dönmüyor malesef
+
