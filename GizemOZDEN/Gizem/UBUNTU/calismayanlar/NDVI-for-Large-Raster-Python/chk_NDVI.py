@@ -25,13 +25,10 @@ import os.path
 from osgeo import gdal
 from osgeo.gdalconst import *
 import numpy as np
-import sys
-
 from show_image import show_image
 
 if __name__ == '__main__':
     # ___________________________Arguments___________________________
-    """
     import argparse
     # Parse command line arguments
     parser = argparse.ArgumentParser(
@@ -52,21 +49,15 @@ if __name__ == '__main__':
     parser.add_argument('-o', required=True,
                         help='Directory of output raster dataset')
     args = parser.parse_args()
-    """
 
     # other parameters
-    #block_size = int(args.block)     # Size of processing block by pixel
-    block_size = 5000
-    #redband_num = int(args.redband)  # Order of red band in input raster
-    redband_num = 1
-    #NIRband_num = int(args.NIRband)  # Order of NIR band in input raster
-    NIRband_num = 1
+    block_size = int(args.block)     # Size of processing block by pixel
+    redband_num = int(args.redband)  # Order of red band in input raster
+    NIRband_num = int(args.NIRband)  # Order of NIR band in input raster
 
     # direcotries of input and output rasters 
-    #inputRaster_path = args.i        # Direcotry of input
-    inputRaster_path = sys.argv[1]
-    #outputRaster_path = args.o       # Direcotry of output
-    outputRaster_path = sys.argv[2]
+    inputRaster_path = args.i        # Direcotry of input
+    outputRaster_path = args.o       # Direcotry of output
 
     """
     Or you can make your own parameters and input and output directory
@@ -88,11 +79,6 @@ if __name__ == '__main__':
 
     # read as raster 
     redband_raster = ds.GetRasterBand(redband_num)
-    print("Band Type={}".format(gdal.GetDataTypeName(redband_raster.DataType)))
-
-    #if redband_raster.GetRasterColorTable():
-    print("Band has a color table with {} entries".format(redband_raster.GetRasterColorTable().GetCount()))
-
     nirband_raster = ds.GetRasterBand(NIRband_num)
 
     # output parameters
@@ -129,7 +115,8 @@ if __name__ == '__main__':
             dst_ds.GetRasterBand(1).WriteArray(ndvi_array, j, i) 
 
 
+    #show image
+    show_image(outputRaster_path, red_array, nir_array)
     # program ends
     dst_ds = None
-    show_image(outputRaster_path, red_array, nir_array)
 

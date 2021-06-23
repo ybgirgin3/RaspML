@@ -1,68 +1,68 @@
-import os.path
 from osgeo import gdal
 from osgeo.gdalconst import *
-import numpy as np
-from show_image import show_image
+import sys
 
-if __name__ == '__main__':
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-block', required=True)
-    parser.add_argument('-redband', required=True)
-    parser.add_argument('-NIRband', required=True)
-    parser.add_argument('-i', required=True)
-    parser.add_argument('-o', required=True)
+# open image
+#filen = 'images/land_shallow_topo_2048.tif'
+#fileo = "images/berkay.tif"
+filen = sys.argv[1]
+fileo = sys.argv[2]
+#block = 500
+#redband = 1
+dataset = gdal.Open(filen, gdal.GA_ReadOnly)
 
-    args = parser.parse_args()
+# get sizes
+x_size = dataset.RasterXSize
+y_size = dataset.RasterYSize
+n_bands = dataset.RasterCount
 
-    # sizes
-    block_size = int(args.block)
-    redband_num = int(args.redband)
-    NIRband_num = int(args.NIRband)
+print("Driver: {}/{}".format(dataset.GetDriver().ShortName,
+                            dataset.GetDriver().LongName))
 
-    input_file = args.i
-    output_file = args.o
+print("Size is {} x {} x {}".format(dataset.RasterXSize,
+                                    dataset.RasterYSize,
+                                    dataset.RasterCount))
 
-    # get input file
-    data = gdal.Open(input_file, GA_ReadOnly)
-    x_size = data.RasterXSize
-    y_size = data.RasterYSize
-    nbands = data.RasterCount
+print("Projection is {}".format(dataset.GetProjection()))
 
-    # read as gaster
-    redband = data.GetRasterBand(redband_num)
-    nirband = data.GetRasterBand(NIRband_num)
+geotransform = dataset.GetGeoTransform()
 
-    # output parameters
-    format_ = "GTiff"
-    driver = gdal.GetDriverByName(format_)
-    dst_data = driver.Create(output_file, x_size, y_size, 1, gdal.GDT_Byte)
-    dst_data.SetGeoTransform(data.GetGeoTransform())
-    dst_data.SetProjection(data.GetProjection())
+if geotransform:
+    print("Origin = ({}, {})".format(geotransform[0], geotransform[3]))
+    print("Pixel Size = ({}, {})".format(geotransform[1], geotransform[5]))
 
-    for i in range(0, y_size, block_size):
-        rows = block_size if i + block_size < y_size else y_size - i
-        for j in range(0, x_size, block_size):
-            cols = block_size if j + block_size < x_size else x_size - j
-
-            # extract block out of the whole raster
-            red_arr = redband.ReadAsArray(j, i, cols, rows)
-            nir_arr = nirband.ReadAsArray(j, i, cols, rows)
-
-            # avoid zero situation
-            nir_arr = nir_arr + 0.00001
-
-            # calculate
-            ndvi_arr = (nir_arr - red_arr) / (nir_arr + red_arr)
-            dst_data.GetRasterBand(1).WriteArray(ndvi_arr, j, i)
-
-    dst_data = None
-    show_image(output_file, red_arr, nir_arr)
+band = dataset.GetRasterBand(1)
+print("Band Type={}".format(gdal.GetDataTypeName(band.DataType)))
 
 
+min = band.GetMinimum()
+max = band.GetMaximum()
+if not min or not max:
+    (min,max) = band.ComputeRasterMinMax(True)
+print("Min={:.3f}, Max={:.3f}".format(min,max))
 
+if band.GetRasterColorTable():
+    print("Band has a color table with {} entries".format(band.GetRasterColorTable().GetCount()))
 
+scanline = band.ReadRaster(xoff=0, yoff=0,
+                        xsize=band.XSize, ysize=1,
+                        buf_xsize=band.XSize, buf_ysize=1,
+                        buf_type=gdal.GDT_Float32)
 
+fileformat = "GTiff"
+driver = gdal.GetDriverByName(fileformat)
+metadata = driver.GetMetadata()
+if metadata.get(gdal.DCAP_CREATE) == "YES":
+    print("Driver {} supports Create() method.".format(fileformat))
 
+if metadata.get(gdal.DCAP_CREATECOPY) == "YES":
+    print("Driver {} supports CreateCopy() method.".format(fileformat))
 
+# işlemler
+red_band = dataset.GetRasterBand(1)
+nir_band = dataset.GetRasterBand(2)
+
+drv = driver.Create(fileo, x_size, y_size, gdal.GDT_Byte)
+#drv.SetGeoTransform(dataset.GeoGeoTransform())
+drv.SetProjection(dataset.GetProjection())
 
