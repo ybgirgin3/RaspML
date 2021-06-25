@@ -36,7 +36,6 @@ tempImage = ee.Image()
 
 
 
-
 ################ helper functions ##############
 
 

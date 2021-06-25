@@ -31,7 +31,6 @@ from show_image import show_image
 
 if __name__ == '__main__':
     # ___________________________Arguments___________________________
-    """
     import argparse
     # Parse command line arguments
     parser = argparse.ArgumentParser(
@@ -52,21 +51,21 @@ if __name__ == '__main__':
     parser.add_argument('-o', required=True,
                         help='Directory of output raster dataset')
     args = parser.parse_args()
-    """
 
     # other parameters
     #block_size = int(args.block)     # Size of processing block by pixel
-    block_size = 5000
-    #redband_num = int(args.redband)  # Order of red band in input raster
-    redband_num = 1
-    #NIRband_num = int(args.NIRband)  # Order of NIR band in input raster
-    NIRband_num = 1
+    #block_size = 5000
+    redband_num = int(args.redband)  # Order of red band in input raster
+    #redband_num = 1
+    NIRband_num = int(args.NIRband)  # Order of NIR band in input raster
+    #NIRband_num = 1
 
     # direcotries of input and output rasters 
-    #inputRaster_path = args.i        # Direcotry of input
-    inputRaster_path = sys.argv[1]
-    #outputRaster_path = args.o       # Direcotry of output
-    outputRaster_path = sys.argv[2]
+    inputRaster_path = args.i        # Direcotry of input
+    #inputRaster_path = sys.argv[1]
+    outputRaster_path = args.o       # Direcotry of output
+    #outputRaster_path = sys.argv[2]
+    #outputRaster_path = 'o.tif' 
 
     """
     Or you can make your own parameters and input and output directory
@@ -131,5 +130,5 @@ if __name__ == '__main__':
 
     # program ends
     dst_ds = None
-    show_image(outputRaster_path, red_array, nir_array)
+    #show_image(outputRaster_path, red_array, nir_array)
 

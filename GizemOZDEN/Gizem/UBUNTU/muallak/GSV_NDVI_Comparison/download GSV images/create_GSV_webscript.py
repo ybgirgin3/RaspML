@@ -14,12 +14,14 @@ import random
 
 
 ######## define constants ##########
-pathname = os.path.dirname(sys.argv[0]) + "/"
-topCSVFile = pathname + "get_PanID_Bottom_Half.txt"
-bottomCSVFile = pathname + "get_PanID_Bottom_Half.txt"
-tempFilename = pathname + "tempfile.txt"
-csvFile = pathname + "PortlandRoadFiles/csvFiles/tl_2015_53059_roads.csv"
-outputFile = pathname + "PortlandRoadFiles/completedWebScripts/county_53059.txt"
+#pathname = os.path.dirname(sys.argv[0]) + "/"
+topCSVFile = "get_PanID_Bottom_Half.txt"
+bottomCSVFile = "get_PanID_Bottom_Half.txt"
+tempFilename ="tempfile.txt"
+
+# bu alttaki csv için google earth engine kullanılacak
+csvFile = "PortlandRoadFiles/csvFiles/tl_2015_53059_roads.csv"
+outputFile = "PortlandRoadFiles/completedWebScripts/county_53059.txt"
 CSV_DICT = ["latitude","longitude"]
 defaultConstants = False
 
