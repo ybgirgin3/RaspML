@@ -7,7 +7,8 @@ from skimage.io import imread, imsave
 from skimage.draw import polygon
 import numpy as np
 
-src_img = r'IAWatson_E22_24___6_10_16smallplot_400ft.jpg'
+#src_img = r'IAWatson_E22_24___6_10_16smallplot_400ft.jpg'
+src_img = r'../template.jpg'
 
 
 def render(x, y, x_offset, y_offset, plot_x, plot_y, net_x, net_y, rownum, rangenum, angle_deg):
