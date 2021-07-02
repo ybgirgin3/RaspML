@@ -52,8 +52,12 @@ def render(x, y, x_offset, y_offset, plot_x, plot_y, net_x, net_y, rownum, range
             #     values.append(pixel.ndvi)
             # vals.append(sum(values)/len(values))
             value = 0
+            from termcolor import colored
             for pixel in image_new[rr, cc]:
-                value += sum(pixel)
+                print(f"{colored(pixel=, 'yellow')}")
+                print(f"{image_new[rr, cc]=}")
+                #value += sum(pixel)
+                value += np.sum(pixel)
             vals.append(value)
 
     # RGB sum normalisation

@@ -1,0 +1,25 @@
+Gizem:
+
+    SAR2NDVI_CNN:
+        eğitilmiş bir modele ihtiyaç duyuyor eğer model bulunamazsa eğitmek gerekecek o kısım içinde google colab en sağlıklı yöntem
+
+    ndvi_superresolution:
+        nasıl kullanılacağını anlamadım tam olarak, çalıştırma komutunu bir sürü argüman eklemiş proje sahibi ve bunları da click ile eklemiş ne eklediği gözükmüyor
+
+        
+kübra:
+    
+    NDVI_GNDVI_ImageProcessing:
+        - csv dosyaları yok çalışmıyor
+        - program çalıştırıldığı zaman bir dosyaya ihtiyaç duyuyor ne dosyası olduğu ile ilgili bir yazı veya yorum satırı yok
+        - resimler yok
+        - veriseti lazım
+             
+    NDVI-analizi-Django-project:
+        - api olarak bir site kullanıyor site üzerinden hesap açıldığı zaman ve kullanıcı adı ve şifresi girildiği zaman projeye "password unicode" hatası veriyor. projenin çalışmasında işe yarayan asıl kütüphanenin desteği bitmiş
+        
+    NDVI-Test:
+        - python dosyası içindeki nir ve rgb resimlerin matrisleri arasında indice uyuşmazlığı var. resimlerde sıkıntı olduğundan dolayı yapılan matris işlemleri de başarısız oluyor siyah bir çıktı alınıyor.
+        
+    py-yield-estimation:
+        - programı çalıştırmak için serverless denen bir harici program var onu kurdum bilgisayara fakat yine sitelerinde api çekerken hata veriyor projeler eski projeler olduğundan dolayı (en az 3 yıllık) destekleri de kesilmiş

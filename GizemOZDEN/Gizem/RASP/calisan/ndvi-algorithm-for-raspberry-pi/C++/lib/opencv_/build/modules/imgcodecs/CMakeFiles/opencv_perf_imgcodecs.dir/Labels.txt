@@ -1,0 +1,13 @@
+# Target labels
+ Main
+ opencv_imgcodecs
+ PerfTest
+# Source files and their labels
+/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv-master/modules/imgcodecs/perf/perf_main.cpp
+ Main
+ opencv_imgcodecs
+ PerfTest
+/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv-master/modules/imgcodecs/perf/perf_precomp.hpp
+ Main
+ opencv_imgcodecs
+ PerfTest

@@ -1,0 +1,17 @@
+# Target labels
+ Extra
+ opencv_line_descriptor
+ PerfTest
+# Source files and their labels
+/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/line_descriptor/perf/perf_main.cpp
+ Extra
+ opencv_line_descriptor
+ PerfTest
+/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/line_descriptor/perf/perf_matching.cpp
+ Extra
+ opencv_line_descriptor
+ PerfTest
+/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/line_descriptor/perf/perf_precomp.hpp
+ Extra
+ opencv_line_descriptor
+ PerfTest

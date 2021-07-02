@@ -1,0 +1,2057 @@
+.
+├── Gizem
+│   ├── not
+│   ├── RASP
+│   │   └── calisan
+│   │       ├── NDVI
+│   │       │   └── NDVI
+│   │       │       ├── input_file.jpg
+│   │       │       ├── NDVI.py
+│   │       │       ├── README.md
+│   │       │       ├── requirements.txt
+│   │       │       └── test.jpg
+│   │       ├── ndvi-algorithm-for-raspberry-pi
+│   │       │   ├── C++
+│   │       │   │   ├── lib
+│   │       │   │   │   ├── raspicam-0.1.3
+│   │       │   │   │   │   ├── build
+│   │       │   │   │   │   │   ├── CMakeCache.txt
+│   │       │   │   │   │   │   ├── CMakeFiles
+│   │       │   │   │   │   │   │   ├── 3.0.2
+│   │       │   │   │   │   │   │   │   ├── CMakeCCompiler.cmake
+│   │       │   │   │   │   │   │   │   ├── CMakeCXXCompiler.cmake
+│   │       │   │   │   │   │   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │       │   │   │   │   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │       │   │   │   │   │   │   │   ├── CMakeSystem.cmake
+│   │       │   │   │   │   │   │   │   ├── CompilerIdC
+│   │       │   │   │   │   │   │   │   │   ├── a.out
+│   │       │   │   │   │   │   │   │   │   └── CMakeCCompilerId.c
+│   │       │   │   │   │   │   │   │   └── CompilerIdCXX
+│   │       │   │   │   │   │   │   │       ├── a.out
+│   │       │   │   │   │   │   │   │       └── CMakeCXXCompilerId.cpp
+│   │       │   │   │   │   │   │   ├── cmake.check_cache
+│   │       │   │   │   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │       │   │   │   │   │   │   ├── CMakeOutput.log
+│   │       │   │   │   │   │   │   ├── CMakeRuleHashes.txt
+│   │       │   │   │   │   │   │   ├── Makefile2
+│   │       │   │   │   │   │   │   ├── Makefile.cmake
+│   │       │   │   │   │   │   │   ├── progress.marks
+│   │       │   │   │   │   │   │   ├── TargetDirectories.txt
+│   │       │   │   │   │   │   │   └── uninstall.dir
+│   │       │   │   │   │   │   │       ├── build.make
+│   │       │   │   │   │   │   │       ├── cmake_clean.cmake
+│   │       │   │   │   │   │   │       ├── DependInfo.cmake
+│   │       │   │   │   │   │   │       └── progress.make
+│   │       │   │   │   │   │   ├── cmake_install.cmake
+│   │       │   │   │   │   │   ├── cmake_uninstall.cmake
+│   │       │   │   │   │   │   ├── Findraspicam.cmake
+│   │       │   │   │   │   │   ├── install_manifest.txt
+│   │       │   │   │   │   │   ├── Makefile
+│   │       │   │   │   │   │   ├── raspicamConfig.cmake
+│   │       │   │   │   │   │   ├── src
+│   │       │   │   │   │   │   │   ├── CMakeFiles
+│   │       │   │   │   │   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │       │   │   │   │   │   │   │   ├── progress.marks
+│   │       │   │   │   │   │   │   │   ├── raspicam_cv.dir
+│   │       │   │   │   │   │   │   │   │   ├── build.make
+│   │       │   │   │   │   │   │   │   │   ├── cmake_clean.cmake
+│   │       │   │   │   │   │   │   │   │   ├── CXX.includecache
+│   │       │   │   │   │   │   │   │   │   ├── DependInfo.cmake
+│   │       │   │   │   │   │   │   │   │   ├── depend.internal
+│   │       │   │   │   │   │   │   │   │   ├── depend.make
+│   │       │   │   │   │   │   │   │   │   ├── flags.make
+│   │       │   │   │   │   │   │   │   │   ├── link.txt
+│   │       │   │   │   │   │   │   │   │   ├── progress.make
+│   │       │   │   │   │   │   │   │   │   ├── raspicam_cv.cpp.o
+│   │       │   │   │   │   │   │   │   │   └── raspicam_still_cv.cpp.o
+│   │       │   │   │   │   │   │   │   └── raspicam.dir
+│   │       │   │   │   │   │   │   │       ├── build.make
+│   │       │   │   │   │   │   │   │       ├── cmake_clean.cmake
+│   │       │   │   │   │   │   │   │       ├── CXX.includecache
+│   │       │   │   │   │   │   │   │       ├── DependInfo.cmake
+│   │       │   │   │   │   │   │   │       ├── depend.internal
+│   │       │   │   │   │   │   │   │       ├── depend.make
+│   │       │   │   │   │   │   │   │       ├── flags.make
+│   │       │   │   │   │   │   │   │       ├── link.txt
+│   │       │   │   │   │   │   │   │       ├── private
+│   │       │   │   │   │   │   │   │       │   ├── private_impl.cpp.o
+│   │       │   │   │   │   │   │   │       │   └── threadcondition.cpp.o
+│   │       │   │   │   │   │   │   │       ├── private_still
+│   │       │   │   │   │   │   │   │       │   └── private_still_impl.cpp.o
+│   │       │   │   │   │   │   │   │       ├── progress.make
+│   │       │   │   │   │   │   │   │       ├── raspicam.cpp.o
+│   │       │   │   │   │   │   │   │       └── raspicam_still.cpp.o
+│   │       │   │   │   │   │   │   ├── cmake_install.cmake
+│   │       │   │   │   │   │   │   ├── libraspicam_cv.so
+│   │       │   │   │   │   │   │   ├── libraspicam.so -> libraspicam.so.0.1
+│   │       │   │   │   │   │   │   ├── libraspicam.so.0.1
+│   │       │   │   │   │   │   │   ├── libraspicam.so.0.1.2
+│   │       │   │   │   │   │   │   └── Makefile
+│   │       │   │   │   │   │   └── utils
+│   │       │   │   │   │   │       ├── CMakeFiles
+│   │       │   │   │   │   │       │   ├── CMakeDirectoryInformation.cmake
+│   │       │   │   │   │   │       │   ├── progress.marks
+│   │       │   │   │   │   │       │   ├── raspicam_cv_still_test.dir
+│   │       │   │   │   │   │       │   │   ├── build.make
+│   │       │   │   │   │   │       │   │   ├── cmake_clean.cmake
+│   │       │   │   │   │   │       │   │   ├── CXX.includecache
+│   │       │   │   │   │   │       │   │   ├── DependInfo.cmake
+│   │       │   │   │   │   │       │   │   ├── depend.internal
+│   │       │   │   │   │   │       │   │   ├── depend.make
+│   │       │   │   │   │   │       │   │   ├── flags.make
+│   │       │   │   │   │   │       │   │   ├── link.txt
+│   │       │   │   │   │   │       │   │   ├── progress.make
+│   │       │   │   │   │   │       │   │   └── raspicam_cv_still_test.cpp.o
+│   │       │   │   │   │   │       │   ├── raspicam_cv_test.dir
+│   │       │   │   │   │   │       │   │   ├── build.make
+│   │       │   │   │   │   │       │   │   ├── cmake_clean.cmake
+│   │       │   │   │   │   │       │   │   ├── CXX.includecache
+│   │       │   │   │   │   │       │   │   ├── DependInfo.cmake
+│   │       │   │   │   │   │       │   │   ├── depend.internal
+│   │       │   │   │   │   │       │   │   ├── depend.make
+│   │       │   │   │   │   │       │   │   ├── flags.make
+│   │       │   │   │   │   │       │   │   ├── link.txt
+│   │       │   │   │   │   │       │   │   ├── progress.make
+│   │       │   │   │   │   │       │   │   └── raspicam_cv_test.cpp.o
+│   │       │   │   │   │   │       │   ├── raspicam_still_test.dir
+│   │       │   │   │   │   │       │   │   ├── build.make
+│   │       │   │   │   │   │       │   │   ├── cmake_clean.cmake
+│   │       │   │   │   │   │       │   │   ├── CXX.includecache
+│   │       │   │   │   │   │       │   │   ├── DependInfo.cmake
+│   │       │   │   │   │   │       │   │   ├── depend.internal
+│   │       │   │   │   │   │       │   │   ├── depend.make
+│   │       │   │   │   │   │       │   │   ├── flags.make
+│   │       │   │   │   │   │       │   │   ├── link.txt
+│   │       │   │   │   │   │       │   │   ├── progress.make
+│   │       │   │   │   │   │       │   │   └── raspicam_still_test.cpp.o
+│   │       │   │   │   │   │       │   └── raspicam_test.dir
+│   │       │   │   │   │   │       │       ├── build.make
+│   │       │   │   │   │   │       │       ├── cmake_clean.cmake
+│   │       │   │   │   │   │       │       ├── CXX.includecache
+│   │       │   │   │   │   │       │       ├── DependInfo.cmake
+│   │       │   │   │   │   │       │       ├── depend.internal
+│   │       │   │   │   │   │       │       ├── depend.make
+│   │       │   │   │   │   │       │       ├── flags.make
+│   │       │   │   │   │   │       │       ├── link.txt
+│   │       │   │   │   │   │       │       ├── progress.make
+│   │       │   │   │   │   │       │       └── raspicam_test.cpp.o
+│   │       │   │   │   │   │       ├── cmake_install.cmake
+│   │       │   │   │   │   │       ├── Makefile
+│   │       │   │   │   │   │       ├── raspicam_cv_still_test
+│   │       │   │   │   │   │       ├── raspicam_cv_test
+│   │       │   │   │   │   │       ├── raspicam_still_test
+│   │       │   │   │   │   │       └── raspicam_test
+│   │       │   │   │   │   ├── Changelog
+│   │       │   │   │   │   ├── CMakeLists.txt
+│   │       │   │   │   │   ├── cmake_uninstall.cmake.in
+│   │       │   │   │   │   ├── config.cmake.in
+│   │       │   │   │   │   ├── dependencies
+│   │       │   │   │   │   │   ├── mmal
+│   │       │   │   │   │   │   │   ├── client
+│   │       │   │   │   │   │   │   │   ├── brcmjpeg
+│   │       │   │   │   │   │   │   │   │   ├── brcmjpeg.c
+│   │       │   │   │   │   │   │   │   │   ├── brcmjpeg.h
+│   │       │   │   │   │   │   │   │   │   ├── brcmjpeg_test.c
+│   │       │   │   │   │   │   │   │   │   └── CMakeLists.txt
+│   │       │   │   │   │   │   │   │   └── CMakeLists.txt
+│   │       │   │   │   │   │   │   ├── CMakeLists.txt
+│   │       │   │   │   │   │   │   ├── components
+│   │       │   │   │   │   │   │   │   ├── aaf_audio_render.cpp
+│   │       │   │   │   │   │   │   │   ├── aggregator.c
+│   │       │   │   │   │   │   │   │   ├── android_media_codec.cpp
+│   │       │   │   │   │   │   │   │   ├── artificial_camera.c
+│   │       │   │   │   │   │   │   │   ├── avcodec_audio_decoder.c
+│   │       │   │   │   │   │   │   │   ├── avcodec_video_decoder.c
+│   │       │   │   │   │   │   │   │   ├── clock.c
+│   │       │   │   │   │   │   │   │   ├── CMakeLists.txt
+│   │       │   │   │   │   │   │   │   ├── container_reader.c
+│   │       │   │   │   │   │   │   │   ├── copy.c
+│   │       │   │   │   │   │   │   │   ├── null_sink.c
+│   │       │   │   │   │   │   │   │   ├── passthrough.c
+│   │       │   │   │   │   │   │   │   ├── scheduler.c
+│   │       │   │   │   │   │   │   │   ├── sdl_audio_render.c
+│   │       │   │   │   │   │   │   │   ├── sdl_video_render.c
+│   │       │   │   │   │   │   │   │   ├── spdif.c
+│   │       │   │   │   │   │   │   │   └── splitter.c
+│   │       │   │   │   │   │   │   ├── core
+│   │       │   │   │   │   │   │   │   ├── CMakeLists.txt
+│   │       │   │   │   │   │   │   │   ├── mmal_buffer.c
+│   │       │   │   │   │   │   │   │   ├── mmal_buffer_private.h
+│   │       │   │   │   │   │   │   │   ├── mmal_clock.c
+│   │       │   │   │   │   │   │   │   ├── mmal_clock_private.h
+│   │       │   │   │   │   │   │   │   ├── mmal_component.c
+│   │       │   │   │   │   │   │   │   ├── mmal_component_private.h
+│   │       │   │   │   │   │   │   │   ├── mmal_core_private.h
+│   │       │   │   │   │   │   │   │   ├── mmal_events.c
+│   │       │   │   │   │   │   │   │   ├── mmal_events_private.h
+│   │       │   │   │   │   │   │   │   ├── mmal_format.c
+│   │       │   │   │   │   │   │   │   ├── mmal_logging.c
+│   │       │   │   │   │   │   │   │   ├── mmal_pool.c
+│   │       │   │   │   │   │   │   │   ├── mmal_port.c
+│   │       │   │   │   │   │   │   │   ├── mmal_port_clock.c
+│   │       │   │   │   │   │   │   │   ├── mmal_port_private.h
+│   │       │   │   │   │   │   │   │   └── mmal_queue.c
+│   │       │   │   │   │   │   │   ├── mmal_buffer.h
+│   │       │   │   │   │   │   │   ├── mmal_clock.h
+│   │       │   │   │   │   │   │   ├── mmal_common.h
+│   │       │   │   │   │   │   │   ├── mmal_component.h
+│   │       │   │   │   │   │   │   ├── mmal_encodings.h
+│   │       │   │   │   │   │   │   ├── mmal_events.h
+│   │       │   │   │   │   │   │   ├── mmal_format.h
+│   │       │   │   │   │   │   │   ├── mmal.h
+│   │       │   │   │   │   │   │   ├── mmal_logging.h
+│   │       │   │   │   │   │   │   ├── mmal_metadata.h
+│   │       │   │   │   │   │   │   ├── mmal_parameters_audio.h
+│   │       │   │   │   │   │   │   ├── mmal_parameters_camera.h
+│   │       │   │   │   │   │   │   ├── mmal_parameters_clock.h
+│   │       │   │   │   │   │   │   ├── mmal_parameters_common.h
+│   │       │   │   │   │   │   │   ├── mmal_parameters.h
+│   │       │   │   │   │   │   │   ├── mmal_parameters_video.h
+│   │       │   │   │   │   │   │   ├── mmal_pool.h
+│   │       │   │   │   │   │   │   ├── mmal_port.h
+│   │       │   │   │   │   │   │   ├── mmal_queue.h
+│   │       │   │   │   │   │   │   ├── mmal_types.h
+│   │       │   │   │   │   │   │   ├── openmaxil
+│   │       │   │   │   │   │   │   │   ├── CMakeLists.txt
+│   │       │   │   │   │   │   │   │   ├── mmalomx_buffer.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_buffer.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_commands.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_commands.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_core.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_logging.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_logging.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_marks.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_marks.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_parameters.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_parameters.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_registry.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_registry.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_roles.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_roles.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_util_params_audio.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_util_params.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_util_params_camera.c
+│   │       │   │   │   │   │   │   │   ├── mmalomx_util_params_common.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_util_params.h
+│   │       │   │   │   │   │   │   │   ├── mmalomx_util_params_misc.c
+│   │       │   │   │   │   │   │   │   └── mmalomx_util_params_video.c
+│   │       │   │   │   │   │   │   ├── test
+│   │       │   │   │   │   │   │   │   ├── CMakeLists.txt
+│   │       │   │   │   │   │   │   │   └── examples
+│   │       │   │   │   │   │   │   │       ├── example_basic_1.c
+│   │       │   │   │   │   │   │   │       ├── example_basic_2.c
+│   │       │   │   │   │   │   │   │       ├── example_connections.c
+│   │       │   │   │   │   │   │   │       └── example_graph.c
+│   │       │   │   │   │   │   │   ├── util
+│   │       │   │   │   │   │   │   │   ├── CMakeLists.txt
+│   │       │   │   │   │   │   │   │   ├── mmal_component_wrapper.c
+│   │       │   │   │   │   │   │   │   ├── mmal_component_wrapper.h
+│   │       │   │   │   │   │   │   │   ├── mmal_connection.c
+│   │       │   │   │   │   │   │   │   ├── mmal_connection.h
+│   │       │   │   │   │   │   │   │   ├── mmal_default_components.h
+│   │       │   │   │   │   │   │   │   ├── mmal_graph.c
+│   │       │   │   │   │   │   │   │   ├── mmal_graph.h
+│   │       │   │   │   │   │   │   │   ├── mmal_il.c
+│   │       │   │   │   │   │   │   │   ├── mmal_il.h
+│   │       │   │   │   │   │   │   │   ├── mmal_list.c
+│   │       │   │   │   │   │   │   │   ├── mmal_list.h
+│   │       │   │   │   │   │   │   │   ├── mmal_param_convert.c
+│   │       │   │   │   │   │   │   │   ├── mmal_param_convert.h
+│   │       │   │   │   │   │   │   │   ├── mmal_util.c
+│   │       │   │   │   │   │   │   │   ├── mmal_util.h
+│   │       │   │   │   │   │   │   │   ├── mmal_util_params.c
+│   │       │   │   │   │   │   │   │   ├── mmal_util_params.h
+│   │       │   │   │   │   │   │   │   ├── mmal_util_rational.c
+│   │       │   │   │   │   │   │   │   └── mmal_util_rational.h
+│   │       │   │   │   │   │   │   └── vc
+│   │       │   │   │   │   │   │       ├── CMakeLists.txt
+│   │       │   │   │   │   │   │       ├── mmal_vc_api.c
+│   │       │   │   │   │   │   │       ├── mmal_vc_api_drm.c
+│   │       │   │   │   │   │   │       ├── mmal_vc_api_drm.h
+│   │       │   │   │   │   │   │       ├── mmal_vc_api.h
+│   │       │   │   │   │   │   │       ├── mmal_vc_client.c
+│   │       │   │   │   │   │   │       ├── mmal_vc_client_priv.h
+│   │       │   │   │   │   │   │       ├── mmal_vc_dbglog.h
+│   │       │   │   │   │   │   │       ├── mmal_vc_diag.c
+│   │       │   │   │   │   │   │       ├── mmal_vc_msgnames.c
+│   │       │   │   │   │   │   │       ├── mmal_vc_msgnames.h
+│   │       │   │   │   │   │   │       ├── mmal_vc_msgs.h
+│   │       │   │   │   │   │   │       ├── mmal_vc_opaque_alloc.c
+│   │       │   │   │   │   │   │       ├── mmal_vc_opaque_alloc.h
+│   │       │   │   │   │   │   │       ├── mmal_vc_shm.c
+│   │       │   │   │   │   │   │       └── mmal_vc_shm.h
+│   │       │   │   │   │   │   └── vcos
+│   │       │   │   │   │   │       ├── CMakeLists.txt
+│   │       │   │   │   │   │       ├── generic
+│   │       │   │   │   │   │       │   ├── CMakeLists.txt
+│   │       │   │   │   │   │       │   ├── vcos_abort.c
+│   │       │   │   │   │   │       │   ├── vcos_cmd.c
+│   │       │   │   │   │   │       │   ├── vcos_common.h
+│   │       │   │   │   │   │       │   ├── vcos_deprecated.h
+│   │       │   │   │   │   │       │   ├── vcos_generic_blockpool.c
+│   │       │   │   │   │   │       │   ├── vcos_generic_blockpool.h
+│   │       │   │   │   │   │       │   ├── vcos_generic_event_flags.c
+│   │       │   │   │   │   │       │   ├── vcos_generic_event_flags.h
+│   │       │   │   │   │   │       │   ├── vcos_generic_named_sem.c
+│   │       │   │   │   │   │       │   ├── vcos_generic_named_sem.h
+│   │       │   │   │   │   │       │   ├── vcos_generic_quickslow_mutex.h
+│   │       │   │   │   │   │       │   ├── vcos_generic_reentrant_mtx.c
+│   │       │   │   │   │   │       │   ├── vcos_generic_reentrant_mtx.h
+│   │       │   │   │   │   │       │   ├── vcos_generic_safe_string.c
+│   │       │   │   │   │   │       │   ├── vcos_generic_tls.h
+│   │       │   │   │   │   │       │   ├── vcos_init.c
+│   │       │   │   │   │   │       │   ├── vcos_joinable_thread_from_plain.h
+│   │       │   │   │   │   │       │   ├── vcos_latch_from_sem.h
+│   │       │   │   │   │   │       │   ├── vcos_logcat.c
+│   │       │   │   │   │   │       │   ├── vcos_mem_from_malloc.c
+│   │       │   │   │   │   │       │   ├── vcos_mem_from_malloc.h
+│   │       │   │   │   │   │       │   ├── vcos_msgqueue.c
+│   │       │   │   │   │   │       │   ├── vcos_mutexes_are_reentrant.h
+│   │       │   │   │   │   │       │   └── vcos_thread_reaper.h
+│   │       │   │   │   │   │       ├── glibc
+│   │       │   │   │   │   │       │   └── vcos_backtrace.c
+│   │       │   │   │   │   │       ├── pthreads
+│   │       │   │   │   │   │       │   ├── CMakeLists.txt
+│   │       │   │   │   │   │       │   ├── vcos_dlfcn.c
+│   │       │   │   │   │   │       │   ├── vcos_futex_mutex.h
+│   │       │   │   │   │   │       │   ├── vcos_platform.h
+│   │       │   │   │   │   │       │   ├── vcos_platform_types.h
+│   │       │   │   │   │   │       │   └── vcos_pthreads.c
+│   │       │   │   │   │   │       ├── user_nodefs.h
+│   │       │   │   │   │   │       ├── vcos_assert.h
+│   │       │   │   │   │   │       ├── vcos_atomic_flags.h
+│   │       │   │   │   │   │       ├── vcos_attr.h
+│   │       │   │   │   │   │       ├── vcos_blockpool.h
+│   │       │   │   │   │   │       ├── vcos_build_info.h
+│   │       │   │   │   │   │       ├── vcos_cfg.h
+│   │       │   │   │   │   │       ├── vcos_cmd.h
+│   │       │   │   │   │   │       ├── vcos_ctype.h
+│   │       │   │   │   │   │       ├── vcos_dlfcn.h
+│   │       │   │   │   │   │       ├── vcos_event_flags.h
+│   │       │   │   │   │   │       ├── vcos_event.h
+│   │       │   │   │   │   │       ├── vcos.h
+│   │       │   │   │   │   │       ├── vcos_init.h
+│   │       │   │   │   │   │       ├── vcos_inttypes.h
+│   │       │   │   │   │   │       ├── vcos_isr.h
+│   │       │   │   │   │   │       ├── vcos_legacy_isr.h
+│   │       │   │   │   │   │       ├── vcos_logging_control.h
+│   │       │   │   │   │   │       ├── vcos_logging.h
+│   │       │   │   │   │   │       ├── vcos_lowlevel_thread.h
+│   │       │   │   │   │   │       ├── vcos_mem.h
+│   │       │   │   │   │   │       ├── vcos_mempool.h
+│   │       │   │   │   │   │       ├── vcos_msgqueue.h
+│   │       │   │   │   │   │       ├── vcos_mutex.h
+│   │       │   │   │   │   │       ├── vcos_named_semaphore.h
+│   │       │   │   │   │   │       ├── vcos_once.h
+│   │       │   │   │   │   │       ├── vcos_queue.h
+│   │       │   │   │   │   │       ├── vcos_quickslow_mutex.h
+│   │       │   │   │   │   │       ├── vcos_reentrant_mutex.h
+│   │       │   │   │   │   │       ├── vcos_semaphore.h
+│   │       │   │   │   │   │       ├── vcos_stdbool.h
+│   │       │   │   │   │   │       ├── vcos_stdint.h
+│   │       │   │   │   │   │       ├── vcos_string.h
+│   │       │   │   │   │   │       ├── vcos_thread_attr.h
+│   │       │   │   │   │   │       ├── vcos_thread.h
+│   │       │   │   │   │   │       ├── vcos_timer.h
+│   │       │   │   │   │   │       ├── vcos_tls.h
+│   │       │   │   │   │   │       └── vcos_types.h
+│   │       │   │   │   │   ├── README
+│   │       │   │   │   │   ├── src
+│   │       │   │   │   │   │   ├── CMakeLists.txt
+│   │       │   │   │   │   │   ├── private
+│   │       │   │   │   │   │   │   ├── exceptions.h
+│   │       │   │   │   │   │   │   ├── fake_mmal_dependencies.cpp
+│   │       │   │   │   │   │   │   ├── private_impl.cpp
+│   │       │   │   │   │   │   │   ├── private_impl.h
+│   │       │   │   │   │   │   │   ├── private_types.h
+│   │       │   │   │   │   │   │   ├── threadcondition.cpp
+│   │       │   │   │   │   │   │   └── threadcondition.h
+│   │       │   │   │   │   │   ├── private_still
+│   │       │   │   │   │   │   │   ├── private_still_impl.cpp
+│   │       │   │   │   │   │   │   └── private_still_impl.h
+│   │       │   │   │   │   │   ├── raspicam.cpp
+│   │       │   │   │   │   │   ├── raspicam_cv.cpp
+│   │       │   │   │   │   │   ├── raspicam_cv.h
+│   │       │   │   │   │   │   ├── raspicam.h
+│   │       │   │   │   │   │   ├── raspicam_still.cpp
+│   │       │   │   │   │   │   ├── raspicam_still_cv.cpp
+│   │       │   │   │   │   │   ├── raspicam_still_cv.h
+│   │       │   │   │   │   │   ├── raspicam_still.h
+│   │       │   │   │   │   │   ├── raspicamtypes.h
+│   │       │   │   │   │   │   └── scaler.h
+│   │       │   │   │   │   └── utils
+│   │       │   │   │   │       ├── CMakeLists.txt
+│   │       │   │   │   │       ├── raspicam_cv_still_test.cpp
+│   │       │   │   │   │       ├── raspicam_cv_test.cpp
+│   │       │   │   │   │       ├── raspicam_still_test.cpp
+│   │       │   │   │   │       └── raspicam_test.cpp
+│   │       │   │   │   └── raspicam-0.1.3.zip
+│   │       │   │   ├── main
+│   │       │   │   └── main.cpp
+│   │       │   ├── LICENSE
+│   │       │   ├── Python
+│   │       │   │   ├── main.py
+│   │       │   │   └── ubuntu_main.py
+│   │       │   └── README.md
+│   │       └── raspberry-pi-ndvi-plant-analysis
+│   │           ├── ndvi.py
+│   │           ├── README.md
+│   │           └── ubuntu_ndvi.py
+│   └── UBUNTU
+│       ├── calisanlar
+│       │   ├── NDVI-for-Large-Raster-Python
+│       │   │   ├── 2show_tif.py
+│       │   │   ├── NDVI_Python2.7.py
+│       │   │   ├── NDVI_Python3.7.py
+│       │   │   ├── python3.7.requirement.txt
+│       │   │   ├── README.md
+│       │   │   ├── requirements.txt
+│       │   │   ├── sample_ndvi.tif
+│       │   │   ├── sample.tif
+│       │   │   ├── show_tiff.py
+│       │   │   └── Thumbs.db
+│       │   ├── PlantHealth
+│       │   │   ├── faster_rendering
+│       │   │   │   ├── process_ndvi_fast.py
+│       │   │   │   ├── process_ndvi.py
+│       │   │   │   ├── process.py
+│       │   │   │   └── test.py
+│       │   │   ├── Final
+│       │   │   │   └── main.py
+│       │   │   ├── images
+│       │   │   │   ├── bvdrvi.jpg
+│       │   │   │   ├── endvi.jpg
+│       │   │   │   ├── imagefile.jpg
+│       │   │   │   ├── msr.jpg
+│       │   │   │   ├── ndvi.jpg
+│       │   │   │   ├── nir.jpg
+│       │   │   │   ├── rdvi.jpg
+│       │   │   │   ├── savi2.jpg
+│       │   │   │   ├── savi.jpg
+│       │   │   │   └── sr.jpg
+│       │   │   ├── Mobius
+│       │   │   │   └── SYSCFG.TXT
+│       │   │   ├── README.md
+│       │   │   └── Webcam
+│       │   │       ├── DVI.py
+│       │   │       ├── main.py
+│       │   │       ├── NDVI.py
+│       │   │       └── __pycache__
+│       │   │           ├── DVI.cpython-36.pyc
+│       │   │           └── NDVI.cpython-36.pyc
+│       │   └── PyGdal_batch_NDVI
+│       │       ├── 2000121_ndvi.tif
+│       │       ├── 2000129_ndvi.tif
+│       │       ├── code
+│       │       │   ├── batch_compute_NDVI.py
+│       │       │   └── kurulum.sh
+│       │       └── data
+│       │           ├── 2000121.hdr
+│       │           ├── 2000121.tif
+│       │           ├── 2000129.hdr
+│       │           └── 2000129.tif
+│       ├── calismayanlar
+│       │   └── SAR2NDVI_CNN
+│       │       ├── A CNN-Based Fusion Method for Feature Extraction from Sentinel Data.pdf
+│       │       ├── asdasd5.png
+│       │       ├── colab.png
+│       │       ├── DATASET
+│       │       │   ├── 001_MASK.tif
+│       │       │   ├── 001_NDVI.tif
+│       │       │   ├── 001_VH.tif
+│       │       │   ├── 001_VV.tif
+│       │       │   ├── 002_MASK.tif
+│       │       │   ├── 002_NDVI.tif
+│       │       │   ├── 002_VH.tif
+│       │       │   ├── 002_VV.tif
+│       │       │   ├── 003_MASK.tif
+│       │       │   ├── 003_NDVI.tif
+│       │       │   ├── 003_VH.tif
+│       │       │   ├── 003_VV.tif
+│       │       │   ├── 004_MASK.tif
+│       │       │   ├── 004_NDVI.tif
+│       │       │   ├── 004_VH.tif
+│       │       │   ├── 004_VV.tif
+│       │       │   ├── 005_MASK.tif
+│       │       │   ├── 005_NDVI.tif
+│       │       │   ├── 005_VH.tif
+│       │       │   ├── 005_VV.tif
+│       │       │   ├── 006_MASK.tif
+│       │       │   ├── 006_NDVI.tif
+│       │       │   ├── 006_VH.tif
+│       │       │   ├── 006_VV.tif
+│       │       │   ├── 007_MASK.tif
+│       │       │   ├── 007_NDVI.tif
+│       │       │   ├── 007_VH.tif
+│       │       │   ├── 007_VV.tif
+│       │       │   ├── DEM.tif
+│       │       │   ├── LICENSE.txt
+│       │       │   └── Readme.txt
+│       │       ├── download_dataset.sh
+│       │       ├── error.png
+│       │       ├── matris.png
+│       │       ├── MODEL
+│       │       ├── not
+│       │       ├── README.md
+│       │       ├── requirements.txt
+│       │       ├── TEST
+│       │       │   ├── funct_Test.py
+│       │       │   ├── __pycache__
+│       │       │   │   └── funct_Test.cpython-36.pyc
+│       │       │   └── Test.py
+│       │       └── TRAINING
+│       │           ├── funct_Train.py
+│       │           ├── funct_Train.pyc
+│       │           ├── __pycache__
+│       │           │   ├── funct_Train.cpython-36.pyc
+│       │           │   └── funct_Train.cpython-38.pyc
+│       │           ├── Train.py
+│       │           └── trash
+│       │               ├── 1
+│       │               └── asd.py
+│       └── muallak
+│           ├── GSV_NDVI_Comparison
+│           │   ├── download GSV images
+│           │   │   ├── create_GSV_webscript.py
+│           │   │   ├── create_street_view.py
+│           │   │   ├── downloadGSV.py
+│           │   │   ├── folder
+│           │   │   │   ├── GoogleImageMetaData
+│           │   │   │   │   ├── csvFolder
+│           │   │   │   │   │   └── C53059.csv
+│           │   │   │   │   └── textFolder
+│           │   │   │   │       └── C53059.txt
+│           │   │   │   └── panoramaImages
+│           │   │   │       ├── allComposites
+│           │   │   │       └── County53059
+│           │   │   ├── get_PanID_Bottom_Half.txt
+│           │   │   ├── get_PanID_Top_Half.txt
+│           │   │   ├── html
+│           │   │   │   ├── genindex.html
+│           │   │   │   ├── index.html
+│           │   │   │   ├── _modules
+│           │   │   │   │   ├── index.html
+│           │   │   │   │   └── streetview.html
+│           │   │   │   ├── objects.inv
+│           │   │   │   ├── py-modindex.html
+│           │   │   │   ├── search.html
+│           │   │   │   ├── searchindex.js
+│           │   │   │   ├── _sources
+│           │   │   │   │   └── index.txt
+│           │   │   │   └── _static
+│           │   │   │       ├── ajax-loader.gif
+│           │   │   │       ├── basic.css
+│           │   │   │       ├── comment-bright.png
+│           │   │   │       ├── comment-close.png
+│           │   │   │       ├── comment.png
+│           │   │   │       ├── css
+│           │   │   │       │   ├── badge_only.css
+│           │   │   │       │   ├── badge_only.css.map
+│           │   │   │       │   ├── theme.css
+│           │   │   │       │   └── theme.css.map
+│           │   │   │       ├── default.css
+│           │   │   │       ├── doctools.js
+│           │   │   │       ├── down.png
+│           │   │   │       ├── down-pressed.png
+│           │   │   │       ├── file.png
+│           │   │   │       ├── fonts
+│           │   │   │       │   ├── FontAwesome.otf
+│           │   │   │       │   ├── fontawesome-webfont.eot
+│           │   │   │       │   ├── fontawesome-webfont.svg
+│           │   │   │       │   ├── fontawesome-webfont.ttf
+│           │   │   │       │   ├── fontawesome-webfont.woff
+│           │   │   │       │   ├── Inconsolata-Bold.ttf
+│           │   │   │       │   ├── Inconsolata-Regular.ttf
+│           │   │   │       │   ├── Lato-Bold.ttf
+│           │   │   │       │   ├── Lato-Regular.ttf
+│           │   │   │       │   ├── RobotoSlab-Bold.ttf
+│           │   │   │       │   └── RobotoSlab-Regular.ttf
+│           │   │   │       ├── jquery.js
+│           │   │   │       ├── js
+│           │   │   │       │   ├── modernizr.min.js
+│           │   │   │       │   └── theme.js
+│           │   │   │       ├── minus.png
+│           │   │   │       ├── plus.png
+│           │   │   │       ├── pygments.css
+│           │   │   │       ├── searchtools.js
+│           │   │   │       ├── sidebar.js
+│           │   │   │       ├── underscore.js
+│           │   │   │       ├── up.png
+│           │   │   │       ├── up-pressed.png
+│           │   │   │       └── websupport.js
+│           │   │   ├── Readme.md
+│           │   │   ├── setup_.sh
+│           │   │   └── trees_.sh
+│           │   ├── download NDVI
+│           │   │   └── extractNDVIGoogleEarthPonts.py
+│           │   ├── GreenComparev2.gif
+│           │   ├── not
+│           │   ├── process GSV images
+│           │   │   ├── GSV2.cpp
+│           │   │   ├── statVals.cpp
+│           │   │   └── statVals.hpp
+│           │   └── Readme.md
+│           └── ndvi_superresolution
+│               ├── configs
+│               │   ├── l2_config.yaml
+│               │   ├── l2_gan_config.yaml
+│               │   ├── l2_only.yaml
+│               │   ├── siamese_gan.yaml
+│               │   ├── test_config.yaml
+│               │   └── vgg_gan_config.yaml
+│               ├── data
+│               │   └── modis_ndvi
+│               │       └── MYD13Q1.006
+│               │           ├── 2004
+│               │           ├── 2005
+│               │           ├── 2006
+│               │           ├── 2007
+│               │           ├── 2008
+│               │           ├── 2009
+│               │           ├── 2010
+│               │           ├── 2011
+│               │           ├── 2012
+│               │           ├── 2013
+│               │           └── file_list.pkl
+│               ├── local_req.txt
+│               ├── main.py
+│               ├── not
+│               ├── output
+│               │   └── testing
+│               │       ├── h08v05_patch_size=200_date=2004009.pkl
+│               │       └── h09v04_patch_size=200_date=2006009.pkl
+│               ├── pytorch_ssim
+│               │   ├── __init__.py
+│               │   └── __pycache__
+│               │       └── __init__.cpython-36.pyc
+│               ├── README.md
+│               └── src
+│                   ├── data
+│                   │   ├── aggregate_data.py
+│                   │   ├── data_loader.py
+│                   │   ├── extract_patches.py
+│                   │   ├── modis_download.py
+│                   │   ├── __pycache__
+│                   │   │   ├── aggregate_data.cpython-36.pyc
+│                   │   │   ├── extract_patches.cpython-36.pyc
+│                   │   │   └── modis_download.cpython-36.pyc
+│                   │   ├── random_high_res_te.png
+│                   │   ├── random_high_res_tr.png
+│                   │   ├── random_low_res_te.png
+│                   │   └── random_low_res_tr.png
+│                   ├── __init__.py
+│                   ├── methods
+│                   │   ├── evaluation.py
+│                   │   ├── __pycache__
+│                   │   │   ├── evaluation.cpython-36.pyc
+│                   │   │   ├── run.cpython-36.pyc
+│                   │   │   ├── train.cpython-36.pyc
+│                   │   │   └── trainer.cpython-36.pyc
+│                   │   ├── run.py
+│                   │   ├── trainer.py
+│                   │   └── train.py
+│                   ├── models
+│                   │   ├── model_factory.py
+│                   │   ├── models.py
+│                   │   └── __pycache__
+│                   │       ├── model_factory.cpython-36.pyc
+│                   │       └── models.cpython-36.pyc
+│                   ├── __pycache__
+│                   │   └── __init__.cpython-36.pyc
+│                   └── utils
+│                       ├── helper.py
+│                       ├── loss_functions.py
+│                       ├── normalization.py
+│                       ├── parameters.py
+│                       ├── __pycache__
+│                       │   ├── helper.cpython-36.pyc
+│                       │   ├── loss_functions.cpython-36.pyc
+│                       │   ├── normalization.cpython-36.pyc
+│                       │   ├── parameters.cpython-36.pyc
+│                       │   ├── results.cpython-36.pyc
+│                       │   ├── torch_helpers.cpython-36.pyc
+│                       │   └── urls.cpython-36.pyc
+│                       ├── results.py
+│                       ├── torch_helpers.py
+│                       └── urls.py
+├── Kubra
+│   ├── RASP
+│   │   └── calisan
+│   │       └── Raspberry-pi-NDVI
+│   │           ├── LICENSE
+│   │           ├── ndvi.py
+│   │           ├── README.md
+│   │           └── ubuntu_ndvi.py
+│   ├── trash
+│   │   ├── index.html?search_query=&tracking_id=51a3b4f571m
+│   │   └── ndvi
+│   │       ├── ndvi
+│   │       │   ├── NDVI_FLOAT32.tif
+│   │       │   ├── NDVI_INT16.tif
+│   │       │   ├── ndvi_demo.py
+│   │       │   ├── ndvi.py
+│   │       │   ├── NIR_IMAGE.tif
+│   │       │   ├── __pycache__
+│   │       │   │   └── ndvi.cpython-38.pyc
+│   │       │   └── RED_IMAGE.tif
+│   │       └── README.md
+│   └── UBUNTU
+│       ├── calisanlar
+│       │   ├── Crop-lines-system
+│       │   │   ├── example_image.png
+│       │   │   ├── example_output.PNG
+│       │   │   ├── find_gradient.py
+│       │   │   ├── find_lines.py
+│       │   │   ├── __pycache__
+│       │   │   │   ├── find_gradient.cpython-36.pyc
+│       │   │   │   └── find_lines.cpython-36.pyc
+│       │   │   ├── README.md
+│       │   │   └── run.py
+│       │   ├── Image-VideoSegmentationinNIRforPlantDetection
+│       │   │   ├── local_req.txt
+│       │   │   ├── NIRPlantVideoTracking.py
+│       │   │   ├── README.md
+│       │   │   ├── SegmentationofNIRImageandNDVIconversion.py
+│       │   │   ├── testimages
+│       │   │   │   ├── DJI_0860.JPG
+│       │   │   │   └── DJI_0880.JPG
+│       │   │   └── testvideos
+│       │   │       └── nirtestvideo.mp4
+│       │   ├── multispectral-image-processing
+│       │   │   ├── band_separator.py
+│       │   │   ├── data
+│       │   │   │   ├── backup
+│       │   │   │   │   └── BACKUP.md
+│       │   │   │   ├── dataset
+│       │   │   │   │   ├── 0_kinect_hd_depth.png
+│       │   │   │   │   ├── 0_kinect_hd_rgb.png
+│       │   │   │   │   ├── 0_multispectral_camera.png
+│       │   │   │   │   ├── 10_kinect_hd_depth.png
+│       │   │   │   │   ├── 10_kinect_hd_rgb.png
+│       │   │   │   │   ├── 10_multispectral_camera.png
+│       │   │   │   │   ├── 1_kinect_hd_depth.png
+│       │   │   │   │   ├── 1_kinect_hd_rgb.png
+│       │   │   │   │   ├── 1_multispectral_camera.png
+│       │   │   │   │   ├── 2_kinect_hd_depth.png
+│       │   │   │   │   ├── 2_kinect_hd_rgb.png
+│       │   │   │   │   ├── 2_multispectral_camera.png
+│       │   │   │   │   ├── 3_kinect_hd_depth.png
+│       │   │   │   │   ├── 3_kinect_hd_rgb.png
+│       │   │   │   │   ├── 3_multispectral_camera.png
+│       │   │   │   │   ├── 4_kinect_hd_depth.png
+│       │   │   │   │   ├── 4_kinect_hd_rgb.png
+│       │   │   │   │   ├── 4_multispectral_camera.png
+│       │   │   │   │   ├── 5_kinect_hd_depth.png
+│       │   │   │   │   ├── 5_kinect_hd_rgb.png
+│       │   │   │   │   ├── 5_multispectral_camera.png
+│       │   │   │   │   ├── 6_kinect_hd_depth.png
+│       │   │   │   │   ├── 6_kinect_hd_rgb.png
+│       │   │   │   │   ├── 6_multispectral_camera.png
+│       │   │   │   │   ├── 7_kinect_hd_depth.png
+│       │   │   │   │   ├── 7_kinect_hd_rgb.png
+│       │   │   │   │   ├── 7_multispectral_camera.png
+│       │   │   │   │   ├── 8_kinect_hd_depth.png
+│       │   │   │   │   ├── 8_kinect_hd_rgb.png
+│       │   │   │   │   ├── 8_multispectral_camera.png
+│       │   │   │   │   ├── 9_kinect_hd_depth.png
+│       │   │   │   │   ├── 9_kinect_hd_rgb.png
+│       │   │   │   │   └── 9_multispectral_camera.png
+│       │   │   │   ├── flat-field-correction
+│       │   │   │   │   ├── dark-field.png
+│       │   │   │   │   └── flat-field.png
+│       │   │   │   ├── resources
+│       │   │   │   │   ├── fps_log.yaml
+│       │   │   │   │   ├── homography.yaml
+│       │   │   │   │   ├── multispectral_camera.yaml
+│       │   │   │   │   ├── parameters.yaml
+│       │   │   │   │   └── wr_coefficients.yaml
+│       │   │   │   └── simulation
+│       │   │   │       ├── 1
+│       │   │   │       │   ├── 2020511_kinect_hd_depth.png
+│       │   │   │       │   ├── 2020511_kinect_hd_rgb.png
+│       │   │   │       │   ├── 2020511_multispectral_camera.png
+│       │   │   │       │   ├── 2020511_multispectral_ndvi_colored.png
+│       │   │   │       │   └── 2020511_multispectral_ndvi.png
+│       │   │   │       ├── 2
+│       │   │   │       │   ├── 2020511_kinect_hd_depth.png
+│       │   │   │       │   ├── 2020511_kinect_hd_rgb.png
+│       │   │   │       │   ├── 2020511_multispectral_camera.png
+│       │   │   │       │   ├── 2020511_multispectral_ndvi_colored.png
+│       │   │   │       │   └── 2020511_multispectral_ndvi.png
+│       │   │   │       ├── 3
+│       │   │   │       │   ├── 2020511_kinect_hd_depth.png
+│       │   │   │       │   ├── 2020511_kinect_hd_rgb.png
+│       │   │   │       │   ├── 2020511_multispectral_camera.png
+│       │   │   │       │   ├── 2020511_multispectral_ndvi_colored.png
+│       │   │   │       │   └── 2020511_multispectral_ndvi.png
+│       │   │   │       └── 4
+│       │   │   │           ├── 2020511_kinect_hd_depth.png
+│       │   │   │           ├── 2020511_kinect_hd_rgb.png
+│       │   │   │           ├── 2020511_multispectral_camera.png
+│       │   │   │           ├── 2020511_multispectral_ndvi_colored.png
+│       │   │   │           └── 2020511_multispectral_ndvi.png
+│       │   │   ├── LICENSE
+│       │   │   └── README.md
+│       │   └── ndvi_automation
+│       │       ├── doc
+│       │       │   ├── csv.PNG
+│       │       │   ├── param_illustration1.png
+│       │       │   ├── param_illustration2.png
+│       │       │   ├── param.PNG
+│       │       │   ├── rotatevsshift.png
+│       │       │   ├── ui1.png
+│       │       │   ├── ui2.png
+│       │       │   └── workflow.png
+│       │       ├── indicies
+│       │       │   ├── config.cfg
+│       │       │   ├── make_jpg.py
+│       │       │   ├── preview.py
+│       │       │   ├── RED_IMAGE.tif
+│       │       │   └── shift.py
+│       │       ├── not
+│       │       ├── playground.py
+│       │       ├── README.md
+│       │       ├── template.jpg
+│       │       ├── temp.tif
+│       │       ├── tkgui
+│       │       │   ├── tkgui.py
+│       │       │   └── tmp.jpg
+│       │       ├── trash
+│       │       │   ├── template.jpg
+│       │       │   ├── tiff-archicad-ozbreed-native-shrubs-and-ground-covers-part-1
+│       │       │   │   ├── Instructions for ArchiCAD.pdf
+│       │       │   │   ├── Large
+│       │       │   │   │   ├── Aussie Flat Bush TM.tif
+│       │       │   │   │   ├── Aussie Rambler TM.tif
+│       │       │   │   │   ├── Better John TM.tif
+│       │       │   │   │   ├── Blue Gem TM.tif
+│       │       │   │   │   ├── Blue Horizon TM.tif
+│       │       │   │   │   ├── Cherry Cluster TM.tif
+│       │       │   │   │   ├── Crimson Villea TM.tif
+│       │       │   │   │   ├── Free Fall TM.tif
+│       │       │   │   │   ├── Gold Cluster TM.tif
+│       │       │   │   │   ├── Green John TM.tif
+│       │       │   │   │   ├── Grey Box TM Circle.tif
+│       │       │   │   │   ├── Grey Box TM Hedge.tif
+│       │       │   │   │   ├── Low Horizon TM.tif
+│       │       │   │   │   ├── Macarthur TM.tif
+│       │       │   │   │   ├── Meema TM.tif
+│       │       │   │   │   ├── Mundi TM.tif
+│       │       │   │   │   └── Thumbs.db
+│       │       │   │   ├── Readme.txt
+│       │       │   │   └── Small
+│       │       │   │       ├── Aussie Flat Bush TM.tif
+│       │       │   │       ├── Aussie Rambler TM.tif
+│       │       │   │       ├── Better John TM.tif
+│       │       │   │       ├── Blue Gem TM.tif
+│       │       │   │       ├── Blue Horizon TM.tif
+│       │       │   │       ├── Cherry Cluster TM.tif
+│       │       │   │       ├── Crimson Villea TM.tif
+│       │       │   │       ├── Free Fall TM.tif
+│       │       │   │       ├── Gold Cluster TM.tif
+│       │       │   │       ├── Green John TM.tif
+│       │       │   │       ├── Grey Box TM Circle.tif
+│       │       │   │       ├── Grey Box TM Hedge.tif
+│       │       │   │       ├── Low Horizon TM.tif
+│       │       │   │       ├── Macarthur TM.tif
+│       │       │   │       ├── Meema TM.tif
+│       │       │   │       ├── Mundi TM.tif
+│       │       │   │       └── Thumbs.db
+│       │       │   └── tiff-archicad-ozbreed-native-shrubs-and-ground-covers-part-1.zip
+│       │       └── vanilla
+│       │           ├── large_rotate.cfg
+│       │           ├── large_shift.cfg
+│       │           ├── rotate.py
+│       │           ├── shift.py
+│       │           ├── small_rotate.cfg
+│       │           └── small_shift.cfg
+│       ├── calismayanlar
+│       │   ├── NDVI-analizi-Django-project
+│       │   │   ├── accounts
+│       │   │   │   ├── admin.py
+│       │   │   │   ├── apps.py
+│       │   │   │   ├── forms.py
+│       │   │   │   ├── __init__.py
+│       │   │   │   ├── migrations
+│       │   │   │   │   └── __init__.py
+│       │   │   │   ├── models.py
+│       │   │   │   ├── tests.py
+│       │   │   │   └── views.py
+│       │   │   ├── db.sqlite3
+│       │   │   ├── deneme.txt
+│       │   │   ├── local_reqs.txt
+│       │   │   ├── manage.py
+│       │   │   ├── map.geojson
+│       │   │   ├── media
+│       │   │   │   ├── books
+│       │   │   │   │   ├── covers
+│       │   │   │   │   │   ├── 20200723_180133.jpg
+│       │   │   │   │   │   ├── 20200723_180133_rOLQEF5.jpg
+│       │   │   │   │   │   ├── deneme_EJbnhSQ.jpg
+│       │   │   │   │   │   ├── deneme.jpg
+│       │   │   │   │   │   ├── denemeresmi.png
+│       │   │   │   │   │   ├── denemeresmi.tif
+│       │   │   │   │   │   ├── deneme.txt
+│       │   │   │   │   │   └── ndviresim.png
+│       │   │   │   │   ├── geojsons
+│       │   │   │   │   │   ├── map.geojson
+│       │   │   │   │   │   ├── ndviresim.png
+│       │   │   │   │   │   └── ndviresim_ZMk456P.png
+│       │   │   │   │   ├── pdfs
+│       │   │   │   │   │   ├── 1812709049_batuhan_ökmen.pdf
+│       │   │   │   │   │   ├── 1812709049_batuhan_ökmen_pDQOrbL.pdf
+│       │   │   │   │   │   ├── 1812709049_batuhan_ökmen_WpENNFb.pdf
+│       │   │   │   │   │   └── ndviresim_TKZTy99.png
+│       │   │   │   │   ├── tifs
+│       │   │   │   │   │   ├── ndviresim_osS9Jvz.png
+│       │   │   │   │   │   └── ndviresim.png
+│       │   │   │   │   └── txt
+│       │   │   │   │       └── deneme.txt
+│       │   │   │   ├── images
+│       │   │   │   │   └── ndviresim.tif
+│       │   │   │   ├── map_42Cie4k.geojson
+│       │   │   │   ├── map_6bvwsFt.geojson
+│       │   │   │   ├── map_6i4NiNa.geojson
+│       │   │   │   ├── map.geojson
+│       │   │   │   ├── map_i9DsNX2.geojson
+│       │   │   │   ├── map_Pf47ycw.geojson
+│       │   │   │   ├── map_swKtG5L.geojson
+│       │   │   │   ├── map_TDXuznB.geojson
+│       │   │   │   ├── map_vUFuaOP.geojson
+│       │   │   │   ├── map_xPkB01N.geojson
+│       │   │   │   ├── map_YSc91gl.geojson
+│       │   │   │   ├── map_Z4cQdbB.geojson
+│       │   │   │   └── todo
+│       │   │   │       └── books
+│       │   │   │           └── pdfs
+│       │   │   │               └── 1812709049_Batuhan_ökmen.pdf
+│       │   │   ├── mysite
+│       │   │   │   ├── asgi.py
+│       │   │   │   ├── __init__.py
+│       │   │   │   ├── __pycache__
+│       │   │   │   │   ├── __init__.cpython-36.pyc
+│       │   │   │   │   ├── __init__.cpython-37.pyc
+│       │   │   │   │   ├── settings.cpython-36.pyc
+│       │   │   │   │   ├── settings.cpython-37.pyc
+│       │   │   │   │   ├── urls.cpython-36.pyc
+│       │   │   │   │   ├── urls.cpython-37.pyc
+│       │   │   │   │   ├── wsgi.cpython-36.pyc
+│       │   │   │   │   └── wsgi.cpython-37.pyc
+│       │   │   │   ├── settings.py
+│       │   │   │   ├── urls.py
+│       │   │   │   └── wsgi.py
+│       │   │   ├── not
+│       │   │   ├── README.md
+│       │   │   ├── resimler
+│       │   │   │   └── ndviresim.tif
+│       │   │   ├── run.sh
+│       │   │   ├── templates
+│       │   │   │   ├── accounts
+│       │   │   │   │   └── form.html
+│       │   │   │   └── todo_app
+│       │   │   │       ├── abaut.html
+│       │   │   │       ├── base.html
+│       │   │   │       ├── book_list.html
+│       │   │   │       ├── class_book_list.html
+│       │   │   │       ├── denemeler.html
+│       │   │   │       ├── index.html
+│       │   │   │       ├── ndvihesaplama.html
+│       │   │   │       ├── ndviolustur.html
+│       │   │   │       ├── ndviresim.tif
+│       │   │   │       └── upload_book.html
+│       │   │   └── todo_app
+│       │   │       ├── admin.py
+│       │   │       ├── apps.py
+│       │   │       ├── forms.py
+│       │   │       ├── __init__.py
+│       │   │       ├── kod.py
+│       │   │       ├── migrations
+│       │   │       │   ├── 0001_initial.py
+│       │   │       │   ├── 0002_deneme.py
+│       │   │       │   ├── 0003_book.py
+│       │   │       │   ├── 0004_auto_20200818_0935.py
+│       │   │       │   ├── 0005_book_cover.py
+│       │   │       │   ├── 0006_auto_20200818_1543.py
+│       │   │       │   ├── 0007_auto_20200818_1544.py
+│       │   │       │   ├── 0008_auto_20200818_1546.py
+│       │   │       │   ├── __init__.py
+│       │   │       │   └── __pycache__
+│       │   │       │       ├── 0001_initial.cpython-36.pyc
+│       │   │       │       ├── 0001_initial.cpython-37.pyc
+│       │   │       │       ├── 0002_deneme.cpython-36.pyc
+│       │   │       │       ├── 0002_deneme.cpython-37.pyc
+│       │   │       │       ├── 0003_book.cpython-36.pyc
+│       │   │       │       ├── 0003_book.cpython-37.pyc
+│       │   │       │       ├── 0004_auto_20200818_0935.cpython-36.pyc
+│       │   │       │       ├── 0004_auto_20200818_0935.cpython-37.pyc
+│       │   │       │       ├── 0005_book_cover.cpython-36.pyc
+│       │   │       │       ├── 0005_book_cover.cpython-37.pyc
+│       │   │       │       ├── 0006_auto_20200818_1543.cpython-36.pyc
+│       │   │       │       ├── 0006_auto_20200818_1543.cpython-37.pyc
+│       │   │       │       ├── 0007_auto_20200818_1544.cpython-36.pyc
+│       │   │       │       ├── 0007_auto_20200818_1544.cpython-37.pyc
+│       │   │       │       ├── 0008_auto_20200818_1546.cpython-36.pyc
+│       │   │       │       ├── 0008_auto_20200818_1546.cpython-37.pyc
+│       │   │       │       ├── __init__.cpython-36.pyc
+│       │   │       │       └── __init__.cpython-37.pyc
+│       │   │       ├── models.py
+│       │   │       ├── __pycache__
+│       │   │       │   ├── admin.cpython-36.pyc
+│       │   │       │   ├── admin.cpython-37.pyc
+│       │   │       │   ├── apps.cpython-36.pyc
+│       │   │       │   ├── forms.cpython-36.pyc
+│       │   │       │   ├── forms.cpython-37.pyc
+│       │   │       │   ├── __init__.cpython-36.pyc
+│       │   │       │   ├── __init__.cpython-37.pyc
+│       │   │       │   ├── kod.cpython-37.pyc
+│       │   │       │   ├── models.cpython-36.pyc
+│       │   │       │   ├── models.cpython-37.pyc
+│       │   │       │   ├── urls.cpython-36.pyc
+│       │   │       │   ├── urls.cpython-37.pyc
+│       │   │       │   ├── views.cpython-36.pyc
+│       │   │       │   └── views.cpython-37.pyc
+│       │   │       ├── tests.py
+│       │   │       ├── urls.py
+│       │   │       └── views.py
+│       │   ├── NDVI_GNDVI_ImageProcessing
+│       │   │   ├── dataset
+│       │   │   │   ├── _Calibrate
+│       │   │   │   ├── Contourmaps
+│       │   │   │   ├── GNDVI
+│       │   │   │   ├── NDVI
+│       │   │   │   └── _Processed
+│       │   │   ├── images
+│       │   │   │   ├── _Calibrate
+│       │   │   │   ├── Contourmaps
+│       │   │   │   ├── GNDVI
+│       │   │   │   ├── NDVI
+│       │   │   │   ├── _Processed
+│       │   │   │   ├── severin-candrian-MAcqNaCTUYc-unsplash.jpg
+│       │   │   │   └── severin-candrian-Ug5roZHlC78-unsplash.jpg
+│       │   │   ├── NDVI_FINAL.py
+│       │   │   ├── NDVI_wprocessingFinal (3).py
+│       │   │   ├── not
+│       │   │   ├── README.md
+│       │   │   └── requirements.txt
+│       │   ├── NDVI-Test
+│       │   │   ├── DB
+│       │   │   │   ├── country_01_nir.jpg
+│       │   │   │   ├── country_01_rgb.jpg
+│       │   │   │   ├── country_02_nir.jpg
+│       │   │   │   ├── country_02_rgb.jpg
+│       │   │   │   ├── country_03_nir.jpg
+│       │   │   │   ├── country_03_rgb.jpg
+│       │   │   │   ├── country_04_nir.jpg
+│       │   │   │   ├── country_04_rgb.jpg
+│       │   │   │   ├── country_05_nir.jpg
+│       │   │   │   ├── country_05_rgb.jpg
+│       │   │   │   ├── country_06_nir.jpg
+│       │   │   │   ├── country_06_rgb.jpg
+│       │   │   │   ├── country_07_nir.jpg
+│       │   │   │   ├── country_07_rgb.jpg
+│       │   │   │   ├── country_08_nir.jpg
+│       │   │   │   ├── country_08_rgb.jpg
+│       │   │   │   ├── country_09_nir.jpg
+│       │   │   │   ├── country_09_rgb.jpg
+│       │   │   │   ├── country_10_nir.jpg
+│       │   │   │   ├── country_10_rgb.jpg
+│       │   │   │   ├── country_11_nir.jpg
+│       │   │   │   ├── country_11_rgb.jpg
+│       │   │   │   ├── country_12_nir.jpg
+│       │   │   │   ├── country_12_rgb.jpg
+│       │   │   │   ├── country_13_nir.jpg
+│       │   │   │   ├── country_13_rgb.jpg
+│       │   │   │   ├── country_14_nir.jpg
+│       │   │   │   ├── country_14_rgb.jpg
+│       │   │   │   ├── country_15_nir.jpg
+│       │   │   │   ├── country_15_rgb.jpg
+│       │   │   │   ├── country_16_nir.jpg
+│       │   │   │   ├── country_16_rgb.jpg
+│       │   │   │   ├── country_17_nir.jpg
+│       │   │   │   ├── country_17_rgb.jpg
+│       │   │   │   ├── country_18_nir.jpg
+│       │   │   │   ├── country_18_rgb.jpg
+│       │   │   │   ├── country_19_nir.jpg
+│       │   │   │   ├── country_19_rgb.jpg
+│       │   │   │   ├── country_20_nir.jpg
+│       │   │   │   ├── country_20_rgb.jpg
+│       │   │   │   ├── country_21_nir.jpg
+│       │   │   │   ├── country_21_rgb.jpg
+│       │   │   │   ├── country_22_nir.jpg
+│       │   │   │   ├── country_22_rgb.jpg
+│       │   │   │   ├── country_23_nir.jpg
+│       │   │   │   ├── country_23_rgb.jpg
+│       │   │   │   ├── country_24_nir.jpg
+│       │   │   │   ├── country_24_rgb.jpg
+│       │   │   │   ├── country_25_nir.jpg
+│       │   │   │   ├── country_25_rgb.jpg
+│       │   │   │   ├── country_26_nir.jpg
+│       │   │   │   ├── country_26_rgb.jpg
+│       │   │   │   ├── country_27_nir.jpg
+│       │   │   │   ├── country_27_rgb.jpg
+│       │   │   │   ├── country_28_nir.jpg
+│       │   │   │   ├── country_28_rgb.jpg
+│       │   │   │   ├── country_29_nir.jpg
+│       │   │   │   ├── country_29_rgb.jpg
+│       │   │   │   ├── country_30_nir.jpg
+│       │   │   │   ├── country_30_rgb.jpg
+│       │   │   │   ├── country_31_nir.jpg
+│       │   │   │   ├── country_31_rgb.jpg
+│       │   │   │   ├── country_32_nir.jpg
+│       │   │   │   ├── country_32_rgb.jpg
+│       │   │   │   ├── country_33_nir.jpg
+│       │   │   │   ├── country_33_rgb.jpg
+│       │   │   │   ├── country_34_nir.jpg
+│       │   │   │   ├── country_34_rgb.jpg
+│       │   │   │   ├── country_35_nir.jpg
+│       │   │   │   ├── country_35_rgb.jpg
+│       │   │   │   ├── country_36_nir.jpg
+│       │   │   │   ├── country_36_rgb.jpg
+│       │   │   │   ├── country_37_nir.jpg
+│       │   │   │   ├── country_37_rgb.jpg
+│       │   │   │   ├── country_38_nir.jpg
+│       │   │   │   ├── country_38_rgb.jpg
+│       │   │   │   ├── country_39_nir.jpg
+│       │   │   │   ├── country_39_rgb.jpg
+│       │   │   │   ├── country_40_nir.jpg
+│       │   │   │   ├── country_40_rgb.jpg
+│       │   │   │   ├── country_41_nir.jpg
+│       │   │   │   ├── country_41_rgb.jpg
+│       │   │   │   ├── country_42_nir.jpg
+│       │   │   │   ├── country_42_rgb.jpg
+│       │   │   │   ├── country_43_nir.jpg
+│       │   │   │   ├── country_43_rgb.jpg
+│       │   │   │   ├── country_44_nir.jpg
+│       │   │   │   ├── country_44_rgb.jpg
+│       │   │   │   ├── country_45_nir.jpg
+│       │   │   │   ├── country_45_rgb.jpg
+│       │   │   │   ├── country_46_nir.jpg
+│       │   │   │   ├── country_46_rgb.jpg
+│       │   │   │   ├── country_47_nir.jpg
+│       │   │   │   ├── country_47_rgb.jpg
+│       │   │   │   ├── country_48_nir.jpg
+│       │   │   │   ├── country_48_rgb.jpg
+│       │   │   │   ├── country_49_nir.jpg
+│       │   │   │   ├── country_49_rgb.jpg
+│       │   │   │   ├── country_50_nir.jpg
+│       │   │   │   ├── country_50_rgb.jpg
+│       │   │   │   ├── country_51_nir.jpg
+│       │   │   │   ├── country_51_rgb.jpg
+│       │   │   │   ├── country_52_nir.jpg
+│       │   │   │   ├── country_52_rgb.jpg
+│       │   │   │   ├── field_01_nir.jpg
+│       │   │   │   ├── field_01_rgb.jpg
+│       │   │   │   ├── field_02_nir.jpg
+│       │   │   │   ├── field_02_rgb.jpg
+│       │   │   │   ├── field_03_nir.jpg
+│       │   │   │   ├── field_03_rgb.jpg
+│       │   │   │   ├── field_04_nir.jpg
+│       │   │   │   ├── field_04_rgb.jpg
+│       │   │   │   ├── field_05_nir.jpg
+│       │   │   │   ├── field_05_rgb.jpg
+│       │   │   │   ├── field_06_nir.jpg
+│       │   │   │   ├── field_06_rgb.jpg
+│       │   │   │   ├── field_07_nir.jpg
+│       │   │   │   ├── field_07_rgb.jpg
+│       │   │   │   ├── field_08_nir.jpg
+│       │   │   │   ├── field_08_rgb.jpg
+│       │   │   │   ├── field_09_nir.jpg
+│       │   │   │   ├── field_09_rgb.jpg
+│       │   │   │   ├── field_10_nir.jpg
+│       │   │   │   ├── field_10_rgb.jpg
+│       │   │   │   ├── field_11_nir.jpg
+│       │   │   │   ├── field_11_rgb.jpg
+│       │   │   │   ├── field_12_nir.jpg
+│       │   │   │   ├── field_12_rgb.jpg
+│       │   │   │   ├── field_13_nir.jpg
+│       │   │   │   ├── field_13_rgb.jpg
+│       │   │   │   ├── field_14_nir.jpg
+│       │   │   │   ├── field_14_rgb.jpg
+│       │   │   │   ├── field_15_nir.jpg
+│       │   │   │   ├── field_15_rgb.jpg
+│       │   │   │   ├── field_16_nir.jpg
+│       │   │   │   ├── field_16_rgb.jpg
+│       │   │   │   ├── field_17_nir.jpg
+│       │   │   │   ├── field_17_rgb.jpg
+│       │   │   │   ├── field_18_nir.jpg
+│       │   │   │   ├── field_18_rgb.jpg
+│       │   │   │   ├── field_19_nir.jpg
+│       │   │   │   ├── field_19_rgb.jpg
+│       │   │   │   ├── field_20_nir.jpg
+│       │   │   │   ├── field_20_rgb.jpg
+│       │   │   │   ├── field_21_nir.jpg
+│       │   │   │   ├── field_21_rgb.jpg
+│       │   │   │   ├── field_22_nir.jpg
+│       │   │   │   ├── field_22_rgb.jpg
+│       │   │   │   ├── field_23_nir.jpg
+│       │   │   │   ├── field_23_rgb.jpg
+│       │   │   │   ├── field_24_nir.jpg
+│       │   │   │   ├── field_24_rgb.jpg
+│       │   │   │   ├── field_25_nir.jpg
+│       │   │   │   ├── field_25_rgb.jpg
+│       │   │   │   ├── field_26_nir.jpg
+│       │   │   │   ├── field_26_rgb.jpg
+│       │   │   │   ├── field_27_nir.jpg
+│       │   │   │   ├── field_27_rgb.jpg
+│       │   │   │   ├── field_28_nir.jpg
+│       │   │   │   ├── field_28_rgb.jpg
+│       │   │   │   ├── field_29_nir.jpg
+│       │   │   │   ├── field_29_rgb.jpg
+│       │   │   │   ├── field_30_nir.jpg
+│       │   │   │   ├── field_30_rgb.jpg
+│       │   │   │   ├── field_31_nir.jpg
+│       │   │   │   ├── field_31_rgb.jpg
+│       │   │   │   ├── field_32_nir.jpg
+│       │   │   │   ├── field_32_rgb.jpg
+│       │   │   │   ├── field_33_nir.jpg
+│       │   │   │   ├── field_33_rgb.jpg
+│       │   │   │   ├── field_35_nir.jpg
+│       │   │   │   ├── field_35_rgb.jpg
+│       │   │   │   ├── field_36_nir.jpg
+│       │   │   │   ├── field_36_rgb.jpg
+│       │   │   │   ├── field_37_nir.jpg
+│       │   │   │   ├── field_37_rgb.jpg
+│       │   │   │   ├── field_38_nir.jpg
+│       │   │   │   ├── field_38_rgb.jpg
+│       │   │   │   ├── field_39_nir.jpg
+│       │   │   │   ├── field_39_rgb.jpg
+│       │   │   │   ├── field_40_nir.jpg
+│       │   │   │   ├── field_40_rgb.jpg
+│       │   │   │   ├── field_41_nir.jpg
+│       │   │   │   ├── field_41_rgb.jpg
+│       │   │   │   ├── field_42_nir.jpg
+│       │   │   │   ├── field_42_rgb.jpg
+│       │   │   │   ├── field_43_nir.jpg
+│       │   │   │   ├── field_43_rgb.jpg
+│       │   │   │   ├── field_44_nir.jpg
+│       │   │   │   ├── field_44_rgb.jpg
+│       │   │   │   ├── field_45_nir.jpg
+│       │   │   │   ├── field_45_rgb.jpg
+│       │   │   │   ├── field_46_nir.jpg
+│       │   │   │   ├── field_46_rgb.jpg
+│       │   │   │   ├── field_47_nir.jpg
+│       │   │   │   ├── field_47_rgb.jpg
+│       │   │   │   ├── field_48_nir.jpg
+│       │   │   │   ├── field_48_rgb.jpg
+│       │   │   │   ├── field_49_nir.jpg
+│       │   │   │   ├── field_49_rgb.jpg
+│       │   │   │   ├── field_50_nir.jpg
+│       │   │   │   ├── field_50_rgb.jpg
+│       │   │   │   ├── field_51_nir.jpg
+│       │   │   │   ├── field_51_rgb.jpg
+│       │   │   │   ├── field_52_nir.jpg
+│       │   │   │   ├── field_52_rgb.jpg
+│       │   │   │   ├── forest_01_nir.jpg
+│       │   │   │   ├── forest_01_rgb.jpg
+│       │   │   │   ├── forest_02_nir.jpg
+│       │   │   │   ├── forest_02_rgb.jpg
+│       │   │   │   ├── forest_03_nir.jpg
+│       │   │   │   ├── forest_03_rgb.jpg
+│       │   │   │   ├── forest_04_nir.jpg
+│       │   │   │   ├── forest_04_rgb.jpg
+│       │   │   │   ├── forest_05_nir.jpg
+│       │   │   │   ├── forest_05_rgb.jpg
+│       │   │   │   ├── forest_06_nir.jpg
+│       │   │   │   ├── forest_06_rgb.jpg
+│       │   │   │   ├── forest_07_nir.jpg
+│       │   │   │   ├── forest_07_rgb.jpg
+│       │   │   │   ├── forest_08_nir.jpg
+│       │   │   │   ├── forest_08_rgb.jpg
+│       │   │   │   ├── forest_09_nir.jpg
+│       │   │   │   ├── forest_09_rgb.jpg
+│       │   │   │   ├── forest_10_nir.jpg
+│       │   │   │   ├── forest_10_rgb.jpg
+│       │   │   │   ├── forest_11_nir.jpg
+│       │   │   │   ├── forest_11_rgb.jpg
+│       │   │   │   ├── forest_12_nir.jpg
+│       │   │   │   ├── forest_12_rgb.jpg
+│       │   │   │   ├── forest_13_nir.jpg
+│       │   │   │   ├── forest_13_rgb.jpg
+│       │   │   │   ├── forest_14_nir.jpg
+│       │   │   │   ├── forest_14_rgb.jpg
+│       │   │   │   ├── forest_15_nir.jpg
+│       │   │   │   ├── forest_15_rgb.jpg
+│       │   │   │   ├── forest_16_nir.jpg
+│       │   │   │   ├── forest_16_rgb.jpg
+│       │   │   │   ├── forest_17_nir.jpg
+│       │   │   │   ├── forest_17_rgb.jpg
+│       │   │   │   ├── forest_18_nir.jpg
+│       │   │   │   ├── forest_18_rgb.jpg
+│       │   │   │   ├── forest_19_nir.jpg
+│       │   │   │   ├── forest_19_rgb.jpg
+│       │   │   │   ├── forest_20_nir.jpg
+│       │   │   │   ├── forest_20_rgb.jpg
+│       │   │   │   ├── forest_21_nir.jpg
+│       │   │   │   ├── forest_21_rgb.jpg
+│       │   │   │   ├── forest_22_nir.jpg
+│       │   │   │   ├── forest_22_rgb.jpg
+│       │   │   │   ├── forest_23_nir.jpg
+│       │   │   │   ├── forest_23_rgb.jpg
+│       │   │   │   ├── forest_24_nir.jpg
+│       │   │   │   ├── forest_24_rgb.jpg
+│       │   │   │   ├── forest_25_nir.jpg
+│       │   │   │   ├── forest_25_rgb.jpg
+│       │   │   │   ├── forest_26_nir.jpg
+│       │   │   │   ├── forest_26_rgb.jpg
+│       │   │   │   ├── forest_27_nir.jpg
+│       │   │   │   ├── forest_27_rgb.jpg
+│       │   │   │   ├── forest_28_nir.jpg
+│       │   │   │   ├── forest_28_rgb.jpg
+│       │   │   │   ├── forest_29_nir.jpg
+│       │   │   │   ├── forest_29_rgb.jpg
+│       │   │   │   ├── forest_30_nir.jpg
+│       │   │   │   ├── forest_30_rgb.jpg
+│       │   │   │   ├── forest_31_nir.jpg
+│       │   │   │   ├── forest_31_rgb.jpg
+│       │   │   │   ├── forest_32_nir.jpg
+│       │   │   │   ├── forest_32_rgb.jpg
+│       │   │   │   ├── forest_33_nir.jpg
+│       │   │   │   ├── forest_33_rgb.jpg
+│       │   │   │   ├── forest_34_nir.jpg
+│       │   │   │   ├── forest_34_rgb.jpg
+│       │   │   │   ├── forest_35_nir.jpg
+│       │   │   │   ├── forest_35_rgb.jpg
+│       │   │   │   ├── forest_36_nir.jpg
+│       │   │   │   ├── forest_36_rgb.jpg
+│       │   │   │   ├── forest_37_nir.jpg
+│       │   │   │   ├── forest_37_rgb.jpg
+│       │   │   │   ├── forest_38_nir.jpg
+│       │   │   │   ├── forest_38_rgb.jpg
+│       │   │   │   ├── forest_39_nir.jpg
+│       │   │   │   ├── forest_39_rgb.jpg
+│       │   │   │   ├── forest_40_nir.jpg
+│       │   │   │   ├── forest_40_rgb.jpg
+│       │   │   │   ├── forest_41_nir.jpg
+│       │   │   │   ├── forest_41_rgb.jpg
+│       │   │   │   ├── forest_42_nir.jpg
+│       │   │   │   ├── forest_42_rgb.jpg
+│       │   │   │   ├── forest_43_nir.jpg
+│       │   │   │   ├── forest_43_rgb.jpg
+│       │   │   │   ├── forest_44_nir.jpg
+│       │   │   │   ├── forest_44_rgb.jpg
+│       │   │   │   ├── forest_45_nir.jpg
+│       │   │   │   ├── forest_45_rgb.jpg
+│       │   │   │   ├── forest_46_nir.jpg
+│       │   │   │   ├── forest_46_rgb.jpg
+│       │   │   │   ├── forest_47_nir.jpg
+│       │   │   │   ├── forest_47_rgb.jpg
+│       │   │   │   ├── forest_48_nir.jpg
+│       │   │   │   ├── forest_48_rgb.jpg
+│       │   │   │   ├── forest_49_nir.jpg
+│       │   │   │   ├── forest_49_rgb.jpg
+│       │   │   │   ├── forest_50_nir.jpg
+│       │   │   │   ├── forest_50_rgb.jpg
+│       │   │   │   ├── forest_51_nir.jpg
+│       │   │   │   ├── forest_51_rgb.jpg
+│       │   │   │   ├── forest_52_nir.jpg
+│       │   │   │   ├── forest_52_rgb.jpg
+│       │   │   │   ├── forest_53_nir.jpg
+│       │   │   │   ├── forest_53_rgb.jpg
+│       │   │   │   ├── indoor_01_nir.jpg
+│       │   │   │   ├── indoor_01_rgb.jpg
+│       │   │   │   ├── indoor_02_nir.jpg
+│       │   │   │   ├── indoor_02_rgb.jpg
+│       │   │   │   ├── indoor_03_nir.jpg
+│       │   │   │   ├── indoor_03_rgb.jpg
+│       │   │   │   ├── indoor_04_nir.jpg
+│       │   │   │   ├── indoor_04_rgb.jpg
+│       │   │   │   ├── indoor_05_nir.jpg
+│       │   │   │   ├── indoor_05_rgb.jpg
+│       │   │   │   ├── indoor_06_nir.jpg
+│       │   │   │   ├── indoor_06_rgb.jpg
+│       │   │   │   ├── indoor_07_nir.jpg
+│       │   │   │   ├── indoor_07_rgb.jpg
+│       │   │   │   ├── indoor_08_nir.jpg
+│       │   │   │   ├── indoor_08_rgb.jpg
+│       │   │   │   ├── indoor_09_nir.jpg
+│       │   │   │   ├── indoor_09_rgb.jpg
+│       │   │   │   ├── indoor_10_nir.jpg
+│       │   │   │   ├── indoor_10_rgb.jpg
+│       │   │   │   ├── indoor_11_nir.jpg
+│       │   │   │   ├── indoor_11_rgb.jpg
+│       │   │   │   ├── indoor_12_nir.jpg
+│       │   │   │   ├── indoor_12_rgb.jpg
+│       │   │   │   ├── indoor_13_nir.jpg
+│       │   │   │   ├── indoor_13_rgb.jpg
+│       │   │   │   ├── indoor_14_nir.jpg
+│       │   │   │   ├── indoor_14_rgb.jpg
+│       │   │   │   ├── indoor_15_nir.jpg
+│       │   │   │   ├── indoor_15_rgb.jpg
+│       │   │   │   ├── indoor_16_nir.jpg
+│       │   │   │   ├── indoor_16_rgb.jpg
+│       │   │   │   ├── indoor_17_nir.jpg
+│       │   │   │   ├── indoor_17_rgb.jpg
+│       │   │   │   ├── indoor_18_nir.jpg
+│       │   │   │   ├── indoor_18_rgb.jpg
+│       │   │   │   ├── indoor_19_nir.jpg
+│       │   │   │   ├── indoor_19_rgb.jpg
+│       │   │   │   ├── indoor_20_nir.jpg
+│       │   │   │   ├── indoor_20_rgb.jpg
+│       │   │   │   ├── indoor_21_nir.jpg
+│       │   │   │   ├── indoor_21_rgb.jpg
+│       │   │   │   ├── indoor_22_nir.jpg
+│       │   │   │   ├── indoor_22_rgb.jpg
+│       │   │   │   ├── indoor_23_nir.jpg
+│       │   │   │   ├── indoor_23_rgb.jpg
+│       │   │   │   ├── indoor_24_nir.jpg
+│       │   │   │   ├── indoor_24_rgb.jpg
+│       │   │   │   ├── indoor_25_nir.jpg
+│       │   │   │   ├── indoor_25_rgb.jpg
+│       │   │   │   ├── indoor_26_nir.jpg
+│       │   │   │   ├── indoor_26_rgb.jpg
+│       │   │   │   ├── indoor_27_nir.jpg
+│       │   │   │   ├── indoor_27_rgb.jpg
+│       │   │   │   ├── indoor_28_nir.jpg
+│       │   │   │   ├── indoor_28_rgb.jpg
+│       │   │   │   ├── indoor_29_nir.jpg
+│       │   │   │   ├── indoor_29_rgb.jpg
+│       │   │   │   ├── indoor_30_nir.jpg
+│       │   │   │   ├── indoor_30_rgb.jpg
+│       │   │   │   ├── indoor_31_nir.jpg
+│       │   │   │   ├── indoor_31_rgb.jpg
+│       │   │   │   ├── indoor_32_nir.jpg
+│       │   │   │   ├── indoor_32_rgb.jpg
+│       │   │   │   ├── indoor_33_nir.jpg
+│       │   │   │   ├── indoor_33_rgb.jpg
+│       │   │   │   ├── indoor_34_nir.jpg
+│       │   │   │   ├── indoor_34_rgb.jpg
+│       │   │   │   ├── indoor_35_nir.jpg
+│       │   │   │   ├── indoor_35_rgb.jpg
+│       │   │   │   ├── indoor_36_nir.jpg
+│       │   │   │   ├── indoor_36_rgb.jpg
+│       │   │   │   ├── indoor_37_nir.jpg
+│       │   │   │   ├── indoor_37_rgb.jpg
+│       │   │   │   ├── indoor_38_nir.jpg
+│       │   │   │   ├── indoor_38_rgb.jpg
+│       │   │   │   ├── indoor_39_nir.jpg
+│       │   │   │   ├── indoor_39_rgb.jpg
+│       │   │   │   ├── indoor_40_nir.jpg
+│       │   │   │   ├── indoor_40_rgb.jpg
+│       │   │   │   ├── indoor_41_nir.jpg
+│       │   │   │   ├── indoor_41_rgb.jpg
+│       │   │   │   ├── indoor_42_nir.jpg
+│       │   │   │   ├── indoor_42_rgb.jpg
+│       │   │   │   ├── indoor_43_nir.jpg
+│       │   │   │   ├── indoor_43_rgb.jpg
+│       │   │   │   ├── indoor_44_nir.jpg
+│       │   │   │   ├── indoor_44_rgb.jpg
+│       │   │   │   ├── indoor_45_nir.jpg
+│       │   │   │   ├── indoor_45_rgb.jpg
+│       │   │   │   ├── indoor_46_nir.jpg
+│       │   │   │   ├── indoor_46_rgb.jpg
+│       │   │   │   ├── indoor_47_nir.jpg
+│       │   │   │   ├── indoor_47_rgb.jpg
+│       │   │   │   ├── indoor_48_nir.jpg
+│       │   │   │   ├── indoor_48_rgb.jpg
+│       │   │   │   ├── indoor_49_nir.jpg
+│       │   │   │   ├── indoor_49_rgb.jpg
+│       │   │   │   ├── indoor_50_nir.jpg
+│       │   │   │   ├── indoor_50_rgb.jpg
+│       │   │   │   ├── indoor_51_nir.jpg
+│       │   │   │   ├── indoor_51_rgb.jpg
+│       │   │   │   ├── indoor_52_nir.jpg
+│       │   │   │   ├── indoor_52_rgb.jpg
+│       │   │   │   ├── indoor_53_nir.jpg
+│       │   │   │   ├── indoor_53_rgb.jpg
+│       │   │   │   ├── indoor_54_nir.jpg
+│       │   │   │   ├── indoor_54_rgb.jpg
+│       │   │   │   ├── indoor_55_nir.jpg
+│       │   │   │   ├── indoor_55_rgb.jpg
+│       │   │   │   ├── indoor_56_nir.jpg
+│       │   │   │   ├── indoor_56_rgb.jpg
+│       │   │   │   ├── mountain_01_nir.jpg
+│       │   │   │   ├── mountain_01_rgb.jpg
+│       │   │   │   ├── mountain_02_nir.jpg
+│       │   │   │   ├── mountain_02_rgb.jpg
+│       │   │   │   ├── mountain_03_nir.jpg
+│       │   │   │   ├── mountain_03_rgb.jpg
+│       │   │   │   ├── mountain_04_nir.jpg
+│       │   │   │   ├── mountain_04_rgb.jpg
+│       │   │   │   ├── mountain_05_nir.jpg
+│       │   │   │   ├── mountain_05_rgb.jpg
+│       │   │   │   ├── mountain_06_nir.jpg
+│       │   │   │   ├── mountain_06_rgb.jpg
+│       │   │   │   ├── mountain_07_nir.jpg
+│       │   │   │   ├── mountain_07_rgb.jpg
+│       │   │   │   ├── mountain_08_nir.jpg
+│       │   │   │   ├── mountain_08_rgb.jpg
+│       │   │   │   ├── mountain_09_nir.jpg
+│       │   │   │   ├── mountain_09_rgb.jpg
+│       │   │   │   ├── mountain_10_nir.jpg
+│       │   │   │   ├── mountain_10_rgb.jpg
+│       │   │   │   ├── mountain_11_nir.jpg
+│       │   │   │   ├── mountain_11_rgb.jpg
+│       │   │   │   ├── mountain_12_nir.jpg
+│       │   │   │   ├── mountain_12_rgb.jpg
+│       │   │   │   ├── mountain_13_nir.jpg
+│       │   │   │   ├── mountain_13_rgb.jpg
+│       │   │   │   ├── mountain_14_nir.jpg
+│       │   │   │   ├── mountain_14_rgb.jpg
+│       │   │   │   ├── mountain_15_nir.jpg
+│       │   │   │   ├── mountain_15_rgb.jpg
+│       │   │   │   ├── mountain_16_nir.jpg
+│       │   │   │   ├── mountain_16_rgb.jpg
+│       │   │   │   ├── mountain_17_nir.jpg
+│       │   │   │   ├── mountain_17_rgb.jpg
+│       │   │   │   ├── mountain_18_nir.jpg
+│       │   │   │   ├── mountain_18_rgb.jpg
+│       │   │   │   ├── mountain_19_nir.jpg
+│       │   │   │   ├── mountain_19_rgb.jpg
+│       │   │   │   ├── mountain_20_nir.jpg
+│       │   │   │   ├── mountain_20_rgb.jpg
+│       │   │   │   ├── mountain_21_nir.jpg
+│       │   │   │   ├── mountain_21_rgb.jpg
+│       │   │   │   ├── mountain_22_nir.jpg
+│       │   │   │   ├── mountain_22_rgb.jpg
+│       │   │   │   ├── mountain_23_nir.jpg
+│       │   │   │   ├── mountain_23_rgb.jpg
+│       │   │   │   ├── mountain_24_nir.jpg
+│       │   │   │   ├── mountain_24_rgb.jpg
+│       │   │   │   ├── mountain_25_nir.jpg
+│       │   │   │   ├── mountain_25_rgb.jpg
+│       │   │   │   ├── mountain_26_nir.jpg
+│       │   │   │   ├── mountain_26_rgb.jpg
+│       │   │   │   ├── mountain_27_nir.jpg
+│       │   │   │   ├── mountain_27_rgb.jpg
+│       │   │   │   ├── mountain_28_nir.jpg
+│       │   │   │   ├── mountain_28_rgb.jpg
+│       │   │   │   ├── mountain_29_nir.jpg
+│       │   │   │   ├── mountain_29_rgb.jpg
+│       │   │   │   ├── mountain_30_nir.jpg
+│       │   │   │   ├── mountain_30_rgb.jpg
+│       │   │   │   ├── mountain_31_nir.jpg
+│       │   │   │   ├── mountain_31_rgb.jpg
+│       │   │   │   ├── mountain_32_nir.jpg
+│       │   │   │   ├── mountain_32_rgb.jpg
+│       │   │   │   ├── mountain_33_nir.jpg
+│       │   │   │   ├── mountain_33_rgb.jpg
+│       │   │   │   ├── mountain_34_nir.jpg
+│       │   │   │   ├── mountain_34_rgb.jpg
+│       │   │   │   ├── mountain_35_nir.jpg
+│       │   │   │   ├── mountain_35_rgb.jpg
+│       │   │   │   ├── mountain_36_nir.jpg
+│       │   │   │   ├── mountain_36_rgb.jpg
+│       │   │   │   ├── mountain_37_nir.jpg
+│       │   │   │   ├── mountain_37_rgb.jpg
+│       │   │   │   ├── mountain_38_nir.jpg
+│       │   │   │   ├── mountain_38_rgb.jpg
+│       │   │   │   ├── mountain_39_nir.jpg
+│       │   │   │   ├── mountain_39_rgb.jpg
+│       │   │   │   ├── mountain_40_nir.jpg
+│       │   │   │   ├── mountain_40_rgb.jpg
+│       │   │   │   ├── mountain_41_nir.jpg
+│       │   │   │   ├── mountain_41_rgb.jpg
+│       │   │   │   ├── mountain_42_nir.jpg
+│       │   │   │   ├── mountain_42_rgb.jpg
+│       │   │   │   ├── mountain_43_nir.jpg
+│       │   │   │   ├── mountain_43_rgb.jpg
+│       │   │   │   ├── mountain_44_nir.jpg
+│       │   │   │   ├── mountain_44_rgb.jpg
+│       │   │   │   ├── mountain_45_nir.jpg
+│       │   │   │   ├── mountain_45_rgb.jpg
+│       │   │   │   ├── mountain_46_nir.jpg
+│       │   │   │   ├── mountain_46_rgb.jpg
+│       │   │   │   ├── mountain_47_nir.jpg
+│       │   │   │   ├── mountain_47_rgb.jpg
+│       │   │   │   ├── mountain_48_nir.jpg
+│       │   │   │   ├── mountain_48_rgb.jpg
+│       │   │   │   ├── mountain_49_nir.jpg
+│       │   │   │   ├── mountain_49_rgb.jpg
+│       │   │   │   ├── mountain_50_nir.jpg
+│       │   │   │   ├── mountain_50_rgb.jpg
+│       │   │   │   ├── mountain_51_nir.jpg
+│       │   │   │   ├── mountain_51_rgb.jpg
+│       │   │   │   ├── mountain_52_nir.jpg
+│       │   │   │   ├── mountain_52_rgb.jpg
+│       │   │   │   ├── mountain_53_nir.jpg
+│       │   │   │   ├── mountain_53_rgb.jpg
+│       │   │   │   ├── mountain_54_nir.jpg
+│       │   │   │   ├── mountain_54_rgb.jpg
+│       │   │   │   ├── mountain_55_nir.jpg
+│       │   │   │   ├── mountain_55_rgb.jpg
+│       │   │   │   ├── oldbuilding_01_nir.jpg
+│       │   │   │   ├── oldbuilding_01_rgb.jpg
+│       │   │   │   ├── oldbuilding_02_nir.jpg
+│       │   │   │   ├── oldbuilding_02_rgb.jpg
+│       │   │   │   ├── oldbuilding_03_nir.jpg
+│       │   │   │   ├── oldbuilding_03_rgb.jpg
+│       │   │   │   ├── oldbuilding_04_nir.jpg
+│       │   │   │   ├── oldbuilding_04_rgb.jpg
+│       │   │   │   ├── oldbuilding_05_nir.jpg
+│       │   │   │   ├── oldbuilding_05_rgb.jpg
+│       │   │   │   ├── oldbuilding_06_nir.jpg
+│       │   │   │   ├── oldbuilding_06_rgb.jpg
+│       │   │   │   ├── oldbuilding_07_nir.jpg
+│       │   │   │   ├── oldbuilding_07_rgb.jpg
+│       │   │   │   ├── oldbuilding_08_nir.jpg
+│       │   │   │   ├── oldbuilding_08_rgb.jpg
+│       │   │   │   ├── oldbuilding_09_nir.jpg
+│       │   │   │   ├── oldbuilding_09_rgb.jpg
+│       │   │   │   ├── oldbuilding_10_nir.jpg
+│       │   │   │   ├── oldbuilding_10_rgb.jpg
+│       │   │   │   ├── oldbuilding_11_nir.jpg
+│       │   │   │   ├── oldbuilding_11_rgb.jpg
+│       │   │   │   ├── oldbuilding_12_nir.jpg
+│       │   │   │   ├── oldbuilding_12_rgb.jpg
+│       │   │   │   ├── oldbuilding_13_nir.jpg
+│       │   │   │   ├── oldbuilding_13_rgb.jpg
+│       │   │   │   ├── oldbuilding_14_nir.jpg
+│       │   │   │   ├── oldbuilding_14_rgb.jpg
+│       │   │   │   ├── oldbuilding_15_nir.jpg
+│       │   │   │   ├── oldbuilding_15_rgb.jpg
+│       │   │   │   ├── oldbuilding_16_nir.jpg
+│       │   │   │   ├── oldbuilding_16_rgb.jpg
+│       │   │   │   ├── oldbuilding_17_nir.jpg
+│       │   │   │   ├── oldbuilding_17_rgb.jpg
+│       │   │   │   ├── oldbuilding_18_nir.jpg
+│       │   │   │   ├── oldbuilding_18_rgb.jpg
+│       │   │   │   ├── oldbuilding_19_nir.jpg
+│       │   │   │   ├── oldbuilding_19_rgb.jpg
+│       │   │   │   ├── oldbuilding_20_nir.jpg
+│       │   │   │   ├── oldbuilding_20_rgb.jpg
+│       │   │   │   ├── oldbuilding_21_nir.jpg
+│       │   │   │   ├── oldbuilding_21_rgb.jpg
+│       │   │   │   ├── oldbuilding_22_nir.jpg
+│       │   │   │   ├── oldbuilding_22_rgb.jpg
+│       │   │   │   ├── oldbuilding_23_nir.jpg
+│       │   │   │   ├── oldbuilding_23_rgb.jpg
+│       │   │   │   ├── oldbuilding_24_nir.jpg
+│       │   │   │   ├── oldbuilding_24_rgb.jpg
+│       │   │   │   ├── oldbuilding_25_nir.jpg
+│       │   │   │   ├── oldbuilding_25_rgb.jpg
+│       │   │   │   ├── oldbuilding_26_nir.jpg
+│       │   │   │   ├── oldbuilding_26_rgb.jpg
+│       │   │   │   ├── oldbuilding_27_nir.jpg
+│       │   │   │   ├── oldbuilding_27_rgb.jpg
+│       │   │   │   ├── oldbuilding_28_nir.jpg
+│       │   │   │   ├── oldbuilding_28_rgb.jpg
+│       │   │   │   ├── oldbuilding_29_nir.jpg
+│       │   │   │   ├── oldbuilding_29_rgb.jpg
+│       │   │   │   ├── oldbuilding_30_nir.jpg
+│       │   │   │   ├── oldbuilding_30_rgb.jpg
+│       │   │   │   ├── oldbuilding_31_nir.jpg
+│       │   │   │   ├── oldbuilding_31_rgb.jpg
+│       │   │   │   ├── oldbuilding_32_nir.jpg
+│       │   │   │   ├── oldbuilding_32_rgb.jpg
+│       │   │   │   ├── oldbuilding_33_nir.jpg
+│       │   │   │   ├── oldbuilding_33_rgb.jpg
+│       │   │   │   ├── oldbuilding_34_nir.jpg
+│       │   │   │   ├── oldbuilding_34_rgb.jpg
+│       │   │   │   ├── oldbuilding_35_nir.jpg
+│       │   │   │   ├── oldbuilding_35_rgb.jpg
+│       │   │   │   ├── oldbuilding_36_nir.jpg
+│       │   │   │   ├── oldbuilding_36_rgb.jpg
+│       │   │   │   ├── oldbuilding_37_nir.jpg
+│       │   │   │   ├── oldbuilding_37_rgb.jpg
+│       │   │   │   ├── oldbuilding_38_nir.jpg
+│       │   │   │   ├── oldbuilding_38_rgb.jpg
+│       │   │   │   ├── oldbuilding_39_nir.jpg
+│       │   │   │   ├── oldbuilding_39_rgb.jpg
+│       │   │   │   ├── oldbuilding_40_nir.jpg
+│       │   │   │   ├── oldbuilding_40_rgb.jpg
+│       │   │   │   ├── oldbuilding_41_nir.jpg
+│       │   │   │   ├── oldbuilding_41_rgb.jpg
+│       │   │   │   ├── oldbuilding_42_nir.jpg
+│       │   │   │   ├── oldbuilding_42_rgb.jpg
+│       │   │   │   ├── oldbuilding_43_nir.jpg
+│       │   │   │   ├── oldbuilding_43_rgb.jpg
+│       │   │   │   ├── oldbuilding_44_nir.jpg
+│       │   │   │   ├── oldbuilding_44_rgb.jpg
+│       │   │   │   ├── oldbuilding_45_nir.jpg
+│       │   │   │   ├── oldbuilding_45_rgb.jpg
+│       │   │   │   ├── oldbuilding_46_nir.jpg
+│       │   │   │   ├── oldbuilding_46_rgb.jpg
+│       │   │   │   ├── oldbuilding_47_nir.jpg
+│       │   │   │   ├── oldbuilding_47_rgb.jpg
+│       │   │   │   ├── oldbuilding_48_nir.jpg
+│       │   │   │   ├── oldbuilding_48_rgb.jpg
+│       │   │   │   ├── oldbuilding_49_nir.jpg
+│       │   │   │   ├── oldbuilding_49_rgb.jpg
+│       │   │   │   ├── oldbuilding_50_nir.jpg
+│       │   │   │   ├── oldbuilding_50_rgb.jpg
+│       │   │   │   ├── oldbuilding_51_nir.jpg
+│       │   │   │   ├── oldbuilding_51_rgb.jpg
+│       │   │   │   ├── street_01_nir.jpg
+│       │   │   │   ├── street_01_rgb.jpg
+│       │   │   │   ├── street_02_nir.jpg
+│       │   │   │   ├── street_02_rgb.jpg
+│       │   │   │   ├── street_03_nir.jpg
+│       │   │   │   ├── street_03_rgb.jpg
+│       │   │   │   ├── street_04_nir.jpg
+│       │   │   │   ├── street_04_rgb.jpg
+│       │   │   │   ├── street_05_nir.jpg
+│       │   │   │   ├── street_05_rgb.jpg
+│       │   │   │   ├── street_06_nir.jpg
+│       │   │   │   ├── street_06_rgb.jpg
+│       │   │   │   ├── street_07_nir.jpg
+│       │   │   │   ├── street_07_rgb.jpg
+│       │   │   │   ├── street_08_nir.jpg
+│       │   │   │   ├── street_08_rgb.jpg
+│       │   │   │   ├── street_09_nir.jpg
+│       │   │   │   ├── street_09_rgb.jpg
+│       │   │   │   ├── street_10_nir.jpg
+│       │   │   │   ├── street_10_rgb.jpg
+│       │   │   │   ├── street_11_nir.jpg
+│       │   │   │   ├── street_11_rgb.jpg
+│       │   │   │   ├── street_12_nir.jpg
+│       │   │   │   ├── street_12_rgb.jpg
+│       │   │   │   ├── street_13_nir.jpg
+│       │   │   │   ├── street_13_rgb.jpg
+│       │   │   │   ├── street_14_nir.jpg
+│       │   │   │   ├── street_14_rgb.jpg
+│       │   │   │   ├── street_15_nir.jpg
+│       │   │   │   ├── street_15_rgb.jpg
+│       │   │   │   ├── street_16_nir.jpg
+│       │   │   │   ├── street_16_rgb.jpg
+│       │   │   │   ├── street_17_nir.jpg
+│       │   │   │   ├── street_17_rgb.jpg
+│       │   │   │   ├── street_18_nir.jpg
+│       │   │   │   ├── street_18_rgb.jpg
+│       │   │   │   ├── street_19_nir.jpg
+│       │   │   │   ├── street_19_rgb.jpg
+│       │   │   │   ├── street_20_nir.jpg
+│       │   │   │   ├── street_20_rgb.jpg
+│       │   │   │   ├── street_21_nir.jpg
+│       │   │   │   ├── street_21_rgb.jpg
+│       │   │   │   ├── street_22_nir.jpg
+│       │   │   │   ├── street_22_rgb.jpg
+│       │   │   │   ├── street_23_nir.jpg
+│       │   │   │   ├── street_23_rgb.jpg
+│       │   │   │   ├── street_24_nir.jpg
+│       │   │   │   ├── street_24_rgb.jpg
+│       │   │   │   ├── street_25_nir.jpg
+│       │   │   │   ├── street_25_rgb.jpg
+│       │   │   │   ├── street_26_nir.jpg
+│       │   │   │   ├── street_26_rgb.jpg
+│       │   │   │   ├── street_27_nir.jpg
+│       │   │   │   ├── street_27_rgb.jpg
+│       │   │   │   ├── street_28_nir.jpg
+│       │   │   │   ├── street_28_rgb.jpg
+│       │   │   │   ├── street_29_nir.jpg
+│       │   │   │   ├── street_29_rgb.jpg
+│       │   │   │   ├── street_30_nir.jpg
+│       │   │   │   ├── street_30_rgb.jpg
+│       │   │   │   ├── street_31_nir.jpg
+│       │   │   │   ├── street_31_rgb.jpg
+│       │   │   │   ├── street_32_nir.jpg
+│       │   │   │   ├── street_32_rgb.jpg
+│       │   │   │   ├── street_33_nir.jpg
+│       │   │   │   ├── street_33_rgb.jpg
+│       │   │   │   ├── street_34_nir.jpg
+│       │   │   │   ├── street_34_rgb.jpg
+│       │   │   │   ├── street_35_nir.jpg
+│       │   │   │   ├── street_35_rgb.jpg
+│       │   │   │   ├── street_36_nir.jpg
+│       │   │   │   ├── street_36_rgb.jpg
+│       │   │   │   ├── street_37_nir.jpg
+│       │   │   │   ├── street_37_rgb.jpg
+│       │   │   │   ├── street_38_nir.jpg
+│       │   │   │   ├── street_38_rgb.jpg
+│       │   │   │   ├── street_39_nir.jpg
+│       │   │   │   ├── street_39_rgb.jpg
+│       │   │   │   ├── street_40_nir.jpg
+│       │   │   │   ├── street_40_rgb.jpg
+│       │   │   │   ├── street_41_nir.jpg
+│       │   │   │   ├── street_41_rgb.jpg
+│       │   │   │   ├── street_42_nir.jpg
+│       │   │   │   ├── street_42_rgb.jpg
+│       │   │   │   ├── street_43_nir.jpg
+│       │   │   │   ├── street_43_rgb.jpg
+│       │   │   │   ├── street_44_nir.jpg
+│       │   │   │   ├── street_44_rgb.jpg
+│       │   │   │   ├── street_45_nir.jpg
+│       │   │   │   ├── street_45_rgb.jpg
+│       │   │   │   ├── street_46_nir.jpg
+│       │   │   │   ├── street_46_rgb.jpg
+│       │   │   │   ├── street_47_nir.jpg
+│       │   │   │   ├── street_47_rgb.jpg
+│       │   │   │   ├── street_48_nir.jpg
+│       │   │   │   ├── street_48_rgb.jpg
+│       │   │   │   ├── street_49_nir.jpg
+│       │   │   │   ├── street_49_rgb.jpg
+│       │   │   │   ├── street_50_nir.jpg
+│       │   │   │   ├── street_50_rgb.jpg
+│       │   │   │   ├── urban_01_nir.jpg
+│       │   │   │   ├── urban_01_rgb.jpg
+│       │   │   │   ├── urban_02_nir.jpg
+│       │   │   │   ├── urban_02_rgb.jpg
+│       │   │   │   ├── urban_03_nir.jpg
+│       │   │   │   ├── urban_03_rgb.jpg
+│       │   │   │   ├── urban_04_nir.jpg
+│       │   │   │   ├── urban_04_rgb.jpg
+│       │   │   │   ├── urban_05_nir.jpg
+│       │   │   │   ├── urban_05_rgb.jpg
+│       │   │   │   ├── urban_06_nir.jpg
+│       │   │   │   ├── urban_06_rgb.jpg
+│       │   │   │   ├── urban_07_nir.jpg
+│       │   │   │   ├── urban_07_rgb.jpg
+│       │   │   │   ├── urban_08_nir.jpg
+│       │   │   │   ├── urban_08_rgb.jpg
+│       │   │   │   ├── urban_09_nir.jpg
+│       │   │   │   ├── urban_09_rgb.jpg
+│       │   │   │   ├── urban_10_nir.jpg
+│       │   │   │   ├── urban_10_rgb.jpg
+│       │   │   │   ├── urban_11_nir.jpg
+│       │   │   │   ├── urban_11_rgb.jpg
+│       │   │   │   ├── urban_12_nir.jpg
+│       │   │   │   ├── urban_12_rgb.jpg
+│       │   │   │   ├── urban_13_nir.jpg
+│       │   │   │   ├── urban_13_rgb.jpg
+│       │   │   │   ├── urban_14_nir.jpg
+│       │   │   │   ├── urban_14_rgb.jpg
+│       │   │   │   ├── urban_15_nir.jpg
+│       │   │   │   ├── urban_15_rgb.jpg
+│       │   │   │   ├── urban_16_nir.jpg
+│       │   │   │   ├── urban_16_rgb.jpg
+│       │   │   │   ├── urban_17_nir.jpg
+│       │   │   │   ├── urban_17_rgb.jpg
+│       │   │   │   ├── urban_18_nir.jpg
+│       │   │   │   ├── urban_18_rgb.jpg
+│       │   │   │   ├── urban_19_nir.jpg
+│       │   │   │   ├── urban_19_rgb.jpg
+│       │   │   │   ├── urban_20_nir.jpg
+│       │   │   │   ├── urban_20_rgb.jpg
+│       │   │   │   ├── urban_21_nir.jpg
+│       │   │   │   ├── urban_21_rgb.jpg
+│       │   │   │   ├── urban_22_nir.jpg
+│       │   │   │   ├── urban_22_rgb.jpg
+│       │   │   │   ├── urban_23_nir.jpg
+│       │   │   │   ├── urban_23_rgb.jpg
+│       │   │   │   ├── urban_24_nir.jpg
+│       │   │   │   ├── urban_24_rgb.jpg
+│       │   │   │   ├── urban_25_nir.jpg
+│       │   │   │   ├── urban_25_rgb.jpg
+│       │   │   │   ├── urban_26_nir.jpg
+│       │   │   │   ├── urban_26_rgb.jpg
+│       │   │   │   ├── urban_27_nir.jpg
+│       │   │   │   ├── urban_27_rgb.jpg
+│       │   │   │   ├── urban_28_nir.jpg
+│       │   │   │   ├── urban_28_rgb.jpg
+│       │   │   │   ├── urban_29_nir.jpg
+│       │   │   │   ├── urban_29_rgb.jpg
+│       │   │   │   ├── urban_30_nir.jpg
+│       │   │   │   ├── urban_30_rgb.jpg
+│       │   │   │   ├── urban_31_nir.jpg
+│       │   │   │   ├── urban_31_rgb.jpg
+│       │   │   │   ├── urban_32_nir.jpg
+│       │   │   │   ├── urban_32_rgb.jpg
+│       │   │   │   ├── urban_33_nir.jpg
+│       │   │   │   ├── urban_33_rgb.jpg
+│       │   │   │   ├── urban_34_nir.jpg
+│       │   │   │   ├── urban_34_rgb.jpg
+│       │   │   │   ├── urban_35_nir.jpg
+│       │   │   │   ├── urban_35_rgb.jpg
+│       │   │   │   ├── urban_36_nir.jpg
+│       │   │   │   ├── urban_36_rgb.jpg
+│       │   │   │   ├── urban_37_nir.jpg
+│       │   │   │   ├── urban_37_rgb.jpg
+│       │   │   │   ├── urban_38_nir.jpg
+│       │   │   │   ├── urban_38_rgb.jpg
+│       │   │   │   ├── urban_39_nir.jpg
+│       │   │   │   ├── urban_39_rgb.jpg
+│       │   │   │   ├── urban_40_nir.jpg
+│       │   │   │   ├── urban_40_rgb.jpg
+│       │   │   │   ├── urban_41_nir.jpg
+│       │   │   │   ├── urban_41_rgb.jpg
+│       │   │   │   ├── urban_42_nir.jpg
+│       │   │   │   ├── urban_42_rgb.jpg
+│       │   │   │   ├── urban_43_nir.jpg
+│       │   │   │   ├── urban_43_rgb.jpg
+│       │   │   │   ├── urban_44_nir.jpg
+│       │   │   │   ├── urban_44_rgb.jpg
+│       │   │   │   ├── urban_45_nir.jpg
+│       │   │   │   ├── urban_45_rgb.jpg
+│       │   │   │   ├── urban_46_nir.jpg
+│       │   │   │   ├── urban_46_rgb.jpg
+│       │   │   │   ├── urban_47_nir.jpg
+│       │   │   │   ├── urban_47_rgb.jpg
+│       │   │   │   ├── urban_48_nir.jpg
+│       │   │   │   ├── urban_48_rgb.jpg
+│       │   │   │   ├── urban_49_nir.jpg
+│       │   │   │   ├── urban_49_rgb.jpg
+│       │   │   │   ├── urban_50_nir.jpg
+│       │   │   │   ├── urban_50_rgb.jpg
+│       │   │   │   ├── urban_51_nir.jpg
+│       │   │   │   ├── urban_51_rgb.jpg
+│       │   │   │   ├── urban_52_nir.jpg
+│       │   │   │   ├── urban_52_rgb.jpg
+│       │   │   │   ├── urban_53_nir.jpg
+│       │   │   │   ├── urban_53_rgb.jpg
+│       │   │   │   ├── urban_54_nir.jpg
+│       │   │   │   ├── urban_54_rgb.jpg
+│       │   │   │   ├── urban_55_nir.jpg
+│       │   │   │   ├── urban_55_rgb.jpg
+│       │   │   │   ├── urban_56_nir.jpg
+│       │   │   │   ├── urban_56_rgb.jpg
+│       │   │   │   ├── urban_57_nir.jpg
+│       │   │   │   ├── urban_57_rgb.jpg
+│       │   │   │   ├── urban_58_nir.jpg
+│       │   │   │   ├── urban_58_rgb.jpg
+│       │   │   │   ├── water_01_nir.jpg
+│       │   │   │   ├── water_01_rgb.jpg
+│       │   │   │   ├── water_02_nir.jpg
+│       │   │   │   ├── water_02_rgb.jpg
+│       │   │   │   ├── water_03_nir.jpg
+│       │   │   │   ├── water_03_rgb.jpg
+│       │   │   │   ├── water_04_nir.jpg
+│       │   │   │   ├── water_04_rgb.jpg
+│       │   │   │   ├── water_05_nir.jpg
+│       │   │   │   ├── water_05_rgb.jpg
+│       │   │   │   ├── water_06_nir.jpg
+│       │   │   │   ├── water_06_rgb.jpg
+│       │   │   │   ├── water_07_nir.jpg
+│       │   │   │   ├── water_07_rgb.jpg
+│       │   │   │   ├── water_08_nir.jpg
+│       │   │   │   ├── water_08_rgb.jpg
+│       │   │   │   ├── water_09_nir.jpg
+│       │   │   │   ├── water_09_rgb.jpg
+│       │   │   │   ├── water_10_nir.jpg
+│       │   │   │   ├── water_10_rgb.jpg
+│       │   │   │   ├── water_11_nir.jpg
+│       │   │   │   ├── water_11_rgb.jpg
+│       │   │   │   ├── water_12_nir.jpg
+│       │   │   │   ├── water_12_rgb.jpg
+│       │   │   │   ├── water_13_nir.jpg
+│       │   │   │   ├── water_13_rgb.jpg
+│       │   │   │   ├── water_14_nir.jpg
+│       │   │   │   ├── water_14_rgb.jpg
+│       │   │   │   ├── water_15_nir.jpg
+│       │   │   │   ├── water_15_rgb.jpg
+│       │   │   │   ├── water_16_nir.jpg
+│       │   │   │   ├── water_16_rgb.jpg
+│       │   │   │   ├── water_17_nir.jpg
+│       │   │   │   ├── water_17_rgb.jpg
+│       │   │   │   ├── water_18_nir.jpg
+│       │   │   │   ├── water_18_rgb.jpg
+│       │   │   │   ├── water_19_nir.jpg
+│       │   │   │   ├── water_19_rgb.jpg
+│       │   │   │   ├── water_20_nir.jpg
+│       │   │   │   ├── water_20_rgb.jpg
+│       │   │   │   ├── water_21_nir.jpg
+│       │   │   │   ├── water_21_rgb.jpg
+│       │   │   │   ├── water_22_nir.jpg
+│       │   │   │   ├── water_22_rgb.jpg
+│       │   │   │   ├── water_23_nir.jpg
+│       │   │   │   ├── water_23_rgb.jpg
+│       │   │   │   ├── water_24_nir.jpg
+│       │   │   │   ├── water_24_rgb.jpg
+│       │   │   │   ├── water_25_nir.jpg
+│       │   │   │   ├── water_25_rgb.jpg
+│       │   │   │   ├── water_26_nir.jpg
+│       │   │   │   ├── water_26_rgb.jpg
+│       │   │   │   ├── water_27_nir.jpg
+│       │   │   │   ├── water_27_rgb.jpg
+│       │   │   │   ├── water_28_nir.jpg
+│       │   │   │   ├── water_28_rgb.jpg
+│       │   │   │   ├── water_29_nir.jpg
+│       │   │   │   ├── water_29_rgb.jpg
+│       │   │   │   ├── water_30_nir.jpg
+│       │   │   │   ├── water_30_rgb.jpg
+│       │   │   │   ├── water_31_nir.jpg
+│       │   │   │   ├── water_31_rgb.jpg
+│       │   │   │   ├── water_32_nir.jpg
+│       │   │   │   ├── water_32_rgb.jpg
+│       │   │   │   ├── water_33_nir.jpg
+│       │   │   │   ├── water_33_rgb.jpg
+│       │   │   │   ├── water_34_nir.jpg
+│       │   │   │   ├── water_34_rgb.jpg
+│       │   │   │   ├── water_35_nir.jpg
+│       │   │   │   ├── water_35_rgb.jpg
+│       │   │   │   ├── water_36_nir.jpg
+│       │   │   │   ├── water_36_rgb.jpg
+│       │   │   │   ├── water_37_nir.jpg
+│       │   │   │   ├── water_37_rgb.jpg
+│       │   │   │   ├── water_38_nir.jpg
+│       │   │   │   ├── water_38_rgb.jpg
+│       │   │   │   ├── water_39_nir.jpg
+│       │   │   │   ├── water_39_rgb.jpg
+│       │   │   │   ├── water_40_nir.jpg
+│       │   │   │   ├── water_40_rgb.jpg
+│       │   │   │   ├── water_41_nir.jpg
+│       │   │   │   ├── water_41_rgb.jpg
+│       │   │   │   ├── water_42_nir.jpg
+│       │   │   │   ├── water_42_rgb.jpg
+│       │   │   │   ├── water_43_nir.jpg
+│       │   │   │   ├── water_43_rgb.jpg
+│       │   │   │   ├── water_44_nir.jpg
+│       │   │   │   ├── water_44_rgb.jpg
+│       │   │   │   ├── water_45_nir.jpg
+│       │   │   │   ├── water_45_rgb.jpg
+│       │   │   │   ├── water_46_nir.jpg
+│       │   │   │   ├── water_46_rgb.jpg
+│       │   │   │   ├── water_47_nir.jpg
+│       │   │   │   ├── water_47_rgb.jpg
+│       │   │   │   ├── water_48_nir.jpg
+│       │   │   │   ├── water_48_rgb.jpg
+│       │   │   │   ├── water_49_nir.jpg
+│       │   │   │   ├── water_49_rgb.jpg
+│       │   │   │   ├── water_50_nir.jpg
+│       │   │   │   ├── water_50_rgb.jpg
+│       │   │   │   ├── water_51_nir.jpg
+│       │   │   │   └── water_51_rgb.jpg
+│       │   │   ├── local_req.txt
+│       │   │   ├── NDVI_Test
+│       │   │   │   ├── berkay.py
+│       │   │   │   ├── chk_berkay.py
+│       │   │   │   ├── NDVI_Test.py
+│       │   │   │   └── NDVI_Test.pyproj
+│       │   │   ├── NDVI_Test.sln
+│       │   │   ├── not
+│       │   │   ├── README.md
+│       │   │   ├── sample_ndvi.jpg
+│       │   │   ├── sample_rgb.jpg
+│       │   │   └── Tiff-Image-File-Download.tiff
+│       │   └── py-yield-estimation
+│       │       ├── Dockerfile
+│       │       ├── docs
+│       │       │   ├── conf.py
+│       │       │   ├── index.rst
+│       │       │   ├── make.bat
+│       │       │   └── Makefile
+│       │       ├── environment.yml
+│       │       ├── kurulum.sh
+│       │       ├── local_req.txt
+│       │       ├── not
+│       │       ├── package.json
+│       │       ├── package-lock.json
+│       │       ├── poetry.lock
+│       │       ├── pull_request_template.md
+│       │       ├── pyproject.toml
+│       │       ├── py-yield-error.png
+│       │       ├── README.md
+│       │       ├── rio_tiler
+│       │       ├── scripts
+│       │       │   ├── build.sh
+│       │       │   ├── geojson.json
+│       │       │   ├── __init__.py
+│       │       │   ├── run_yield_estimation.py
+│       │       │   └── src
+│       │       │       ├── api.py
+│       │       │       ├── cli.py
+│       │       │       ├── handler.py
+│       │       │       ├── __init__.py
+│       │       │       ├── log_cfg.py
+│       │       │       ├── main.py
+│       │       │       ├── __pycache__
+│       │       │       │   ├── api.cpython-36.pyc
+│       │       │       │   ├── api.cpython-37.pyc
+│       │       │       │   ├── __init__.cpython-36.pyc
+│       │       │       │   ├── __init__.cpython-37.pyc
+│       │       │       │   ├── main.cpython-36.pyc
+│       │       │       │   ├── main.cpython-37.pyc
+│       │       │       │   ├── _version.cpython-36.pyc
+│       │       │       │   └── _version.cpython-37.pyc
+│       │       │       └── _version.py
+│       │       ├── serverles error.png
+│       │       ├── serverless.yml
+│       │       └── tests
+│       │           └── sample.json
+│       └── muallak
+├── output.txt
+├── projeler_hakkinda.txt
+├── projelerin_durumu2.txt
+├── projelerin_durumu3.txt
+└── projelerin_durumu.txt
+
+201 directories, 1853 files

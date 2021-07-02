@@ -1,0 +1,33 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/rapid/test/test_main.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"AccuracyTest"
+			]
+		},
+		{
+			"file" : "/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/rapid/test/test_precomp.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"AccuracyTest"
+			]
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_rapid",
+			"AccuracyTest"
+		],
+		"name" : "opencv_test_rapid"
+	}
+}

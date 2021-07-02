@@ -1,0 +1,21 @@
+# Target labels
+ Extra
+ opencv_xphoto
+ PerfTest
+# Source files and their labels
+/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/xphoto/perf/perf_grayworld.cpp
+ Extra
+ opencv_xphoto
+ PerfTest
+/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/xphoto/perf/perf_learning_based_color_balance.cpp
+ Extra
+ opencv_xphoto
+ PerfTest
+/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/xphoto/perf/perf_main.cpp
+ Extra
+ opencv_xphoto
+ PerfTest
+/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/xphoto/perf/perf_precomp.hpp
+ Extra
+ opencv_xphoto
+ PerfTest

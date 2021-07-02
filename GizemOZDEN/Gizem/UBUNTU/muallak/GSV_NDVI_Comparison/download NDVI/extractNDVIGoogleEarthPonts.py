@@ -20,8 +20,10 @@ ee.Initialize()
 
 ####### variables user might want to change ############
 DisplayGUI = False
-folder = os.path.dirname(sys.argv[0]) + "/"
-datesCSVFolder = folder + "csvByDate/"
+#folder = os.path.dirname(sys.argv[0]) + "/"
+folder = 'folder'
+#datesCSVFolder = folder + "csvByDate/"
+datesCSVFolder = os.path.join(folder, "csvByDate")
 outputFolder = folder + "GEE_NDVI/Landsat5/"
 bufferDistance = 50;
 BATCH_SIZE = 100

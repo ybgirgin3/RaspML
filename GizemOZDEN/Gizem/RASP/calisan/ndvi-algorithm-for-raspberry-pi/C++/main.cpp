@@ -21,23 +21,23 @@ int main () {
     int resolution[][2] = {{1920,1080},{1336,768},{1280,720},{1024,768},{800,600},{640,480},{320,240},{160,120},{100,133}};
     int resolutionNumber = 8;
     Camera.set(CV_CAP_PROP_FORMAT, CV_8UC3);   
-	Camera.set(CV_CAP_PROP_FRAME_WIDTH, resolution[resolutionNumber][0]);
-	Camera.set(CV_CAP_PROP_FRAME_HEIGHT, resolution[resolutionNumber][1]);
-	Camera.set(CV_CAP_PROP_FPS, 60);
-	/**
-	 * Sets a property in the VideoCapture.
-	* * 
-	* Implemented properties:
-	* CV_CAP_PROP_FRAME_WIDTH,CV_CAP_PROP_FRAME_HEIGHT,
-	* CV_CAP_PROP_FORMAT: CV_8UC1 or CV_8UC3
-	* CV_CAP_PROP_BRIGHTNESS: [0,100]
-	* CV_CAP_PROP_CONTRAST: [0,100]
-	* CV_CAP_PROP_SATURATION: [0,100]
-	* CV_CAP_PROP_GAIN: (iso): [0,100]
-	* CV_CAP_PROP_EXPOSURE: -1 auto. [1,100] shutter speed from 0 to 33ms
-	* CV_CAP_PROP_WHITE_BALANCE_RED_V : [1,100] -1 auto whitebalance
-	* CV_CAP_PROP_WHITE_BALANCE_BLUE_U : [1,100] -1 auto whitebalance
-	**/
+    Camera.set(CV_CAP_PROP_FRAME_WIDTH, resolution[resolutionNumber][0]);
+    Camera.set(CV_CAP_PROP_FRAME_HEIGHT, resolution[resolutionNumber][1]);
+    Camera.set(CV_CAP_PROP_FPS, 60);
+    /**
+     * Sets a property in the VideoCapture.
+    * * 
+    * Implemented properties:
+    * CV_CAP_PROP_FRAME_WIDTH,CV_CAP_PROP_FRAME_HEIGHT,
+    * CV_CAP_PROP_FORMAT: CV_8UC1 or CV_8UC3
+    * CV_CAP_PROP_BRIGHTNESS: [0,100]
+    * CV_CAP_PROP_CONTRAST: [0,100]
+    * CV_CAP_PROP_SATURATION: [0,100]
+    * CV_CAP_PROP_GAIN: (iso): [0,100]
+    * CV_CAP_PROP_EXPOSURE: -1 auto. [1,100] shutter speed from 0 to 33ms
+    * CV_CAP_PROP_WHITE_BALANCE_RED_V : [1,100] -1 auto whitebalance
+    * CV_CAP_PROP_WHITE_BALANCE_BLUE_U : [1,100] -1 auto whitebalance
+    **/
 
     //Open camera
     if (!Camera.open()) {

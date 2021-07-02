@@ -1,0 +1,31 @@
+{
+  "rootdir": "/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv-master",
+  
+  "modules": [
+    { "name": "core", "location": "modules/core" },
+    { "name": "imgproc", "location": "modules/imgproc" },
+    { "name": "ml", "location": "modules/ml" },
+    { "name": "phase_unwrapping", "location": "../opencv_contrib-master/modules/phase_unwrapping" },
+    { "name": "photo", "location": "modules/photo" },
+    { "name": "plot", "location": "../opencv_contrib-master/modules/plot" },
+    { "name": "xphoto", "location": "../opencv_contrib-master/modules/xphoto" },
+    { "name": "dnn", "location": "modules/dnn" },
+    { "name": "features2d", "location": "modules/features2d" },
+    { "name": "img_hash", "location": "../opencv_contrib-master/modules/img_hash" },
+    { "name": "imgcodecs", "location": "modules/imgcodecs" },
+    { "name": "text", "location": "../opencv_contrib-master/modules/text" },
+    { "name": "videoio", "location": "modules/videoio" },
+    { "name": "wechat_qrcode", "location": "../opencv_contrib-master/modules/wechat_qrcode" },
+    { "name": "calib3d", "location": "modules/calib3d" },
+    { "name": "objdetect", "location": "modules/objdetect" },
+    { "name": "structured_light", "location": "../opencv_contrib-master/modules/structured_light" },
+    { "name": "video", "location": "modules/video" },
+    { "name": "xfeatures2d", "location": "../opencv_contrib-master/modules/xfeatures2d" },
+    { "name": "ximgproc", "location": "../opencv_contrib-master/modules/ximgproc" },
+    { "name": "aruco", "location": "../opencv_contrib-master/modules/aruco" },
+    { "name": "bgsegm", "location": "../opencv_contrib-master/modules/bgsegm" },
+    { "name": "bioinspired", "location": "../opencv_contrib-master/modules/bioinspired" },
+    { "name": "face", "location": "../opencv_contrib-master/modules/face" },
+    { "name": "tracking", "location": "../opencv_contrib-master/modules/tracking" }
+  ]
+}

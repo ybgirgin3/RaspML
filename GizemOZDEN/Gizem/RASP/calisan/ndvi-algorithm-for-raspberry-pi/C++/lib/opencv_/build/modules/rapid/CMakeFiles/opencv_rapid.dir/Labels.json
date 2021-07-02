@@ -1,0 +1,57 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/rapid/include/opencv2/rapid.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/rapid/src/histogram.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/rapid/src/rapid.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/opencv_contrib-master/modules/rapid/src/precomp.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/build/cvconfig.h"
+		},
+		{
+			"file" : "/home/berkay/code/freelance/RaspML/GizemOZDEN/Gizem/RASP/calisan/ndvi-algorithm-for-raspberry-pi/C++/lib/opencv_/build/opencv2/opencv_modules.hpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_rapid",
+			"Module"
+		],
+		"name" : "opencv_rapid"
+	}
+}

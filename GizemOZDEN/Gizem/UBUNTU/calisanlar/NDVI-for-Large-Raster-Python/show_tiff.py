@@ -20,8 +20,6 @@ ysize: {}
 nbands: {}
 """.format(xsize, ysize, nbands))
 
-'''
-
 
 print(ds.RasterCount)
 
@@ -43,5 +41,3 @@ plt.imshow(img)
 plt.savefig('Tiff.png')
 plt.show()
 
-
-'''
