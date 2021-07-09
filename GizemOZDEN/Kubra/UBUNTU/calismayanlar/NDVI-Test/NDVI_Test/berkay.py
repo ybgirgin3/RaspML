@@ -1,6 +1,7 @@
 import os
 import time
 import glob
+import sys
 from skimage import data, io
 from skimage import color
 import matplotlib.pyplot as plt
@@ -22,7 +23,7 @@ greenMultiplier = [0, 1, 0]
 start_time = time.time()
 
 bad_image_counter = 0
-
+good_image_counter = 0
 
 def passImage(image):
     global shp
@@ -36,7 +37,6 @@ def passImage(image):
         return True
     else: return False
 
-
 def NDVI(nir, rgb):
     # Calculate NDVI [(NIR - VIS) / (NIR + VIS)]
     if nir.shape[0] > rgb.shape[1]:
@@ -47,25 +47,32 @@ def NDVI(nir, rgb):
 
     return ndvi
 
-for i in range(0, len(nirImgs)):
+
+from tqdm import tqdm, trange
+from colorama import Fore
+for i in trange(0, len(nirImgs), bar_format="{l_bar}%s{bar}%s{r_bar}" % (Fore.GREEN, Fore.RESET)):
     # Load the next image pair from the set
     rgbImg = io.imread(str(rgbImgs[i]))
     nirImg = io.imread(str(nirImgs[i]))
 
     # control images
     if passImage(rgbImg) and passImage(nirImg):
+        good_image_counter += 1
+
+        # process get percentage
         # print image shapes
         rgbImg = rgbImg[:,:, 0].T
         nirImg = nirImg
-        print("nirImg {}".format(colored(nirImg.shape, "yellow")))
-        print("rgbImg {}".format(colored(rgbImg.shape, "yellow")))
+        print("\r", end='')
+        #print(f"process: {percent}", end = "", flush=True)
+
+        #print("nirImg {} ".format(colored(nirImg.shape, "yellow")), end = "", flush=True)
+        #print("rgbImg {}".format(colored(rgbImg.shape, "yellow")), end = "", flush=True)
 
         # calculate
-        ndvi = NDVI(nirImg, rgbImg)
-        print(ndvi)
-
-
-
+        # matris sıkıntısı çözülürse eğer dahil et
+        #ndvi = NDVI(nirImg, rgbImg)
+        #print(ndvi)
 
     else: bad_image_counter += 1
 
@@ -85,5 +92,6 @@ for i in range(0, len(nirImgs)):
     """
 
 # Print loop execution time
-print("--- %s seconds ---" % (time.time() - start_time))
-print(colored(f"işlenemeyen pas geçilen resim sayısı: {bad_image_counter}", "yellow"))
+#print("--- %s seconds ---" % (time.time() - start_time))
+print(colored(f"işlenebilecek resim sayısı: {good_image_counter}", "green"))
+print(colored(f"işlenemez resim sayısı: {bad_image_counter}", "yellow"))
