@@ -1,0 +1,3 @@
+1- NDVI projesi dışındaki projelerin hem video hem de resim üzerinden çalışma sistemleri halledildi
+2- NDVI projesinin hallolmamasını sebebi ise projenin resmi okurken opencv yerine matplotlib kullanması, matplotlib'in video okuma özelliği yok malesef. Eğer eklemek istersek projenin büyük ir çoğunluğu değişecek
+
