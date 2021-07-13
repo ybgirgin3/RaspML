@@ -1,0 +1,3 @@
+proje tif dosyaları ile işlem yapıyor, tif dosyaları ise 3 veya 3 farklı band a ve katmana sahip 
+gdal kütüphanesi kullanarak sadece tiff dosyaları üzerinden işlem yapılabiliyor
+kamera üzerinden alınan veriler tiff dosyası gibi özel katmanlar içermemektedir
