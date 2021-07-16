@@ -20,8 +20,8 @@ pixel_value_cutoff = 0.5 #This is the avg pixel value of the lines, below which 
 
 image_paths = []
 # resim çek ondan sonra işlem yap
-image_paths.append('example_image.png')
-#image_paths.append(get_image())
+#image_paths.append('example_image.png')
+image_paths.append(get_image())
 halfway = round(len(image_paths)/2)
 
 #find good estimation of gradient from the middle images (because the middle images are less likely to be edge images)
