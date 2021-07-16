@@ -1,0 +1,11 @@
+# yeni sorun
+  gdal kütüphanesi hızlı resimler üzerinden işlem yapmıyor, not a string hatası veriyor
+
+# eski çözüldü
+  red.tiff adından bir belgeye ihtiyaç duyuyor
+  işlemlerin hepsinde de bu belgeye ihtiyaç duyuyor
+
+# yeni çözüldü
+  bulunan red.tiff dosyasını kullanarak scanline denen bir işlem yapmaya çalışıyor fakat scanline bir değer dönmüyor malesef
+
+# arayüz kısmına uğraş
