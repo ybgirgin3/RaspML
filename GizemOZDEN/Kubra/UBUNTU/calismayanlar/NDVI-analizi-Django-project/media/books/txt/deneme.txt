@@ -1,9 +1,0 @@
-Dosya adı::[['S2A_MSIL2A_20191219T090401_N0213_R007_T35TPE_20191220T135408'
-Uydu adı: Size: 943.77 MB'
-Dosya boyutu: 'false'
-Çekim tarihi: Timestamp('2019-12-19 09:04:01.024000')
-Orbit numarası: 23456
-Bulut: 14.012882
-vejetasyon: 29.379436
-su: 12.595308
-not vejetasyon: 18.366854
