@@ -1,0 +1,18 @@
+ÇALIŞMAYAN PROJELERİN ÇALIŞMAMA SEBEPLERİ 
+============================================
+
+- RASPS/UBUNTU_PROJS/neg/giz/NDVI-for-Large-Raster-Python:
+- RASPS/UBUNTU_PROJS/neg/giz/PyGdal_batch_NDVI/
+
+    açıklama: tif resimler üzerinden işlem yapıyor, standart raspberry pi kamerası ile tif resim çekme imkanımız yok. dolayısıyla kameralı sistemden çalışamaz
+
+
+- RASPS/UBUNTU_PROJS/neg/kub/multispectral-image-processing
+  projedeki resimler, değişkenler, hepsi yaml dosyaları üzerinden çağırılmış yani proje statik olarak resimler üzerinden çalışıyor bunu değiştirmek için yaklaşık 20 tane olan yaml dosyalarını tek tek değiştirmek bunları değiştirirken de istediği değişkenlere özel resimler bulmak lazım. Ki bulabilme garantimiz de yok malesef
+
+- RASPS/UBUNTU_PROJS/neg/kub/ndvi_automation
+  ndvi işlemlerini yapabilmek için gdal kütüphanesine ihtiyaç var ve gdal kütüphanesi de statik resimler üzerinden işlem yapıyor, kamera üzerinden alınan video ise statik değil dinamik yani çok hızlı değişen resimleri gdal kütüphanesini kendi sitesinden veya diğer örnek projelere bakmama rağmen buna benzer bir sistem bulamadım. dolayısıyla çalışmıyor. eğer elinizde buna benzer bir proje varsa bulduysanız ona bakarak yapmaya çalışırız
+
+- RASPS/UBUNTU_PROJS/neut/kub/Crop-lines-system
+  'example_image.png' isimli dosya sadece çizgilerden oluşuyor eğer olurda kamera ile onun gibi bir resim yakalayabilirseniz çalışır
+
