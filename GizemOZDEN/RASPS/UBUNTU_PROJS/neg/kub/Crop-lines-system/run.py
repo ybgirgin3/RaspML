@@ -18,14 +18,16 @@ plot_fourier = False #Set to True for 2d fourier transform plot to shown
 plot_line_find = True #Set to True for found lines plot to be shown
 pixel_value_cutoff = 0.5 #This is the avg pixel value of the lines, below which lines will not be detected. 
 
-image_paths = []
+#image_paths = []
+image_paths = ['example_image.png',"asd.jpeg"]
 # resim çek ondan sonra işlem yap
 #image_paths.append('example_image.png')
-image_paths.append(get_image())
-halfway = round(len(image_paths)/2)
+#image_paths.append(get_image())
+halfway = int(round(len(image_paths)/2))
 
 #find good estimation of gradient from the middle images (because the middle images are less likely to be edge images)
-for i in range(halfway, halfway + 10):
+#for i in range(halfway, halfway + 10):
+for i in range(2):
 	img = plt.imread(image_paths[i]).astype(float)
 
 	# Using a 2D Fourier Transform, the angle of the lines is detected
