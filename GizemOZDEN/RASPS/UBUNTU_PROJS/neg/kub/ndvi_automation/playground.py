@@ -36,19 +36,23 @@ import sys, struct
 # print(image[815][910])  # black
 
 import osgeo.gdal as gdal
+from take_photo import take
 import cv2
-
+import sys
 
 #dataset = gdal.Open(r'indicies/red.tif', gdal.GA_ReadOnly)
 #dataset = gdal.Open(r'indicies/RED_IMAGE.tif', gdal.GA_ReadOnly)
-cap = cv2.VideoCapture(0)
-while True:
-    s, frame = cap.read()
-    if not s:
-        break
-    
+def main(f):
+    dataset = gdal.Open(f, gdal.GA_ReadOnly)
+    ysize = dataset.RasterYSize
+    xsize = dataset.RasterXSize
+    nbands = dataset.RasterCount
+    print("""
+    xsize: {}
+    ysize: {}
+    nbands: {}
+    """.format(xsize, ysize, nbands))
 
-    dataset = gdal.Open(frame, gdal.GA_ReadOnly)
     #print(dataset.GetProjection())
     band = dataset.GetRasterBand(1)
     print("xsize", band.XSize)
@@ -64,9 +68,9 @@ while True:
     print('temp.tiff', im.shape)
 
 
-    #red = imread('red.tif')
-    red = imread('indicies/RED_IMAGE.tif')
-    print("1",red.shape)
+    red = imread('temp.tif')
+    #red = imread('indicies/RED_IMAGE.tif')
+    print("1", red.shape)
     #red = red[..., 0]
     #print("2",red.shape)
     #print(red[900, 900])
@@ -76,3 +80,11 @@ while True:
 
     redjpg = imread('template.jpg')
     print(redjpg.shape)
+
+if __name__ == '__main__':
+    if sys.argv[1] == 'R':
+        main(r'indicies/RED_IMAGE.tif')
+    elif sys.argv[1] == 'V':
+        main(take(0))
+
+

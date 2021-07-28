@@ -16,3 +16,8 @@
 - RASPS/UBUNTU_PROJS/neut/kub/Crop-lines-system
   'example_image.png' isimli dosya sadece çizgilerden oluşuyor eğer olurda kamera ile onun gibi bir resim yakalayabilirseniz çalışır
 
+
+
+çalışanlar:
+  NDVI-for-Large-Raster-Python
+  PyGdal_batch_NDVI

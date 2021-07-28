@@ -1,5 +1,5 @@
 # yeni sorun
-  gdal kütüphanesi hızlı resimler üzerinden işlem yapmıyor, not a string hatası veriyor
+  img must be 2D hatası alıyorum
 
 # eski çözüldü
   red.tiff adından bir belgeye ihtiyaç duyuyor
@@ -7,5 +7,6 @@
 
 # yeni çözüldü
   bulunan red.tiff dosyasını kullanarak scanline denen bir işlem yapmaya çalışıyor fakat scanline bir değer dönmüyor malesef
+  gdal kütüphanesi hızlı resimler üzerinden işlem yapmıyor, not a string hatası veriyor
 
 # arayüz kısmına uğraş
