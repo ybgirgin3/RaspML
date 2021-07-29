@@ -58,9 +58,9 @@ def main(f):
     print("xsize", band.XSize)
     scanline = band.ReadRaster(0, 948, band.XSize, 1, band.XSize, 1, gdal.GDT_Float32)
     #Unpack the line of data to be read as floating point data
-    #print(band.XSize, scanline)
-    #t = struct.unpack('f' * band.XSize, scanline)
-    #t = struct.unpack('H' * bytes([band.XSize, scanline]))
+    print(band.XSize, scanline)
+    t = struct.unpack('f' * band.XSize, scanline)
+    t = struct.unpack('H' * bytes([band.XSize, scanline]))
     #print(t)
 
     imsave('temp.tif', np.random.rand(3, 4, 301, 219))
@@ -68,8 +68,9 @@ def main(f):
     print('temp.tiff', im.shape)
 
 
-    red = imread('temp.tif')
+    #red = imread('temp.tif')
     #red = imread('indicies/RED_IMAGE.tif')
+    red = imread(f)
     print("1", red.shape)
     #red = red[..., 0]
     #print("2",red.shape)
