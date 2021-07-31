@@ -1,0 +1,21 @@
+## 1
+====
+>> sudo apt-get update
+>> sudo apt-get upgrade
+>> sudo apt-get dist-upgrade
+>> sudo apt-get install gdal-bin
+
+
+## 2
+=====
+>> sudo chmod +x install_gdal.sh && ./install_gdal.sh
+
+
+## 3
+=====
+- update raspbian from its debian whezzy to jessie
+>> sudo vim /etc/apt/sources.list
+- and change all references wheezy to jessie
+>> sudo apt-get update && sudo apt-get upgrade
+>> sudo apt-get dist-upgrade
+>> sudo apt-get install gdal-bin
