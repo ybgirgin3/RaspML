@@ -1,2 +1,13 @@
+# yeni
+  projede şöyle bir sistem var videoyu framelere ayırmışlar.
+  her bir frame'i üç farklı şekilde işlemişler ve çıktılarını yazdırmışlar
+  ana projede o framelerin üç farklı versiyonunu ayrı ayrı çağırıp işlem yapıyor
+  işlemlerin ne olduğunu çözebilirsek eğer videoyu framelere ayırma ve üzerinden o işlemleri yapma kısmı ile uğraşabiliriz
+
+
+
+
+
+# eski
 [-] OOP mantığı ile yazılmış program içinde resimlerin hangi mantık ile alındığını bulamadım
 [?] proje hem OOP mantığı ile yazılmış hem de safi resim ile çalışmak üzere geliştirilmiş
