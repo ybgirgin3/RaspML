@@ -2,6 +2,7 @@ __pycache__/
 *.swp
 .vscode/
 dataset/
+dataset_kubra/
 DATASET/
 trash/
 chk_trash/
